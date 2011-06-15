@@ -6,7 +6,7 @@
   <property name="fallbackdirectory">/WEB-INF/base/emfrontend</property>
   <property name="title">EML</property>
   <property name="applicationid">eml</property>
-  <property name="catalogid">media/catalogs/video</property>
+  <property name="catalogid">media/catalogs/public</property>
   <property name="parentapplicationid">media</property>
 <property name="jquery-theme">ui-lightness</property>
   <property name="mastergroup">video</property>
