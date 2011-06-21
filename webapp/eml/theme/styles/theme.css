@@ -11,3 +11,26 @@
 	border-radius: 5px 5px;
 	-moz-border-radius: 5px;
 }
+
+table td
+{
+	vertical-align: top;
+}
+
+.emdetailactions 
+{
+	padding-top: 40px;	
+}
+.emdetailactions .ui-button-text
+{
+	width: 130px;	
+}
+
+.emdetailactions img
+{
+	border: 0px;	
+}
+.emdetailactions li
+{
+list-style: none;
+}

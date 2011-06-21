@@ -1,41 +1,39 @@
 $context.putPageValue("showhover", "false")
 $context.putPageValue("thumbsize", "thumb")
 $context.putPageValue("showcaption", "true")
+$context.putPageValue("hideheader", "true")
 
-<div class="subcolumns">
-   <div class="c66l">
-            <div class="subcl">     
-         
-<div class="ui-widget">
-<div class="ui-widget-header">Player</div>
-<div class="ui-widget-content">
 
-	  $pages.include("$apphome/components/mediaviewer/player/index.html",$context)
+<table width="100%">
+<tr>
+<td width="66%">
+			<div class="uipanel" header="Player" style="overflow:hidden;">
+			
+				  $pages.include("$apphome/components/mediaviewer/player/index.html",$context)
+			</div>
+			
+			<div class="uipanel" header="Comments" >
+			
+			$pages.include("$apphome/components/mediaviewer/comments/mini.html",$context)
+			</div>
+</td>
+<td width="33%">
 
-</div></div>
-</div></div>
+<div style='background: url($themeprefix/images/bg_box.png) no-repeat;'>
+	<div class="ui-widget-header">Details</div>
+	<div 	>
 
-   <div class="c33r">
-            <div class="subcr">
-  
-  
+	$pages.include("/${applicationid}/components/mediaviewer/details/index.html",$context)
 
-       
-<div class="ui-widget">
-<div class="ui-widget-header">Actions</div>
-<div class="ui-widget-content">
-  </div></div>
+</div>
 	
-	<a class="uibutton" href="$home$apphome/views/activity/downloadassets.html?sourcepath=$asset.sourcepath"><span>[[Download]]</span></a>
-	<a class="uibutton"  href="$home$apphome/views/activity/emailassets.html?sourcepath=$asset.sourcepath"><span>[[Email]]</span></a>
-	<a class="uibutton"  href="$home$apphome/views/activity/publishassets.html?sourcepath=$asset.sourcepath"><span>[[Export]]</span></a>
+</div>
 
-#if( $caneditasset )
-	#if ($isediting)
-		
-	#else
-		<a  class="uibutton"  href="$home$apphome/views/assets/index.html?sourcepath=${asset.sourcepath}&edit=true"><span>[[Edit]]</span></a>
-	#end
-#end
+</td>
+</tr>
+
+</table>
+
   
-  </div></div></div>
+  	$pages.include("/${applicationid}/components/results/mini.html",$context)
+  
