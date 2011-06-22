@@ -19,7 +19,6 @@
   </target>
     
   <target name="unzip" depends="update-dependencies">
-  	<mkdir dir="${build}/unzip"/>
     <unzip  src="${build}/eml.zip" dest=".." />
   </target>
  
