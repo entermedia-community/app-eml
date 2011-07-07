@@ -8,7 +8,7 @@
   <property name="applicationid">eml</property>
   <property name="catalogid">media/catalogs/public</property>
   <property name="parentapplicationid">media</property>
-<property name="jquery-theme">ui-lightness</property>
+<property name="jquery-theme">emlred</property>
   <property name="mastergroup">video</property>
   	<property name="showaddselections">true</property>
 	<property name="showremoveselections">false</property>
