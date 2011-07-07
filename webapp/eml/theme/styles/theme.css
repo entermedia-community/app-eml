@@ -6,9 +6,6 @@
 	-webkit-border-radius: 5px;
 }
 
-.ui-widget-header
-{
-}
 
 table td
 {
@@ -71,7 +68,7 @@ ul.emheaderbuttons li a.current,ul.emheaderbuttons  li a:hover
 {
 	background: url(../images/buttons/emheaderbuttonshover.png) no-repeat top right;
 }
-
+hbs/views/assets/users/admin/Real_Media.rm/index.html?hitssessionid=${hitssessionid}
 ul.emheaderbuttons li a.current span, ul.emheaderbuttons li a:hover span 
 {
  	color: #fff;
@@ -92,4 +89,44 @@ ul.emheaderbuttons li a.current span, ul.emheaderbuttons li a:hover span
 .playerbox
 {
 	background: url(../images/video_bkgd_fade.jpg) repeat-y top left;		
+	text-decoration: none;
+}
+
+.emprevnext
+{
+	
+	padding: 20px 0 20px 0;	
+}
+.emprevnext A
+{
+	color: #4D87C7;
+	text-decoration: none;
+}	
+.emprevnext A:hover
+{
+	text-decoration: none;
+}	
+
+.linkprevious
+{
+	background: url(../images/buttons/back_16x16.png) no-repeat top left;		
+}
+
+.linkprevious span
+{
+	padding-left: 18px;
+}
+.linknext
+{
+	float: right;
+	background: url(../images/buttons/forwd_16x16.png) no-repeat top right;		
+}
+.linknext span
+{
+	padding-right: 18px;
+}
+
+.commentbox .ui-widget-header
+{
+	background-color: #666;
 }
