@@ -184,7 +184,7 @@
 
   /*--- Links ----------------------------------------------------------------------------------------- */
 
-  a { color:#4D87C7; background:transparent; text-decoration:none; }
+  a { color:#4D87C7;  text-decoration:none; }
   a:visited  { color:#036; }
 Space
   /* (en) maximum constrast for tab focus - change with great care */
@@ -239,7 +239,7 @@ Space
   * @section content-tables
   */
 
-  table { border-collapse:collapse; margin-bottom:0.5em;  }
+  table { border-collapse:collapse; margin-bottom:0.5em; width: 100%; }
   table caption { font-variant:small-caps; }
   table.full { width:100%; }
   table.fixed { table-layout:fixed; }
@@ -351,5 +351,10 @@ Space
   	font-size: 2.2em;
   	padding: 15px 0 0 80px;
   	
+  }
+  
+  img 
+  {
+   border: 0px;
   }
 }
