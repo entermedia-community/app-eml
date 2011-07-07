@@ -7,12 +7,14 @@ $context.putPageValue("hideheader", "true")
 <table width="100%">
 <tr>
 <td width="66%">
-			<div class="uipanel" header="Player" style="overflow:hidden;">
-			
+			<div class="uipanel" style="overflow:hidden;">
+				<div  class="ui-widget-header">Player</div>
+				<div  class="ui-widget-content playerbox">
 				  $pages.include("$apphome/components/mediaviewer/player/index.html",$context)
+				</div> 
 			</div>
 			
-			<div class="uipanel" header="Comments" >
+			<div class="uipanel commentbox" header="Comments" >
 			
 			$pages.include("$apphome/components/mediaviewer/comments/mini.html",$context)
 			</div>

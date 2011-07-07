@@ -8,8 +8,6 @@
 
 .ui-widget-header
 {
-	border-radius: 5px 5px;
-	-moz-border-radius: 5px;
 }
 
 table td
@@ -19,18 +17,79 @@ table td
 
 .emdetailactions 
 {
-	padding-top: 40px;	
+	padding-top: 40px;
+	list-style: none;	
+}
+.emdetailactions li
+{
+	margin-left:0; 
 }
 .emdetailactions .ui-button-text
 {
 	width: 130px;	
 }
 
+
+
+ul.emheaderbuttons 
+{
+	padding: 0px;
+	margin: 10px;
+	list-style: none;
+	clear: left;
+	height: 23px;
+}
+
+ul.emheaderbuttons li {
+	float: left;
+	display: inline; /*For ignore double margin in IE6*/
+	margin: 0 10px;
+}
+
+ul.emheaderbuttons li a 
+{
+	text-decoration: none;
+	float:left;
+ 	color: #39578A;
+	cursor: pointer;
+		background: url(../images/buttons/emheaderbuttons.png) no-repeat top right;
+}
+
+ul.emheaderbuttons li a span 
+{
+	white-space: nowrap;
+	font-size: 13px;
+	line-height: 23px;
+	margin: 0 10px 0 -10px;
+	padding: 0px 8px 0px 18px;
+	position: relative; /*To fix IE6 problem (not displaying)*/
+	float:left;
+	background: url(../images/buttons/emheaderbuttons.png) no-repeat top left;
+}
+
+ul.emheaderbuttons li a.current,ul.emheaderbuttons  li a:hover  
+{
+	background: url(../images/buttons/emheaderbuttonshover.png) no-repeat top right;
+}
+
+ul.emheaderbuttons li a.current span, ul.emheaderbuttons li a:hover span 
+{
+ 	color: #fff;
+	background: url(../images/buttons/emheaderbuttonshover.png) no-repeat top left;
+}
+
 .emdetailactions img
 {
-	border: 0px;	
+	
+	border: 0px;
 }
-.emdetailactions li
+
+#emresultscontent
 {
-list-style: none;
+  border-top: 2px solid #90002A;
+}
+
+.playerbox
+{
+	background: url(../images/video_bkgd_fade.jpg) repeat-y top left;		
 }

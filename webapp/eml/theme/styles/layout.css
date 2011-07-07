@@ -33,32 +33,46 @@
   .page_margins { text-align:left; margin: 0 auto; }
 
   /* (en) Layout: width, background, borders */
-  .page_margins { max-width: 90%; }
-  .page { margin: 0 20px; }
+  .page { margin: 0;  }
   #topnav, #header, #nav, #main, #extended, #footer { overflow:hidden; min-width: 720px; }
-
+  #application {
+	  background: #fff;
+	  max-width: 1060px;
+	  margin: 0 auto;
+	  padding: 0 5px 10px 5px;
+	}
+  #emuploadcontainer {
+	  max-width: 450px;
+	  margin: 0 auto;
+	  background-color: #f6f1eb;
+	}
   /* (en) Designing main layout elements */
-  #topnav .page { text-align:left; padding: 5px 0; }
-  #topnav span.navlinks { float:right; }
+  #topnav .page { 
+  	overflow:hidden;
+	
+    }
+	
+  #topnav span.navlinks { 
+  	float:right;
+
+	
+   }
 
   #header .page {
-    position:relative;
-    padding: 75px 0px 20px 0px;
+    padding: 0px 0px 10px 0px;
   }
 
-
-
   #nav {
-    padding-top:10px;
-    padding-bottom:10px;
-    padding-top:10px;
+    padding-top:0;
+    padding-bottom:0;
+    padding-top:0;
   }
 
   #extended .subc  { padding: 0 10px; }
   #extended .subcl { padding: 0 10px 0 0; }
   #extended .subcr { padding: 0 0 0 10px; }
 
-  #main, #extended { padding-top: 20px; padding-bottom: 20px; }
+  #main, #extended { padding-top: 0; padding-bottom: 0; }
   #footer .page { padding: 10px 0px; }
 }
 
@@ -90,7 +104,7 @@
   * @section subtemplates
   * @see     http://www.yaml.de/en/documentation/practice/subtemplates.html
   */
-  .subcolumns { width:100%; overflow:hidden; }
+  .subcolumns { width:100%; }
 
   /* (en) alternative class for optional support of old Mozilla/Netscape browers */
   /* (de) Alternative Klasse zur optionalen Unterstützung alter Mozilla/Netscape-Brower */

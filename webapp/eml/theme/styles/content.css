@@ -17,72 +17,72 @@
 @media all {
 	/* (en) reset font size for all elements to standard (16 Pixel) */
 	html * {
-		font-size: 100.01%;
+		font-size: 11px;
 	}
 	/* Layout color and look, doesn't have anything to do with spacing so I put it here*/
 	
 	/* (en) Marginal areas & page background */
 	body {
-		background: #888;
+		background: #e7e7e7;
+		margin: 0;
 	}
 	/* (en) Centering layout in old IE-versions */
 	body {
 		text-align: center;
 	}
 	#header {
-		color: #fff;
-		border-top: 10px #fff solid;
-		border-bottom: 10px #fff solid;
-		background: #FFF url("../images/banner.jpg") no-repeat top left;
+		max-width: 940px;
+		margin: 0;
+		
 	}
 	#header h1 {
 		color: #fff !important;
-	}
-	#header span {
-		color: #99c;
-	}
-	#header h1 {
 		font-weight: bold;
 		font-size: 2.5em;
 		letter-spacing: -2px;
 		line-height: 65%;
 		color: #000;
 	}
+	#header span {
+		color: #fff;
+	}
 	#nav {
-		background: #f0f0f0;
-		border-top: 2px #666 solid;
-		border-bottom: 1px #ccc dashed;
+		background: #ffffff;
+		border-bottom: 5px #90002a solid;	
 	}
 	#main {
-		background: #fff;
-		border-top: 1px #ccc dashed;
 	}
 	#main .c25r {
-		border-left: 1px #88a dashed;
 	}
 	#extended {
-		background: #eee;
-		border-top: 1px #ccc dashed;
 	}
 	#extended .c25l,#extended .c50l {
-		border-right: 1px #88a dashed;
 	}
-	#topnav,#footer {
-		background: #888;
-		color: #ccc;
+	#topnav {
+		height: 70px;
+		background: url("../images/banner.jpg") no-repeat;
+		padding-top: 5px;
+		
+		
+	}
+	#footer {
+		border-top: 4px #90002a;
 	}
 	#topnav a {
-		color: #fff;
+		font-family: Verdana, Geneva, sans-serif;
+		font-size:11px;
 		font-weight: normal;
+		color:#666;
 		background: transparent;
 		text-decoration: none;
 	}
 	#topnav a:focus,#topnav a:hover,#topnav a:active {
 		text-decoration: underline;
 		background-color: transparent;
+		color:#39578a;
 	}
 	#footer {
-		border-top: 2px #666 solid;
+		
 	}
 	#footer a {
 		color: #fff;
@@ -101,15 +101,15 @@
   */
 
   textarea, pre, code, kbd, samp, var, tt {
-    font-family:Consolas, "Lucida Console", "Andale Mono", "Bitstream Vera Sans Mono", "Courier New", Courier;
+    font-family: Verdana,Arial;
   }
 
   /* (en) base layout gets standard font size 12px */
   /* (de) Basis-Layout erhält Standardschriftgröße von 12 Pixeln */
   body {
     font-family: Verdana,Arial;
-    font-size:75.00%;
-    color:#444;
+    font-size:11px;
+    color:#666;
   }
 
   /*--- Headings | Überschriften ------------------------------------------------------------------------*/
@@ -117,12 +117,11 @@
   h1,h2,h3,h4,h5,h6 {
     font-family: Verdana,Arial;
     font-weight:normal;
-    color:#222;
     margin:0 0 0.25em 0;
   }
 
-  h1 { font-size:250%; }                       /* 30px */
-  h2 { font-size:200%; }                       /* 24px */
+  h1 { font-size:12px; }                       /* 30px */
+  h2 { font-size:12px; font-weight:bold; color: #336699; }                       /* 24px */
   h3 { font-size:150%; }                       /* 18px */
   h4 { font-size:133.33%; }                    /* 16px */
   h5 { font-size:116.67%; }                    /* 14px */
@@ -187,7 +186,7 @@
 
   a { color:#4D87C7; background:transparent; text-decoration:none; }
   a:visited  { color:#036; }
-
+Space
   /* (en) maximum constrast for tab focus - change with great care */
   /* (en) Maximaler Kontrast für Tab Focus - Ändern Sie diese Regel mit Bedacht */
   a:focus { text-decoration:underline; color:#000; background: #fff; outline: 3px #f93 solid; }
@@ -196,7 +195,7 @@
 
   /* --- images (with optional captions) | Bilder (mit optionaler Bildunterschrift) ------------------ */
 
-  p.icaption_left { float:left; display:inline; margin:0 1em 0.15em 0; }
+  p.icaption_left { float	:left; display:inline; margin:0 1em 0.15em 0; }
   p.icaption_right { float:right; display:inline; margin:0 0 0.15em 1em; }
 
   p.icaption_left img,
@@ -250,8 +249,6 @@
   tbody th { background:#e0e0e0; color:#333; }
   tbody th[scope="row"], tbody th.sub { background:#f0f0f0; }
 
-  tbody th { border-bottom:1px solid #fff; text-align:left; }
-  tbody td { border-bottom:1px solid #eee; }
 
   tbody tr:hover th[scope="row"],
   tbody tr:hover tbody th.sub { background:#f0e8e8; }
@@ -288,14 +285,11 @@
     float:left; /* LTR */
     /* (en) Left margin of the first button  */
     /* (de) Abstand des ersten Buttons vom linken Rand  */
-    border-left:1px #aaa solid;
-    border-right:1px #fff solid;
+    
   }
 
   .hlist ul li {
-    border-left:1px black solid;
-    border-right:1px black solid;
-    /* (en|de) Bugfix:IE - Doubled Float Margin Bug */
+     /* (en|de) Bugfix:IE - Doubled Float Margin Bug */
     display:inline;
     float:left; /* LTR */
    
@@ -310,45 +304,52 @@
     background:transparent;
     color:white;
     display:block;
-    font-size:1em;
+    font-size:12px;
     font-weight:bold;
     margin:0;
     padding:0.5em 0.8em 0.5em 0.8em;
     text-decoration:none;
     width:auto;
+	line-height: 60px;
   }
 
   .hlist ul li a:focus,
   .hlist ul li a:hover,
-  .hlist ul li a:active  { background:#eee; color:black; text-decoration:none; outline: 0 none; }
+  .hlist ul li a:active  { background:#fff; color:#993300; text-decoration:none; outline: 0 none; }
 
   .hlist ul li.active {
     /* (en) Repeat the main color from the image */
     /* (de) Wiederholung der Hauptfarbe aus der Bilddatei */
-    border-left:1px #444 solid;
-    border-right:1px #888 solid;
-  }
+   }
 
   .hlist ul li.active strong,
   .hlist ul li.active a:focus,
   .hlist ul li.active a:hover,
-  .hlist ul li.active a:active { background:transparent; color:#fff; text-decoration:none; }
+  .hlist ul li.active a:active { background:transparent; color:#666; text-decoration:none; }
 
   .hlist { background: transparent; border: 0 none; }
   .hlist ul { margin-left: 0; border: 0 none; width: 100%; }
   .hlist ul li { line-height: 1.2em; display:block; width: 12.5%; border:0; padding: 0;}
-  .hlist ul li.last { margin-left: -5px; float:right; border-right: 1px #ccc solid;}
+  .hlist ul li.last { margin-left: -5px; float:right; }
 
   .hlist ul li a,
-  .hlist ul li strong {  width:auto; display:block; border-left: 1px #ccc solid; color: #000; font-weight: normal; margin: 0 5px 0 0; padding: 0.5em 0 0.5em 0.5em; }
+  .hlist ul li strong {  width:auto; display:block; color: #39578A; font-weight: bold; font-size:11px; margin: 0 5px 0 0; padding: 0.5em 0 0.5em 0.5em; }
 
   .hlist ul li a span { display:block;  }
   .hlist ul li strong span { display:block; color: #aaa; }
 
   .hlist ul li a:focus,
   .hlist ul li a:hover,
-  .hlist ul li a:active {  background: #444; color: #fff; }
+  .hlist ul li a:active {  background: #fff; color: #666; text-decoration:underline;}
 
   .hlist ul li.active { background:transparent; border: 0 none; }
-  .hlist ul li.active strong { background: #800; color: #fff; font-weight: bold; }
+  .hlist ul li.active strong { background: #fff; color: #666; text-decoration:underline; }
+  
+  #site-title 
+  {
+  	float: left;
+  	font-size: 2.2em;
+  	padding: 15px 0 0 80px;
+  	
+  }
 }
