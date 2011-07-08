@@ -130,3 +130,8 @@ ul.emheaderbuttons li a.current span, ul.emheaderbuttons li a:hover span
 {
 	background-color: #666;
 }
+
+.uploadform
+{
+	border: #90002A solid 1px;
+}
