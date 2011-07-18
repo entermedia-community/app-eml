@@ -20,7 +20,7 @@ unziper.unzip(  tmp + "/eml.zip",  tmp );
 var files = new FileUtils();
 log.add("4. UPGRADE BASE DIR");
 files.deleteAll( root + "/eml");
-files.copyFiles( tmp + "/eml", root);
+files.copyFiles( tmp + "/eml", root + "/eml/");
 
 log.add("5. CLEAN UP");
 files.deleteAll(tmp);
