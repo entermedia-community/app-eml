@@ -48,7 +48,8 @@
 	}
 	#nav {
 		background: #ffffff;
-		border-bottom: 5px #90002a solid;	
+		border-bottom: 5px #90002a solid;
+		height:50px;	
 	}
 	#main {
 	}

@@ -31,7 +31,7 @@ table td
 ul.emheaderbuttons 
 {
 	padding: 0px;
-	margin: 10px;
+	margin: 5px;
 	list-style: none;
 	clear: left;
 	height: 23px;
@@ -47,33 +47,58 @@ ul.emheaderbuttons li a
 {
 	text-decoration: none;
 	float:left;
- 	color: #39578A;
+ 	color: #5FADF9;
 	cursor: pointer;
-		background: url(../images/buttons/emheaderbuttons.png) no-repeat top right;
 }
 
 ul.emheaderbuttons li a span 
 {
-	white-space: nowrap;
-	font-size: 13px;
-	line-height: 23px;
-	margin: 0 10px 0 -10px;
-	padding: 0px 8px 0px 18px;
-	position: relative; /*To fix IE6 problem (not displaying)*/
-	float:left;
-	background: url(../images/buttons/emheaderbuttons.png) no-repeat top left;
+    float: left;
+    font-size: 12px;
+	font-family:Verdana, Geneva, sans-serif;
+	font-weight:bold;
+    line-height: 23px;
+    padding: 5px 15px;
+    position: relative;
+    white-space: nowrap;
+	
 }
 
-ul.emheaderbuttons li a.current,ul.emheaderbuttons  li a:hover  
-{
-	background: url(../images/buttons/emheaderbuttonshover.png) no-repeat top right;
-}
-hbs/views/assets/users/admin/Real_Media.rm/index.html?hitssessionid=${hitssessionid}
+
 ul.emheaderbuttons li a.current span, ul.emheaderbuttons li a:hover span 
 {
- 	color: #fff;
-	background: url(../images/buttons/emheaderbuttonshover.png) no-repeat top left;
+ 	color: #666;
+	text-decoration:underline;
+    border-radius: 8px 8px 8px 8px;
+
 }
+
+.uploadbutton 
+{
+	background:#5FADF9;
+	color:#fff;
+    border-radius: 8px 8px 8px 8px;
+	padding-left:20px;
+	padding-right:20px;
+}
+
+.uploadbutton a
+{
+	color:#fff;
+}
+
+.uploadbutton a:hover
+{
+	color:#fff;
+	text-decoration:none;
+}
+
+
+.uploadbutton:hover {
+	background: #FFB15F;
+	
+}
+
 
 .emdetailactions img
 {
