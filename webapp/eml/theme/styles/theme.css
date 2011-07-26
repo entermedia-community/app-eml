@@ -61,6 +61,9 @@ ul.emheaderbuttons li a span
     padding: 5px 15px;
     position: relative;
     white-space: nowrap;
+ 	color: #5FADF9;
+	cursor: pointer;	
+	
 	
 }
 
@@ -70,10 +73,12 @@ ul.emheaderbuttons li a.current span, ul.emheaderbuttons li a:hover span
  	color: #666;
 	text-decoration:underline;
     border-radius: 8px 8px 8px 8px;
+	background: #FFB15F;
+
 
 }
 
-.uploadbutton 
+.active 
 {
 	background:#5FADF9;
 	color:#fff;
@@ -82,23 +87,29 @@ ul.emheaderbuttons li a.current span, ul.emheaderbuttons li a:hover span
 	padding-right:20px;
 }
 
-.uploadbutton a
+.active a
 {
 	color:#fff;
 }
 
-.uploadbutton a:hover
+.active a:hover
 {
 	color:#fff;
 	text-decoration:none;
 }
 
 
-.uploadbutton:hover {
+.activebutton:hover {
 	background: #FFB15F;
 	
 }
 
+
+
+.detailsbox{
+	background:#dcd8d7;	
+	
+}
 
 .emdetailactions img
 {
@@ -110,6 +121,17 @@ ul.emheaderbuttons li a.current span, ul.emheaderbuttons li a:hover span
 {
   border-top: 2px solid #90002A;
 }
+
+#emresultscontent a
+{
+	font-size:11px;
+	font-weight:bold;
+	color:#222;
+
+}
+
+
+
 
 .playerbox
 {
@@ -158,5 +180,84 @@ ul.emheaderbuttons li a.current span, ul.emheaderbuttons li a:hover span
 
 .uploadform
 {
-	border: #90002A solid 1px;
+	border: #d6c4c4 solid 1px;
+	background:#f6f1eb;
 }
+
+
+.finishbutt{
+	background:#5FADF9;
+	font-family:Verdana, Arial;
+	font-size:12px;
+	font-weight:bold;
+	color:#fff;
+	border-radius:6px;
+	padding-top:8px;
+	padding-bottom:8px;
+	padding-left:30px;
+	padding-right:30px;
+	
+}
+
+
+.finishbutt:hover{
+	background:#ffb15f;
+}
+
+
+
+
+.uploadformfield{
+}
+
+.uploadformfield file{
+	background:#000;	
+}
+
+
+.file_input_textbox
+{
+	float: left;
+	width: 215px;
+	margin-right:8px;
+	margin-top:4px;
+}
+
+.file_input_div
+{
+  position: relative; 
+  height: 30px; 
+  overflow: hidden;
+}
+
+
+.file_input_hidden
+{
+  font-size: 30px; 
+  position: absolute; 
+  right: 0px; 
+  top: 0px; 
+  opacity: 0; 
+}
+
+.file_input_button
+{
+	position: absolute; 
+	top: 0px;
+	background-color: #5FADF9;
+	color: #FFFFFF;
+	font-weight:bold;
+	border-style: solid;
+	padding-left:10px;
+	padding-right:10px;
+	padding-top:5px;
+	padding-bottom:5px;
+}
+
+
+.file_input_button:hover
+{
+	
+	background-color: #FFb15f;
+}
+

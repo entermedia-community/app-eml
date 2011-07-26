@@ -122,7 +122,7 @@
   }
 
   h1 { font-size:12px; }                       /* 30px */
-  h2 { font-size:12px; font-weight:bold; color: #336699; }                       /* 24px */
+  h2 { font-size:12px; font-weight:bold; color: #d6c4c4; line-height:21px;}                       /* 24px */
   h3 { font-size:150%; }                       /* 18px */
   h4 { font-size:133.33%; }                    /* 16px */
   h5 { font-size:116.67%; }                    /* 14px */
