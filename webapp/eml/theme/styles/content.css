@@ -100,6 +100,38 @@
   *
   * @see: http://webkit.org/blog/67/strange-medium/
   */
+  textarea{
+	color: #333333;
+    padding-top: 5px;
+    padding-right: 3px;
+    padding-bottom: 5px;
+    padding-left: 3px;
+    border:1px solid #D6C4C4;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 5px;
+    -moz-box-shadow: 1px 1px 0px #fff;
+    -webkit-box-shadow: 1px 1px 0px #fff;
+    box-shadow: 1px 1px 0px #fff;
+	height:20px;
+	width:100%;  
+	max-width:689px;
+	min-width:689px;
+	margin-top:8px;
+	  
+  }
+    textarea:focus{
+	height:80px;
+    -moz-box-shadow: 2px 2px 2px #000;
+    -webkit-box-shadow: 2px 2px 2px #000;
+    box-shadow: 2px 2px 2px #000;
+	  
+  }
+  
+  
+  
+  
+	
 
   textarea, pre, code, kbd, samp, var, tt {
     font-family: Verdana,Arial;
