@@ -387,3 +387,9 @@ input[type=submit]:hover, button:hover, a.btn:hover {
     box-shadow: 0 0 8px rgba(82,168,236,0.5);
 }
 
+.error {
+	color:#90002A;
+	font-weight:bold;
+	line-height:16px;	
+	
+}
