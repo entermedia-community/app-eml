@@ -394,3 +394,54 @@ input[type=submit]:hover, button:hover, a.btn:hover {
 	display:block;	
 	
 }
+
+ul.emuploadbutton 
+{
+	padding: 0px;
+	margin: 5px;
+	list-style: none;
+	clear: left;
+	height: 23px;
+}
+
+ul.emuploadbutton li {
+	float: left;
+	display: inline; /*For ignore double margin in IE6*/
+	margin: 0 10px;
+}
+
+ul.emuploadbutton li a 
+{
+	text-decoration: none;
+	float:left;
+ 	color: #5FADF9;
+	cursor: pointer;
+}
+
+ul.emuploadbutton li a span 
+{
+    float: right;
+    font-size: 12px;
+	font-family:Verdana, Geneva, sans-serif;
+	font-weight:bold;
+    line-height: 23px;
+    padding: 5px 15px;
+    position: relative;
+    white-space: nowrap;
+ 	color: #fff;
+	cursor: pointer;	
+	margin-top:-40px;
+	border-radius: 8px 8px 8px 8px;
+	background: #90002A;
+}
+
+
+ul.emuploadbutton li a.current span, ul.emuploadbutton li a:hover span 
+{
+ 	color: #fff;
+	text-decoration:underline;
+    border-radius: 8px 8px 8px 8px;
+	background: #5FADF9;
+
+
+}
