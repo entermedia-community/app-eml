@@ -164,6 +164,10 @@ li.navactive a:hover span
 
 .navactive:hover {
 	background: #FFB15F;
+	border-radius:8px;	
+		-moz-border-radius:8px 8px 8px 8px;
+		-webkit-border-radius:8px 8px 8px 8px;
+	
 	
 }
 
@@ -171,7 +175,7 @@ li.navactive a:hover span
 
 .detailsbox{
 	background:#dcd8d7;	
-	
+	height:339px;
 }
 
 .emdetailactions img
@@ -457,7 +461,7 @@ ul.emuploadbutton li a.current span, ul.emuploadbutton li a:hover span
 	text-decoration:none;
     border-radius: 8px 8px 8px 8px;
 		-moz-border-radius:8px 8px 8px 8px;
-		-webkit-border-radius:8px 8px 8px 8px;
+		-webkit-border-radius:8px 8px 8px 8px; 
 	background: #FFB15F;
 
 
