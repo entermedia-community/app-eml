@@ -21,11 +21,7 @@
 #if($user)
 
 ##if( $canviewupload )
-<<<<<<< HEAD
- <li  #if( $content.section == "upload" ) class="navactive" #end ><a href="$home$apphome/views/upload/simple.html" style="color:#fff;"><span>Upload</span></a></li>
-=======
- <li><a href="$home$apphome/views/upload/simple.html" style="color:#fff;"><span>Upload Video</span></a></li>
->>>>>>> c55a4180213297fe2215e1f37a5d9864980d7b4e
+ <li><a #if( $content.section == "upload" ) class="navactive" #end href="$home$apphome/views/upload/simple.html" style="color:#fff;"><span>Upload Video</span></a></li>
 ##end
 
 
