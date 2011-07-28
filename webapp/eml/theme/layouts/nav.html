@@ -1,12 +1,12 @@
  
  <ul class="emheaderbuttons" >
 
-<li #if( $content.section == "home" ) class="navactive" #end ><a  href="$home$apphome/index.html"><span>Home</span></a></li>
+<li #if( $content.section == "home" ) class="navactive" #end ><a #if( $content.section == "home" ) style="color:#fff;" #end href="$home$apphome/index.html"><span>Home</span></a></li>
 
 #if($user)
 
 ##if( $canviewassets )
-<li  #if( $content.section == "assets" ) class="navactive" #end ><a href="$home$apphome/views/categories/index.html"><span>Show All Files</span></a></li>
+<li #if( $content.section == "assets" ) class="navactive"  #end ><a  href="$home$apphome/views/categories/index.html" ><span>Show All Files</span></a></li>
 ##end
 
 
@@ -21,7 +21,9 @@
 #if($user)
 
 ##if( $canviewupload )
- <li><a #if( $content.section == "upload" ) class="navactive" #end href="$home$apphome/views/upload/simple.html" style="color:#fff;"><span>Upload Video</span></a></li>
+
+ <li  #if( $content.section == "upload" ) class="navactive" #end ><a href="$home$apphome/views/upload/simple.html" style="color:#fff;"><span>Upload Video</span></a></li>
+
 ##end
 
 
