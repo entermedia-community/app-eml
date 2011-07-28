@@ -390,6 +390,7 @@ input[type=submit]:hover, button:hover, a.btn:hover {
 .error {
 	color:#90002A;
 	font-weight:bold;
-	line-height:16px;	
+	line-height:16px;
+	display:block;	
 	
 }
