@@ -114,7 +114,6 @@ ul.emheaderbuttons li a span
     padding: 5px 15px;
     position: relative;
     white-space: nowrap;
- 	color: #5FADF9;
 	cursor: pointer;	
 	
 	
@@ -124,35 +123,46 @@ ul.emheaderbuttons li a span
 ul.emheaderbuttons li a.current span, ul.emheaderbuttons li a:hover span 
 {
  	color: #666;
-	text-decoration:underline;
+	text-decoration:none;
     border-radius: 8px 8px 8px 8px;
+		-moz-border-radius:8px 8px 8px 8px;
+		-webkit-border-radius:8px 8px 8px 8px;
 	background: #FFB15F;
 
 
 }
 
-.active 
+
+
+
+ul.emheaderbuttons li.navactive a 
 {
 	background:#5FADF9;
-	color:#fff;
     border-radius: 8px 8px 8px 8px;
-	padding-left:20px;
-	padding-right:20px;
+		-moz-border-radius:8px 8px 8px 8px;
+		-webkit-border-radius:8px 8px 8px 8px;
 }
 
-.active a
+
+ul.emheaderbuttons li.navactive a {
+    color: #FFFFFF;
+    text-decoration: none;
+}
+
+li.navactive a
 {
 	color:#fff;
+	text-decoration:none;
 }
 
-.active a:hover
+li.navactive a:hover span
 {
 	color:#fff;
 	text-decoration:none;
 }
 
 
-.activebutton:hover {
+.navactive:hover {
 	background: #FFB15F;
 	
 }
@@ -393,4 +403,62 @@ input[type=submit]:hover, button:hover, a.btn:hover {
 	line-height:16px;
 	display:block;	
 	
+}
+
+
+ul.emuploadbutton 
+{
+	padding: 0px;
+	margin: 5px;
+	list-style: none;
+	clear: left;
+	height: 23px;
+}
+
+ul.emuploadbutton li {
+	float: left;
+	display: inline; /*For ignore double margin in IE6*/
+	margin: 0 10px;
+}
+
+ul.emuploadbutton li a 
+{
+	text-decoration: none;
+	float:left;
+ 	color: #fff;
+	cursor: pointer;
+}
+
+ul.emuploadbutton li a span 
+{
+    float: left;
+    font-size: 12px;
+	font-family:Verdana, Geneva, sans-serif;
+	font-weight:bold;
+    line-height: 23px;
+    padding: 5px 15px;
+    position: relative;
+    white-space: nowrap;
+ 	color: #fff;
+	cursor: pointer;
+	margin-top:-38px;
+	background:#90002a;
+	border-radius:8px;	
+		-moz-border-radius:8px 8px 8px 8px;
+		-webkit-border-radius:8px 8px 8px 8px;
+	
+	
+}
+
+
+ul.emuploadbutton li a.current span, ul.emuploadbutton li a:hover span 
+{
+ 	color: #666;
+	text-decoration:none;
+    border-radius: 8px 8px 8px 8px;
+		-moz-border-radius:8px 8px 8px 8px;
+		-webkit-border-radius:8px 8px 8px 8px;
+	background: #FFB15F;
+
+
 }
