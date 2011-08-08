@@ -466,3 +466,14 @@ ul.emuploadbutton li a.current span, ul.emuploadbutton li a:hover span
 
 
 }
+
+.editcolumnheaderpicker
+{
+    white-space: nowrap;	
+	width: 75px;
+}
+
+.editcolumnheader
+{
+    white-space: nowrap;	
+}
