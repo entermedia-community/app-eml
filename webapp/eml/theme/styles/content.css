@@ -47,9 +47,9 @@
 		color: #fff;
 	}
 	#nav {
-		background: #2790B0;
-		border: 3px #23819E solid;
-		height:45px;	
+		background: #ffffff;
+		border-bottom: 5px #90002a solid;
+		height:50px;	
 	}
 	#main {
 	}
@@ -60,11 +60,11 @@
 	#extended .c25l,#extended .c50l {
 	}
 	#topnav {
-		background: url("../images/sanchez_ui/header_background.jpg") repeat-x scroll 0 0 transparent;
-
-		height: 75px;
-		padding-right: 10px;
-		padding-top: 5px;	
+		height: 70px;
+		background: url("../images/banner.jpg") no-repeat;
+		padding-top: 5px;
+		
+		
 	}
 	#footer {
 		border-top: 4px #90002a;
@@ -106,20 +106,25 @@
     padding-right: 3px;
     padding-bottom: 5px;
     padding-left: 3px;
-    border:1px solid #c5c5c5;
+    border:1px solid #D6C4C4;
     -webkit-border-radius: 5px;
     -moz-border-radius: 5px;
     border-radius: 5px;
     -moz-box-shadow: 1px 1px 0px #fff;
     -webkit-box-shadow: 1px 1px 0px #fff;
     box-shadow: 1px 1px 0px #fff;
+	height:20px;
+	width:100%;  
+	max-width:689px;
+	min-width:689px;
 	margin-top:8px;
 	  
   }
     textarea:focus{
-    -moz-box-shadow: 2px 2px 2px #ddd;
-    -webkit-box-shadow: 2px 2px 2px #ddd;
-    box-shadow: 2px 2px 2px #ddd;
+	height:80px;
+    -moz-box-shadow: 2px 2px 2px #000;
+    -webkit-box-shadow: 2px 2px 2px #000;
+    box-shadow: 2px 2px 2px #000;
 	  
   }
   
@@ -149,7 +154,7 @@
   }
 
   h1 { font-size:12px; }                       /* 30px */
-  h2 { font-size:12px; font-weight:bold; color: #777; line-height:21px;}                       /* 24px */
+  h2 { font-size:12px; font-weight:bold; color: #d6c4c4; line-height:21px;}                       /* 24px */
   h3 { font-size:150%; }                       /* 18px */
   h4 { font-size:133.33%; }                    /* 16px */
   h5 { font-size:116.67%; }                    /* 14px */
@@ -375,10 +380,10 @@ Space
   
   #site-title 
   {
-  	float: right;
+  	float: left;
   	font-size: 2.2em;
-    margin-right: -36px;
-    margin-top: 40px;  	
+  	padding: 15px 0 0 80px;
+  	
   }
   
   img 

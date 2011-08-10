@@ -33,14 +33,13 @@
   .page_margins { text-align:left; margin: 0 auto; }
 
   /* (en) Layout: width, background, borders */
-  .page { margin: 0; padding: 0 5px;  }
+  .page { margin: 0;  }
   #topnav, #header, #nav, #main, #extended, #footer { overflow:hidden; min-width: 720px; }
   #application {
 	  background: #fff;
 	  max-width: 1060px;
 	  margin: 0 auto;
-	  padding: 0 0px 10px 0px;
-	  border: 1px solid #c5c5c5;
+	  padding: 0 5px 10px 5px;
 	}
   #emuploadcontainer {
 	  max-width: 450px;
