@@ -1,27 +1,26 @@
  
  <ul class="emheaderbuttons" >
 
-<li><a #if( $content.section == "home" ) style="color:#fff;" #end href="$home$apphome/index.html"><span class="navbutton">Home</span></a></li>
+#set( $section = $content.section)
 
-#if($user)
+<li #if( $section == "home" ) class="navselected" #end><a  href="$home$apphome/index.html"><span>Home</span></a></li>
 
-##if( $canviewassets )
-<li><a  href="$home$apphome/views/categories/index.html" ><span class="navbutton">Show All Files</span></a></li>
-##end
-
-
+#if( $canviewassets )
+<li #if( $section == "assets" ) class="navselected" #end><a  href="$home$apphome/views/categories/index.html" ><span>Show All Files</span></a></li>
 #end
 
-#if($user)
-
-##if( $canviewupload )
-
- <li><a href="$home$apphome/views/upload/index.html" style="color:#fff;"><span class="uploadbutton">Upload Video</span></a></li>
-
-##end
-
-
+#if( $canviewupload )
+ <li #if( $section == "upload" ) class="navselected" #end><a href="$home$apphome/views/upload/index.html" ><span>Upload Media</span></a></li>
 #end
+
+#if($canviewbasket)
+<li #if($section=="basket") class="navselected"  #end >
+<div id="basketmenu" class="emmenuitem">
+$pages.include("$apphome/components/basket/menuitem.html")
+</div> 
+</li>
+#end
+
 
  </ul>
  
@@ -30,8 +29,11 @@
 
 <div id="searchform">
 <form id="search_form" action="$apphome/views/search/search.html" class="em-widget-content">
-
-          <input type="text" class="replace" name="q" onclick="this.value='';" value="Search..." />
+	<input type="hidden" name="field" value="description" />
+	<input type="hidden" name="operation" value="startswith" />
+	#set( $input = "Search...")
+	#set( $input = $hits.getInput("description") )
+    <input type="text"  id="assetsearchinput" initialtext="Search..."  class="initialtext" name="description.value" value="$input" />
 </form>
 </div>
 

@@ -4,12 +4,9 @@
 <div id="topnav" role="contentinfo">
     <div class="page_margins">
       <div class="page">
-      <div><a href="$home$apphome/index.html"><img src="/eml/theme/images/sanchez_ui/enter_media_logo.png" style="margin-top:12px;" /></a>
+	$pages.include("${themeprefix}/layouts/header.html")
       
-      </div>
-	<div style="margin-top:-65px">$pages.include("${themeprefix}/layouts/header.html")</div>
-      
-		<div id="site-title">$content.tagline</div>
+		<div id="site-title">$!content.tagline</div>
       </div>
     </div>
   </div>
@@ -30,12 +27,7 @@
     </div>
   </div>
  
- 
- 
- 
-
- 
-
+<div id="emcontent">
   <div id="main">
     <div class="page_margins">
 
@@ -44,6 +36,7 @@
       </div>
     </div>
   </div>
+</div>
 
   <div id="extended">
     <div class="page_margins">

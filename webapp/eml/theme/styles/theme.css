@@ -1,6 +1,9 @@
+#topnav .navlinks a
+{
+	color: white;
+	margin-top: 4px;
+}
 .ui-widget {
-	margin-bottom: 20px;
-
 	-webkit-border-radius: 5px 5px;
 	-moz-border-radius: 5px 5px;
 	-o-border-radius: 5px 5px;
@@ -13,17 +16,34 @@ table td {
 	vertical-align: top;
 }
 
-.emdetailactions {
+.emdetailactions{
 	padding-top: 40px;
 	list-style: none;
+	margin: 0;
+}
+.embuttons {
+	list-style: none;
+	margin: 8px 0px 4px 0;
 }
 
-.emdetailactions li {
-	margin-left: 0;
+.emdetailactions li, .embuttons li {
+	margin-left: 5px;
+	float: left;
 }
+.emdetailactions li 
+{
+	margin-bottom: 20px;
+}
+.emdetailactions span 
+{
+	width: 130px;	
+}	
+.embuttons span 
+{
+	width: 98px;	
+}	
 
-.emdetailactions .ui-button-text {
-	width: 130px;
+.emdetailactions span, .embuttons span {
 	font-family: Verdana, Geneva, sans-serif;
 	font-size: 12px;
 	font-weight: bold;
@@ -51,14 +71,16 @@ table td {
 
 	padding: 5px 12px;
 }
-
-.emdetailactions .ui-button-text {
+.emdetailactions .ui-button-text
+{
 	width: 130px;
+}
+.emdetailactions .ui-button-text, .embuttons .ui-button-text{
 	font-family: Verdana, Geneva, sans-serif;
 	font-size: 12px;
 	font-weight: bold;
 	background: #dddddd;
-
+	min-width: 70px;
 	background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #ffffff), color-stop(100%, #dfdfdf));
 	background: -webkit-linear-gradient(top, #ffffff 0%, #dfdfdf 100%);
 	background: -moz-linear-gradient(top, #ffffff 0%, #dfdfdf 100%);
@@ -82,33 +104,6 @@ table td {
 	padding: 5px 12px;
 }
 
-.uploadbutton 
-{
-	background:#94BA65;
-	border:1px solid #6A8647;
-    border-radius: 8px 8px 8px 8px;
-}
-
-
-.uploadbutton:hover {
-	background: #87AC5B;
-	border:1px solid #739140;
-	
-}
-
-
-.navbutton 
-{
-	border:1px solid #2790B0;
-    border-radius: 8px 8px 8px 8px;
-}
-
-
-.navbutton:hover {
-	background: #23819E;
-	border:1px solid #1C6E88;
-	
-}
 
 
 
@@ -142,7 +137,16 @@ ul.emheaderbuttons li a {
 	cursor: pointer;
 }
 
+.navbutton 
+{
+}
+
+
+
+
 ul.emheaderbuttons li a span {
+	border:1px solid #2790B0;
+    border-radius: 8px 8px 8px 8px;
 	float: left;
 	font-size: 12px;
 	font-family: Verdana, Geneva, sans-serif;
@@ -157,6 +161,8 @@ ul.emheaderbuttons li a span {
 ul.emheaderbuttons li a.current span, ul.emheaderbuttons li a:hover span {
 	color: #f3f3f3;
 	text-decoration: none;
+	background: #23819E;
+	border:1px solid #1C6E88;
 
 	-webkit-border-radius: 8px 8px 8px 8px;
 	-moz-border-radius: 8px 8px 8px 8px;
@@ -205,10 +211,7 @@ li.navactive a:hover span {
 	border-radius: 8px;
 }
 
-
-
-/* UPLOAD STYLE */
-ul.emheaderbuttons li.navactiveupload a {
+ul.emheaderbuttons li.navselected a {
 	background: #87AC5B;
 	border: 1px solid #647F43;
 
@@ -233,7 +236,6 @@ ul.emheaderbuttons li.navactiveupload a {
 }
 
 #emresultscontent {
-	border-top: 2px solid #c5c5c5;
 }
 
 #emresultscontent a {
@@ -419,6 +421,11 @@ input[type=submit]:hover, button:hover, a.btn:hover {
 	width: 300px;
 	height: 50px;
 }
+#emcontainer .emcommentdate
+{
+	display: inline;
+	margin: 0 10px 0 30px;
+}
 
 #commentprompt textarea {
 	color: #333333;
@@ -571,7 +578,7 @@ ul.emuploadbutton li a.current span, ul.emuploadbutton li a:hover span {
 
 
 #searchform {
-    background: url("../images/sanchez_ui/search_icon.png") no-repeat scroll 200px 6px #F4F4F4;
+    background: url("../images/search_icon.png") no-repeat scroll 190px 0px #F4F4F4;
     border-color: #1C6E88;
     border-radius: 4px 4px 4px 4px;
     border-style: solid;
@@ -593,3 +600,53 @@ ul.emuploadbutton li a.current span, ul.emuploadbutton li a:hover span {
     width: 160px;
 }
 
+.emactionheader
+{
+	 background: none repeat scroll 0 0 #999;
+	  margin-bottom: 0;
+}
+#emcommentarea
+{
+	padding: 5px;	
+}
+
+#emdataeditor
+{
+}
+
+.uipanel
+{
+	margin-bottom: 8px;
+	padding: 0px;
+}
+
+#emcontainer #emcontent .selectedfolder A 
+{
+	font-weight: bold;
+	background-image: url("../images/navigation/folderopen.png");
+}
+#emcontainer .folderlink 
+{
+	padding: 5px;
+	margin-left: 10px;
+}	
+#emcontainer .folderlink A
+{
+	display:block;
+	text-decoration: none;
+	background-repeat: no-repeat;
+	background-position: top left;
+	background-image: url("../images/navigation/folderclosed.png");
+	line-height: 16px;
+}
+#emcontainer .folderlink A span
+{
+	padding-left: 20px;
+}
+#emcontainer .folderlink A:hover span
+{
+	text-decoration: underline;
+}
+
+#emcontainer #emselectable table tr.emhighlight {	background: #30a0a4; color:#fff}
+#emcontainer #emselectable table tr.emborderhover {	 background: #30a0a4; color:#fff  }

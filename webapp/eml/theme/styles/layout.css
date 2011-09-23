@@ -37,7 +37,7 @@
   #topnav, #header, #nav, #main, #extended, #footer { overflow:hidden; min-width: 720px; }
   #application {
 	  background: #fff;
-	  max-width: 1060px;
+	  max-width: 1120px;
 	  margin: 0 auto;
 	  padding: 0 0px 10px 0px;
 	  border: 1px solid #c5c5c5;

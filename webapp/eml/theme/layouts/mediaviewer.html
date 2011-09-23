@@ -7,7 +7,7 @@ $context.putPageValue("hideheader", "true")
 <table width="100%">
 <tr>
 <td width="66%">
-			<div class="uipanel" >
+			<div class="ui-widget uipanel" >
 				<div  class="ui-widget-header">Player</div>
 				<div  class="ui-widget-content playerbox">
 				  <table>
@@ -23,7 +23,7 @@ $context.putPageValue("hideheader", "true")
 				</div> 
 			</div>
 			
-			<div class="uipanel commentbox">
+			<div class="ui-widget commentbox">
 				<div  class="ui-widget-header">Comments</div>
 				<div  class="ui-widget-content">			
 				$pages.include("$apphome/components/mediaviewer/comments/mini.html",$context)
@@ -31,9 +31,9 @@ $context.putPageValue("hideheader", "true")
 </td>
 <td width="33%">
 
-<div class="detailsbox">
+<div class="detailsbox ui-widget">
 	<div class="ui-widget-header">Details</div>
-	<div 	>
+	<div class="ui-widget-content"	>
 
 	$pages.include("/${applicationid}/components/mediaviewer/details/index.html",$context)
 
