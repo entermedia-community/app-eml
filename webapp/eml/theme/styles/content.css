@@ -163,7 +163,6 @@
   ol { list-style-type:decimal; }
   ol ol { list-style-type:lower-latin; margin-bottom:0; }
 
-  li { margin-left:0.8em; line-height:1.5em; }
 
   dt { font-weight:bold; }
   dd { margin:0 0 1em 0.8em; }
