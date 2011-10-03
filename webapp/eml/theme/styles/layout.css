@@ -139,3 +139,18 @@
     overflow:hidden;
     vertical-align:top;
   }
+  
+  .ui-widget-content
+  {
+  	padding: 4px;
+  }
+  .emdetaileditorbox
+  {
+  	margin-bottom: 10px;
+  }
+
+  .active
+  {
+     background-color: #eee;
+    font-weight: bold;
+  }

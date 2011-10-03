@@ -650,3 +650,11 @@ ul.emuploadbutton li a.current span, ul.emuploadbutton li a:hover span {
 
 #emcontainer #emselectable table tr.emhighlight {	background: #30a0a4; color:#fff}
 #emcontainer #emselectable table tr.emborderhover {	 background: #30a0a4; color:#fff  }
+
+.emdropshadow
+{
+	-webkit-box-shadow: 5px 5px 5px #888;
+	-moz-box-shadow: 5px 5px 5px #888;
+	box-shadow: 5px 5px 5px #888;	
+	margin: 5px;
+}
