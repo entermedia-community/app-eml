@@ -26,13 +26,8 @@ $pages.include("$apphome/components/categories/inline.html")
 			</div>
 #end
 
-#if($hits && $hits.size() > 0)
-			<div class="ui-widget  uipanel" >
-				<div  class="ui-widget-header">Related Terms</div>
-				<div  class="ui-widget-content">
+#if($hits )
 $pages.include("$apphome/components/relatedkeywords/index.html")
-				</div>
-			</div>
 #end
           
 		 </div>

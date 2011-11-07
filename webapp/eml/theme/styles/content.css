@@ -112,7 +112,6 @@
     -moz-box-shadow: 1px 1px 0px #fff;
     -webkit-box-shadow: 1px 1px 0px #fff;
     box-shadow: 1px 1px 0px #fff;
-	margin-top:8px;
 	  
   }
     textarea:focus{
@@ -270,10 +269,6 @@ Space
   table.full { width:100%; }
   table.fixed { table-layout:fixed; }
 
-  th,td { padding:0.5em; }
-  thead th { color:#000; border-bottom:2px #800 solid; }
-  tbody th { background:#e0e0e0; color:#333; }
-  tbody th[scope="row"], tbody th.sub { background:#f0f0f0; }
 
 
   tbody tr:hover th[scope="row"],
