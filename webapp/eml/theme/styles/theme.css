@@ -1,6 +1,5 @@
-#topnav .navlinks a
+#header .navlinks a
 {
-	color: white;
 	margin-top: 4px;
 }
 .ui-widget {
@@ -25,13 +24,8 @@
 	-ms-border-radius: 5px 5px;
 	-khtml-border-radius: 5px 5px;
 	border-radius: 5px 5px;
-	border: 1px solid #AAAAAA;
 }
-#emselectable thead tr { background: #2790B0; color: #ffffff; font_size: 11px; font-weight: bold; padding: 5px 0px 5px 14px; }
-
-#usersearchresultspanel #emselectable thead tr { background: #94BA65; }
-
-#episode_table #emselectable thead tr { background: #94BA65; }
+#emselectable thead tr { font_size: 11px; font-weight: bold; padding: 5px 0px 5px 14px; }
 
 table td {
 	vertical-align: top;
@@ -44,7 +38,7 @@ table td {
 }
 .embuttons {
 	list-style: none;
-	margin: 20px 0px 60px 20px;
+	margin: 5px 0px 0px 0px;
 }
 
 .emdetailactions li, .embuttons li {
@@ -68,16 +62,6 @@ table td {
 	font-family: Verdana, Geneva, sans-serif;
 	font-size: 12px;
 	font-weight: bold;
-	background: #dddddd;
-
-	background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #ffffff), color-stop(100%, #dfdfdf));
-	background: -webkit-linear-gradient(top, #ffffff 0%, #dfdfdf 100%);
-	background: -moz-linear-gradient(top, #ffffff 0%, #dfdfdf 100%);
-	background: -o-linear-gradient(top, #ffffff 0%, #dfdfdf 100%);
-	background: -ms-linear-gradient(top, #ffffff 0%, #dfdfdf 100%);
-	background: linear-gradient(top, #ffffff 0%, #dfdfdf 100%);
-
-	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#dfdfdf',GradientType=0 );
 
 	-webkit-border-radius: 3px;
 	-moz-border-radius: 3px;
@@ -100,16 +84,7 @@ table td {
 	font-family: Verdana, Geneva, sans-serif;
 	font-size: 12px;
 	font-weight: bold;
-	background: #dddddd;
 	min-width: 70px;
-	background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #ffffff), color-stop(100%, #dfdfdf));
-	background: -webkit-linear-gradient(top, #ffffff 0%, #dfdfdf 100%);
-	background: -moz-linear-gradient(top, #ffffff 0%, #dfdfdf 100%);
-	background: -o-linear-gradient(top, #ffffff 0%, #dfdfdf 100%);
-	background: -ms-linear-gradient(top, #ffffff 0%, #dfdfdf 100%);
-	background: linear-gradient(top, #ffffff 0%, #dfdfdf 100%);
-
-	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#dfdfdf',GradientType=0 );
 
 	-webkit-border-radius: 3px;
 	-moz-border-radius: 3px;
@@ -130,8 +105,6 @@ table td {
 
 
 .tanmodule {
-	background: none repeat scroll 0 0 #f3f3f3;
-	border: 1px solid #c5c5c5;
 	padding: 8px;
 }
 
@@ -154,19 +127,13 @@ ul.emheaderbuttons li {
 ul.emheaderbuttons li a {
 	text-decoration: none;
 	float: left;
-	color: #fff;
 	cursor: pointer;
-}
-
-.navbutton 
-{
 }
 
 
 
 
 ul.emheaderbuttons li a span {
-	border:1px solid #2790B0;
     border-radius: 8px 8px 8px 8px;
 	float: left;
 	font-size: 12px;
@@ -180,10 +147,7 @@ ul.emheaderbuttons li a span {
 }
 
 ul.emheaderbuttons li a.current span, ul.emheaderbuttons li a:hover span {
-	color: #f3f3f3;
 	text-decoration: none;
-	background: #23819E;
-	border:1px solid #1C6E88;
 
 	-webkit-border-radius: 8px 8px 8px 8px;
 	-moz-border-radius: 8px 8px 8px 8px;
@@ -195,8 +159,6 @@ ul.emheaderbuttons li a.current span, ul.emheaderbuttons li a:hover span {
 }
 
 ul.emheaderbuttons li.navactive a {
-	background: #23819E;
-	border: 1px solid #1C6E88;
 
 	-webkit-border-radius: 8px 8px 8px 8px;
 	-moz-border-radius: 8px 8px 8px 8px;
@@ -207,22 +169,18 @@ ul.emheaderbuttons li.navactive a {
 }
 
 ul.emheaderbuttons li.navactive a {
-	color: #FFFFFF;
 	text-decoration: none;
 }
 
 li.navactive a {
-	color: #fff;
 	text-decoration: none;
 }
 
 li.navactive a:hover span {
-	color: #fff;
 	text-decoration: none;
 }
 
 .navactive:hover {
-	background: #FFB15F;
 
 	-webkit-border-radius: 8px;
 	-moz-border-radius: 8px;
@@ -233,8 +191,6 @@ li.navactive a:hover span {
 }
 
 ul.emheaderbuttons li.navselected a {
-	background: #87AC5B;
-	border: 1px solid #647F43;
 
 	-webkit-border-radius: 8px 8px 8px 8px;
 	-moz-border-radius: 8px 8px 8px 8px;
@@ -247,8 +203,6 @@ ul.emheaderbuttons li.navselected a {
 
 
 .detailsbox {
-	background: #F3F3F3;
-	border: 1px solid #c5c5c5;
 	height: 510px;
 }
 
@@ -262,12 +216,9 @@ ul.emheaderbuttons li.navselected a {
 #emresultscontent a {
 	font-size: 11px;
 	font-weight: bold;
-	color: #222;
 }
 
 .playerbox {
-	background: #F3F3F3;
-	border: 1px solid #c5c5c5;
 	text-decoration: none;
 }
 
@@ -276,7 +227,6 @@ ul.emheaderbuttons li.navselected a {
 }
 
 .emprevnext A {
-	color: #4D87C7;
 	text-decoration: none;
 }
 
@@ -301,18 +251,7 @@ ul.emheaderbuttons li.navselected a {
 	padding-right: 18px;
 }
 
-.commentbox .ui-widget-header {
-	background-color: #94BA65;
-}
-
-.uploadform {
-	border: #c5c5c5 solid 1px;
-	background: #f3f3f3;
-}
-
 .finishbutt {
-	background: #2790B0;
-	border: 1px solid #23819E;
 	font-family: Verdana, Arial;
 	font-size: 12px;
 	font-weight: bold;
@@ -331,19 +270,6 @@ ul.emheaderbuttons li.navselected a {
 	padding-right: 30px;
 	text-transform: uppercase;
 	letter-spacing: 1px;
-}
-
-.finishbutt:hover {
-	background: #92B864;
-	border: 1px solid #6A8647;
-	
-}
-
-.uploadformfield {
-}
-
-.uploadformfield file {
-	background: #000;
 }
 
 .file_input_textbox {
@@ -370,8 +296,6 @@ ul.emheaderbuttons li.navselected a {
 .file_input_button {
 	position: absolute;
 	top: 0px;
-	background-color: #92B864;
-	color: #FFFFFF;
 	font-weight: bold;
 	border-style: solid;
 	padding-left: 10px;
@@ -380,9 +304,6 @@ ul.emheaderbuttons li.navselected a {
 	padding-bottom: 5px;
 }
 
-.file_input_button:hover {
-	background-color: #2790b0;
-}
 
 input, a, button {
 	outline: none !important;
@@ -403,7 +324,6 @@ input:focus, a:focus, button:focus {
 input[type=submit], button, a.btn {
 	/* GENERAL */
 	font-family: Verdana, Geneva, sans-serif;
-	background: #2790B0;
 
 	-webkit-border-radius: 5px;
 	-moz-border-radius: 5px;
@@ -414,7 +334,6 @@ input[type=submit], button, a.btn {
 
 	border-style: solid;
 	border-width: 1px;
-	color: #FFFFFF;
 	display: inline-block;
 	font-weight: bold;
 	margin: 5px 0 5px;
@@ -423,19 +342,10 @@ input[type=submit], button, a.btn {
 	text-decoration: none;
 }
 
-input[type=submit]:hover, button:hover, a.btn:hover {
-	/* BACKGROUND GRADIENTS */
-	background: #92B864;
-}
 
 .emsearchfield {
 	font-weight: bold;
-	color: #c5c5c5;
 	font-size: 12px;
-}
-
-.emcomment {
-	color: #39578a;
 }
 
 .commentinput input {
@@ -449,8 +359,6 @@ input[type=submit]:hover, button:hover, a.btn:hover {
 }
 
 #commentprompt textarea {
-	color: #333333;
-	background-color: #FFFFFF;
 	max-width:689px;
 	min-width:689px;
 	padding-top: 5px;
@@ -494,8 +402,6 @@ input[type=submit]:hover, button:hover, a.btn:hover {
 
 
 #embedprompt textarea {
-	color: #333333;
-	background-color: #FFFFFF;
 	padding-top: 5px;
 	max-width:400px;
 	min-width:400px;
@@ -523,7 +429,6 @@ input[type=submit]:hover, button:hover, a.btn:hover {
 }
 
 .error {
-	color: #90002A;
 	font-weight: bold;
 	line-height: 16px;
 	display: block;
@@ -547,7 +452,6 @@ ul.emuploadbutton li {
 ul.emuploadbutton li a {
 	text-decoration: none;
 	float: left;
-	color: #fff;
 	cursor: pointer;
 }
 
@@ -560,10 +464,8 @@ ul.emuploadbutton li a span {
 	padding: 5px 15px;
 	position: relative;
 	white-space: nowrap;
-	color: #fff;
 	cursor: pointer;
 	margin-top: -38px;
-	background: #90002a;
 
 	-webkit-border-radius: 8px;
 	-moz-border-radius: 8px;
@@ -574,7 +476,6 @@ ul.emuploadbutton li a span {
 }
 
 ul.emuploadbutton li a.current span, ul.emuploadbutton li a:hover span {
-	color: #666;
 	text-decoration: none;
 
 	-webkit-border-radius: 8px 8px 8px 8px;
@@ -584,7 +485,6 @@ ul.emuploadbutton li a.current span, ul.emuploadbutton li a:hover span {
 	-khtml-border-radius: 8px 8px 8px 8px;
 	border-radius: 8px 8px 8px 8px;
 
-	background: #FFB15F;
 }
 
 .editcolumnheaderpicker {
@@ -600,7 +500,6 @@ ul.emuploadbutton li a.current span, ul.emuploadbutton li a:hover span {
 
 #searchform {
     background: url("../images/search_icon.png") no-repeat scroll 190px 0px #F4F4F4;
-    border-color: #1C6E88;
     border-radius: 4px 4px 4px 4px;
     border-style: solid;
     border-width: 1px;
@@ -610,7 +509,6 @@ ul.emuploadbutton li a.current span, ul.emuploadbutton li a:hover span {
 }
 
 #searchform input {
-    background: none repeat scroll 0 0 #f4f4f4;
     border-style: none;
     color: #777;
     height: 20px;
@@ -629,10 +527,6 @@ ul.emuploadbutton li a.current span, ul.emuploadbutton li a:hover span {
 #emcommentarea
 {
 	padding: 5px;	
-}
-
-#emdataeditor
-{
 }
 
 .uipanel
@@ -669,14 +563,8 @@ ul.emuploadbutton li a.current span, ul.emuploadbutton li a:hover span {
 	text-decoration: underline;
 }
 
-#emcontainer #emselectable table tr.emhighlight {	background: #30a0a4; color:#fff}
-#emcontainer #emselectable table tr.emborderhover {	 background: #30a0a4; color:#fff  }
-
 .emdropshadow
 {
-	-webkit-box-shadow: 5px 5px 5px #888;
-	-moz-box-shadow: 5px 5px 5px #888;
-	box-shadow: 5px 5px 5px #888;	
 	margin: 5px;
 }
 
@@ -695,36 +583,26 @@ ul.emuploadbutton li a.current span, ul.emuploadbutton li a:hover span {
 	padding: 2px 0px 0px 10px;
 }
 
-#emcontainer  .emselectmenu  ul li a:hover 
-{
-	background-color: #fff;
-}
 
 #emcontainer  .emselectmenu  .active
 {
-	background-color: #fff;
 	font-weight: bold;
 }
-
-#emcontainer  .emselectmenu  a span
-{
-	color: #036;
-}
- 
-#emcontainer #tableheader th
-{
-	background-color: #94BA65;
-}
-  
 
 #emcontainer #emselectable table th 
 {
  	white-space: nowrap; padding: 4px; text-align: left; font-weight: bold; 
- 	color: #fff;
  }
 #emcontainer #emselectable table tr {	cursor:pointer;  }
 #emcontainer #emselectable table tr td {	padding: 4px;   }
-#emcontainer #emselectable table tr.emhighlight {	cursor:pointer; background: #a88; color:#ccc}
-#emcontainer #emselectable table tr.emborderhover {	 background: #a88; color:#fff  }
+#emcontainer #emselectable table tr.emhighlight {	cursor:pointer; }
 #emcontainer #emselectable .emselectabledetails { padding-left: 20px; }
+
+.ui-widget { font-family: Verdana,Arial; margin: 0 auto; }
+.ui-widget .ui-widget { font-size: 1em; }
+.ui-widget input, .ui-widget select, .ui-widget textarea, .ui-widget button { font-family: Verdana,Arial; font-size: 11px; }
+.ui-widget-content {   font-size: 11px; padding: 0px; overflow:hidden;}
+.ui-widget-content a { font-size: 11px;}
+.ui-widget-header { font_size: 11px; font-weight: bold; padding: 5px 0px 5px 14px; }
+.ui-widget-header a { font_size: 11px; font-weight: bold;}
 

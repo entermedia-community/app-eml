@@ -9,22 +9,12 @@
 				</div>
 			</div>
 
-
-			
-			<div class="ui-widget uipanel" >
-				<div  class="ui-widget-header">Search</div>
-				<div  class="ui-widget-content">
-$pages.include("$apphome/components/advancedsearch/index.html", $context)
-				</div>
-			</div>
-#if( $category )
 			<div class="ui-widget  uipanel" >
 				<div  class="ui-widget-header">Categories</div>
 				<div  class="ui-widget-content">
 $pages.include("$apphome/components/categories/inline.html")
 				</div>
 			</div>
-#end
 
 #if($hits )
 $pages.include("$apphome/components/relatedkeywords/index.html")
@@ -35,11 +25,7 @@ $pages.include("$apphome/components/relatedkeywords/index.html")
          <div class="c75r">
          <div class="subcr">
       
-<div class="ui-widget uipanel">
-<div class="ui-widget-header">Assets</div>
-<div class="ui-widget-content">
 		$pages.includeContent()
-</div></div>
 
           </div>
           </div>

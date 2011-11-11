@@ -5,9 +5,9 @@
   <style id="mediaplayer" href="${themeprefix}/styles/pages/mediaplayer.css"/>
   <style id="results" href="${themeprefix}/styles/pages/results.css"/>
   <style id="categorypicker" href="${themeprefix}/styles/pages/categorypicker.css"/>
-  <style id="jquery-ui-css" href="${themeprefix}/jqueryui/${jquery-theme}/jquery-ui-1.8.13.custom.css"/>
   <style id="layout" href="${themeprefix}/styles/layout.css"/>
-  <style id="content" href="${themeprefix}/styles/content.css"/>
+  <style id="jqueryui" href="${themeprefix}/styles/jquery-ui.css"/>
+  <style id="colors" href="${themeprefix}/styles/colors.css"/>
   <style id="app-css" href="${themeprefix}/styles/theme.css"/>
   <script id="jquery" src="/${applicationid}/components/javascript/jquery-1.6.1.js"/>
   <script id="jquery-ui" src="/${applicationid}/components/javascript/jquery-ui-1.8.12.custom.min.js"/>
