@@ -71,9 +71,9 @@
 
 
 .ui-state-default a, .ui-state-default a:link, .ui-state-default a:visited { color: #336699; text-decoration: none; }
-.ui-state-hover, .ui-widget-content .ui-state-hover, .ui-widget-header .ui-state-hover, .ui-state-focus, .ui-widget-content .ui-state-focus, .ui-widget-header .ui-state-focus { border: 1px solid #ffffff; background: #ffffff url(images/ui-bg_gloss-wave_70_ffffff_500x100.png) 50% 50% repeat-x; font-weight: normal; color: #993300; border:1px solid;}
+.ui-state-hover, .ui-widget-content .ui-state-hover, .ui-widget-header .ui-state-hover, .ui-state-focus, .ui-widget-content .ui-state-focus, .ui-widget-header .ui-state-focus { border: 1px solid #ffffff; background: #ffffff url(jquery/ui-bg_gloss-wave_70_ffffff_500x100.png) 50% 50% repeat-x; font-weight: normal; color: #993300; border:1px solid;}
 .ui-state-hover a, .ui-state-hover a:hover { color: #993300; text-decoration: none; font-weight:bold;}
-.ui-state-active, .ui-widget-content .ui-state-active, .ui-widget-header .ui-state-active { border: 1px solid #ffffff; background: #ffffff url(images/ui-bg_inset-soft_30_ffffff_1x100.png) 50% 50% repeat-x; font-weight: normal; color: #993300; }
+.ui-state-active, .ui-widget-content .ui-state-active, .ui-widget-header .ui-state-active { border: 1px solid #ffffff; background: #ffffff url(jquery/ui-bg_inset-soft_30_ffffff_1x100.png) 50% 50% repeat-x; font-weight: normal; color: #993300; }
 .ui-state-active a, .ui-state-active a:link, .ui-state-active a:visited { color: #993300; text-decoration: none; }
 .ui-widget :active { outline: none; }
 
@@ -81,9 +81,9 @@
 
 /* Interaction Cues
 ----------------------------------*/
-.ui-state-highlight, .ui-widget-content .ui-state-highlight, .ui-widget-header .ui-state-highlight  {border: 1px solid #eeb420; background: #fff9e5 url(images/ui-bg_gloss-wave_90_fff9e5_500x100.png) 50% top repeat-x; color: #1f1f1f; }
+.ui-state-highlight, .ui-widget-content .ui-state-highlight, .ui-widget-header .ui-state-highlight  {border: 1px solid #eeb420; background: #fff9e5 url(jquery/ui-bg_gloss-wave_90_fff9e5_500x100.png) 50% top repeat-x; color: #1f1f1f; }
 .ui-state-highlight a, .ui-widget-content .ui-state-highlight a,.ui-widget-header .ui-state-highlight a { color: #1f1f1f; }
-.ui-state-error, .ui-widget-content .ui-state-error, .ui-widget-header .ui-state-error {border: 1px solid #ffffff; background: #ffffff url(images/ui-bg_diagonals-medium_20_ffffff_40x40.png) 50% 50% repeat; color: #fa0505; }
+.ui-state-error, .ui-widget-content .ui-state-error, .ui-widget-header .ui-state-error {border: 1px solid #ffffff; background: #ffffff url(jquery/ui-bg_diagonals-medium_20_ffffff_40x40.png) 50% 50% repeat; color: #fa0505; }
 .ui-state-error a, .ui-widget-content .ui-state-error a, .ui-widget-header .ui-state-error a { color: #fa0505; }
 .ui-state-error-text, .ui-widget-content .ui-state-error-text, .ui-widget-header .ui-state-error-text { color: #fa0505; }
 .ui-priority-primary, .ui-widget-content .ui-priority-primary, .ui-widget-header .ui-priority-primary { font-weight: bold; }
@@ -94,14 +94,14 @@
 ----------------------------------*/
 
 /* states and images */
-.ui-icon { width: 16px; height: 16px; background-image: url(images/ui-icons_d19405_256x240.png); }
-.ui-widget-content .ui-icon {background-image: url(images/ui-icons_d19405_256x240.png); }
-.ui-widget-header .ui-icon {background-image: url(images/ui-icons_fadc7a_256x240.png); }
-.ui-state-default .ui-icon { background-image: url(images/ui-icons_3d3d3d_256x240.png); }
-.ui-state-hover .ui-icon, .ui-state-focus .ui-icon {background-image: url(images/ui-icons_bd7b00_256x240.png); }
-.ui-state-active .ui-icon {background-image: url(images/ui-icons_eb990f_256x240.png); }
-.ui-state-highlight .ui-icon {background-image: url(images/ui-icons_ed9f26_256x240.png); }
-.ui-state-error .ui-icon, .ui-state-error-text .ui-icon {background-image: url(images/ui-icons_ffe180_256x240.png); }
+.ui-icon { width: 16px; height: 16px; background-image: url(jquery/ui-icons_d19405_256x240.png); }
+.ui-widget-content .ui-icon {background-image: url(jquery/ui-icons_d19405_256x240.png); }
+.ui-widget-header .ui-icon {background-image: url(jquery/ui-icons_fadc7a_256x240.png); }
+.ui-state-default .ui-icon { background-image: url(jquery/ui-icons_3d3d3d_256x240.png); }
+.ui-state-hover .ui-icon, .ui-state-focus .ui-icon {background-image: url(jquery/ui-icons_bd7b00_256x240.png); }
+.ui-state-active .ui-icon {background-image: url(jquery/ui-icons_eb990f_256x240.png); }
+.ui-state-highlight .ui-icon {background-image: url(jquery/ui-icons_ed9f26_256x240.png); }
+.ui-state-error .ui-icon, .ui-state-error-text .ui-icon {background-image: url(jquery/ui-icons_ffe180_256x240.png); }
 
 /* positioning */
 .ui-icon-carat-1-n { background-position: 0 0; }
@@ -296,8 +296,8 @@
 .ui-corner-all { -moz-border-radius: 8px; -webkit-border-radius: 8px; border-radius: 8px; }
 
 /* Overlays */
-.ui-widget-overlay { background: #fce08d url(images/ui-bg_flat_50_fce08d_40x100.png) 50% 50% repeat-x; opacity: .60;filter:Alpha(Opacity=60); }
-.ui-widget-shadow { margin: -7px 0 0 -7px; padding: 5px; background: #cccccc url(images/ui-bg_flat_50_cccccc_40x100.png) 50% 50% repeat-x; opacity: .60;filter:Alpha(Opacity=60); -moz-border-radius: 8px; -webkit-border-radius: 8px; border-radius: 8px; }
+.ui-widget-overlay { background: #fce08d url(jquery/ui-bg_flat_50_fce08d_40x100.png) 50% 50% repeat-x; opacity: .60;filter:Alpha(Opacity=60); }
+.ui-widget-shadow { margin: -7px 0 0 -7px; padding: 5px; background: #cccccc url(jquery/ui-bg_flat_50_cccccc_40x100.png) 50% 50% repeat-x; opacity: .60;filter:Alpha(Opacity=60); -moz-border-radius: 8px; -webkit-border-radius: 8px; border-radius: 8px; }
 
 
  * jQuery UI Resizable 1.8.13
