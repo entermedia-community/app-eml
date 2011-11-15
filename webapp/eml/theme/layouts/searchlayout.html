@@ -1,32 +1,27 @@
-<div class="subcolumns">
-          <div class="c25l">
-          <div class="subcl">
 
-			<div class="ui-widget  uipanel" >
-				<div  class="ui-widget-header">Folders</div>
-				<div  class="ui-widget-content">
-				$pages.include("$apphome/components/savedsearches/index.html", $context)
-				</div>
+<div id="eml-sidebar">
+
+		<div class="ui-widget  uipanel" >
+			<div  class="ui-widget-header">Folders</div>
+			<div  class="ui-widget-content">
+			$pages.include("$apphome/components/savedsearches/index.html", $context)
 			</div>
+		</div>
 
-			<div class="ui-widget  uipanel" >
-				<div  class="ui-widget-header">Categories</div>
-				<div  class="ui-widget-content">
+		<div class="ui-widget  uipanel" >
+			<div  class="ui-widget-header">Categories</div>
+			<div  class="ui-widget-content">
 $pages.include("$apphome/components/categories/inline.html")
 				</div>
-			</div>
+		</div>
+</div>
 
 #if($hits )
 $pages.include("$apphome/components/relatedkeywords/index.html")
 #end
           
-		 </div>
-         </div>
-         <div class="c75r">
-         <div class="subcr">
+         <div id="eml-main">
       
 		$pages.includeContent()
 
           </div>
-          </div>
-        </div>
