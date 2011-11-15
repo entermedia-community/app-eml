@@ -1,10 +1,23 @@
+body {
+	background: #f4f4f4;
+}
+
 #header 
 {
 	background: #4a4a4c;
 }
 #header .navlinks a
 {
-	color: white;
+	color: #888;
+}
+#header .navlinks {
+	color: #888;
+}
+#header .navlinks a:hover {
+	color: #333;
+}
+#nav {
+	background: #2790B0;
 }
 #emselectable  
 {
@@ -43,21 +56,18 @@
 	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#dfdfdf',GradientType=0 );
 }
 
-.tanmodule {
-	background: none repeat scroll 0 0 #f3f3f3;
-	border: 1px solid #c5c5c5;
-}
+
 
 
 ul.emheaderbuttons li a {
 	color: #fff;
-	background: #23819E;
+	
 }
 
 ul.emheaderbuttons li a.current span, ul.emheaderbuttons li a:hover span {
 	color: #f3f3f3;
 	background: #23819E;
-
+	background: #23819E;
 }
 
 ul.emheaderbuttons li.navactive a {
@@ -84,8 +94,7 @@ li.navactive a:hover span {
 
 ul.emheaderbuttons li.navselected a 
 {
-	background: #87AC5B;
-	border: 1px solid #647F43;
+	background: #90be5a;
 
 }
 
@@ -252,3 +261,4 @@ ul.emuploadbutton li a.current span, ul.emuploadbutton li a:hover span {
 .ui-widget-content a { color: #383838;}
 .ui-widget-header { background: #2790B0; color: #ffffff; }
 .ui-widget-header a { color: #ffffff; }
+

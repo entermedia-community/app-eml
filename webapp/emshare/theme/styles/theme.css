@@ -1,6 +1,33 @@
-#header .navlinks a
-{
-	margin-top: 4px;
+body {
+	margin: 0;
+	padding: 0;
+	font-family: 'helvetica neue', helvetica, arial, sans-serif;
+}
+
+#header {
+	height: auto;
+	padding: 35px 16px 10px 16px;
+}
+#header .navlinks {
+	display: block;
+	float: right;
+	background: #2790B0;
+	border-radius: 0 0 5px 5px;
+	padding: 5px 10px 8px 10px;
+	margin: -35px -16px 0 0;
+}
+#header .navlinks a {
+	position: relative;
+	top: -2px;
+	color: #f5fdff;
+	padding: 0 5px;
+}
+#header .navlinks a:hover {
+	color: #fff;
+	text-decoration: none;
+}
+#header .navlinks {
+	color: #59bbd9;
 }
 .ui-widget {
 	-webkit-border-radius: 5px 5px;
@@ -111,6 +138,7 @@ table td {
 ul.emheaderbuttons {
 	padding: 0px;
 	margin: 5px;
+	margin-left: -10px;
 	list-style: none;
 	clear: left;
 	height: 23px;
@@ -128,12 +156,6 @@ ul.emheaderbuttons li a {
 	text-decoration: none;
 	float: left;
 	cursor: pointer;
-		-webkit-border-radius: 8px 8px 8px 8px;
-	-moz-border-radius: 8px 8px 8px 8px;
-	-o-border-radius: 8px 8px 8px 8px;
-	-ms-border-radius: 8px 8px 8px 8px;
-	-khtml-border-radius: 8px 8px 8px 8px;
-	border-radius: 8px 8px 8px 8px;
 }
 
 
@@ -149,6 +171,12 @@ ul.emheaderbuttons li a span {
 	position: relative;
 	white-space: nowrap;
 	cursor: pointer;
+	-webkit-border-radius: 8px 8px 8px 8px;
+	-moz-border-radius: 8px 8px 8px 8px;
+	-o-border-radius: 8px 8px 8px 8px;
+	-ms-border-radius: 8px 8px 8px 8px;
+	-khtml-border-radius: 8px 8px 8px 8px;
+	border-radius: 8px 8px 8px 8px;
 }
 
 ul.emheaderbuttons li a.current span, ul.emheaderbuttons li a:hover span {
@@ -497,7 +525,7 @@ ul.emuploadbutton li a.current span, ul.emuploadbutton li a:hover span {
     border-style: solid;
     border-width: 1px;
     height: 27px;
-    margin: 6px 6px 0 9px;
+    margin: 6px 0 0 9px;
     width: 220px;
 }
 
@@ -598,4 +626,60 @@ ul.emuploadbutton li a.current span, ul.emuploadbutton li a:hover span {
 .ui-widget-content a { font-size: 11px;}
 .ui-widget-header { font_size: 11px; font-weight: bold; padding: 5px 0px 5px 14px; }
 .ui-widget-header a { font_size: 11px; font-weight: bold;}
+#header {
+	background: none;
+}
+#nav {
+	padding: 6px 10px 11px 10px;
+	border-radius: 5px 5px 0 0;
+}
+#application {
+ 	border: none;
+ 	padding: 0;
+ 	margin: 0 auto;
+ 	background: none;
+}
+#main {
+	padding: 10px 10px 0 10px;
+}
+.ui-widget {
+	border: none;
+}
+.c25l .ui-widget {
+	margin-bottom: 20px;
+}
+.ui-widget-header {
+	font-size: 14px;
+	border-radius: 5px 5px 0 0;
+}
+.ui-widget-content {
+	border-radius: 0 0 5px 5px;
+	border: 1px solid #ccc;
+	border-top: none;
+}
+.c75r .ui-widget-content {
+	padding: 10px;
+}
+#emcontainer {
+	background: none;
+}
+#emcontent {
+	background: #fff;
+	border-radius: 0 0 5px 5px;
+	padding: 10px 0 20px 0;
+	border: 1px solid #ccc;
+	border-top: none;
+}
+.footer-p, .footer-p a {
+	font-family: arial;
+	font-size: 12px;
+	color: #aaa;
+	text-decoration: none;
+}
+.footer-p a:hover {
+	color: #777;
+}
 
+.clearfix:before, .clearfix:after { content: "\0020"; display: block; height: 0; overflow: hidden; }
+.clearfix:after { clear: both; }
+.clearfix { zoom: 1; }

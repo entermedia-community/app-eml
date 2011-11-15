@@ -1,14 +1,11 @@
 <div id="application">
 <div id="emcontainer">
 
-<div id="topnav" role="contentinfo">
-    <div class="page_margins">
-      <div class="page">
-	$pages.include("${themeprefix}/layouts/header.html")
+
+  <div id="header" class="clearfix" role="banner">
+      $pages.include("${themeprefix}/layouts/header.html")
       
 		<div id="site-title">$!content.tagline</div>
-      </div>
-    </div>
   </div>
   <div id="nav" role="navigation">
     <div class="page_margins">
@@ -18,14 +15,7 @@
       </div>
     </div>
   </div>
- <div id="header" role="banner">
-    <div class="page_margins">
-      <div class="page">
-   
-   
-      </div>
-    </div>
-  </div>
+
  
 <div id="emcontent">
   <div id="main">
@@ -49,7 +39,7 @@
   <div id="footer" role="contentinfo">
     <div class="page_margins">
       <div class="page">
-     <p></p>
+     $pages.include("${themeprefix}/layouts/footer.html")
       </div>
     </div>
   </div>
