@@ -42,7 +42,7 @@ body {
 	
 	padding: 10px;
 }
-#emselectable { font-family: Verdana,Arial; margin: 0 auto; }
+#emselectable { margin: 0 auto; }
 #emselectable  
 {
 	-webkit-border-radius: 5px 5px;
@@ -86,7 +86,6 @@ table td {
 }	
 
 .emdetailactions span, .embuttons span {
-	font-family: Verdana, Geneva, sans-serif;
 	font-size: 12px;
 	font-weight: bold;
 
@@ -108,7 +107,6 @@ table td {
 	width: 130px;
 }
 .emdetailactions .ui-button-text, .embuttons .ui-button-text{
-	font-family: Verdana, Geneva, sans-serif;
 	font-size: 12px;
 	font-weight: bold;
 	min-width: 70px;
@@ -163,8 +161,7 @@ ul.emheaderbuttons li a {
 
 ul.emheaderbuttons li a span {
 	float: left;
-	font-size: 12px;
-	font-family: Verdana, Geneva, sans-serif;
+	font-size: 13px;
 	font-weight: bold;
 	line-height: 23px;
 	padding: 5px 15px;
@@ -230,7 +227,9 @@ ul.emheaderbuttons li.navselected a {
 .emdetailactions img {
 	border: 0px;
 }
-
+#resultsdiv {
+	margin: -10px;
+}
 #emresultscontent {
 }
 
@@ -273,7 +272,6 @@ ul.emheaderbuttons li.navselected a {
 }
 
 .finishbutt {
-	font-family: Verdana, Arial;
 	font-size: 12px;
 	font-weight: bold;
 	color: #fff;
@@ -344,7 +342,6 @@ input:focus, a:focus, button:focus {
 
 input[type=submit], button, a.btn {
 	/* GENERAL */
-	font-family: Verdana, Geneva, sans-serif;
 
 	-webkit-border-radius: 5px;
 	-moz-border-radius: 5px;
@@ -479,7 +476,6 @@ ul.emuploadbutton li a {
 ul.emuploadbutton li a span {
 	float: left;
 	font-size: 12px;
-	font-family: Verdana, Geneva, sans-serif;
 	font-weight: bold;
 	line-height: 23px;
 	padding: 5px 15px;
@@ -542,9 +538,16 @@ ul.emuploadbutton li a.current span, ul.emuploadbutton li a:hover span {
 
 .emactionheader
 {
-	 background: none repeat scroll 0 0 #999;
-	  margin-bottom: 0;
+	 background: none;
+	 padding: 10px 0 14px 0;
 }
+.embuttons {
+	
+}
+.borderedcell, .resultstablecell {
+	vertical-align: middle;
+}
+
 #emcommentarea
 {
 	padding: 5px;	
@@ -619,9 +622,9 @@ ul.emuploadbutton li a.current span, ul.emuploadbutton li a:hover span {
 #emcontainer #emselectable table tr.emhighlight {	cursor:pointer; }
 #emcontainer #emselectable .emselectabledetails { padding-left: 20px; }
 
-.ui-widget { font-family: Verdana,Arial; margin: 0 auto; }
+.ui-widget { margin: 0 auto; }
 .ui-widget .ui-widget { font-size: 1em; }
-.ui-widget input, .ui-widget select, .ui-widget textarea, .ui-widget button { font-family: Verdana,Arial; font-size: 11px; }
+.ui-widget input, .ui-widget select, .ui-widget textarea, .ui-widget button { font-size: 11px; }
 .ui-widget-content {   font-size: 11px; padding: 0px; overflow:hidden;}
 .ui-widget-content a { font-size: 11px;}
 .ui-widget-header { font_size: 11px; font-weight: bold; padding: 5px 0px 5px 14px; }
@@ -649,7 +652,7 @@ ul.emuploadbutton li a.current span, ul.emuploadbutton li a:hover span {
 	margin-bottom: 20px;
 }
 .ui-widget-header {
-	font-size: 14px;
+	font-size: 13px;
 	border-radius: 5px 5px 0 0;
 }
 .ui-widget-content {
@@ -671,13 +674,18 @@ ul.emuploadbutton li a.current span, ul.emuploadbutton li a:hover span {
 	border-top: none;
 }
 .footer-p, .footer-p a {
-	font-family: arial;
 	font-size: 12px;
 	color: #aaa;
 	text-decoration: none;
 }
 .footer-p a:hover {
 	color: #777;
+}
+#tableheader {
+	vertical-align: middle;
+}
+#emselectable {
+	margin-bottom: 15px;
 }
 
 .clearfix:before, .clearfix:after { content: "\0020"; display: block; height: 0; overflow: hidden; }
