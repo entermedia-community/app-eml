@@ -22,9 +22,9 @@ body {
 
 #emselectable thead tr { background: #2790B0; color: #ffffff; }
 
-#usersearchresultspanel #emselectable thead tr { background: #94BA65; }
+#usersearchresultspanel #emselectable thead tr { background: #90BE5A; }
 
-#episode_table #emselectable thead tr { background: #94BA65; }
+#episode_table #emselectable thead tr { background: #90BE5A; }
 
 .emdetailactions span, .embuttons span {
 	background: #dddddd;
@@ -91,7 +91,7 @@ li.navactive a:hover span {
 
 ul.emheaderbuttons li.navselected a 
 {
-	background: #90be5a;
+	background: #90BE5A;
 
 }
 
@@ -114,7 +114,7 @@ ul.emheaderbuttons li.navselected a
 }
 
 .commentbox .ui-widget-header {
-	background-color: #94BA65;
+	background-color: #90BE5A;
 }
 
 .uploadform {
@@ -240,7 +240,7 @@ ul.emuploadbutton li a.current span, ul.emuploadbutton li a:hover span {
  
 #emcontainer #tableheader th
 {
-	background-color: #94BA65;
+	background-color: #90BE5A;
 }
 .emdropshadow {
 	background: #fff;
@@ -260,14 +260,22 @@ ul.emuploadbutton li a.current span, ul.emuploadbutton li a:hover span {
  	color: #fff;
 }
 
-#emcontainer #emselectable table tr.emhighlight { background: #f4f4f4; color:#000}
-#emcontainer #emselectable table tr.emborderhover {	 background: #f4f4f4; color:#000; border-top: #f0f0f0; border-bottom: #f0f0f0;  }
+#emcontainer #emselectable table tr.emhighlight { background: #f4f4f4; color:#333}
+#emcontainer #emselectable table tr.emborderhover, #emcategoryinline .emtreehover {	 background: #f4f4f4; color:#333;  }
 
-#emcontainer #emselectable table tr.emborderhover .emdropshadow, #emcontainer #emselectable table tr.emhighlight .emdropshadow {
+#emcontainer #emselectable table tr.checked { 
+	background: #b4cf95; 
+	color: #fff; 
+	}
+
+#emcontainer #emselectable table tr.emborderhover .emdropshadow, #emcontainer #emselectable table tr.emhighlight .emdropshadow, #emcontainer #emselectable table tr.checked .emdropshadow {
 	-webkit-box-shadow: 0px 0px 4px 2px rgba(0, 0, 0, .1);
 	-moz-box-shadow: 0px 0px 4px 2px rgba(0, 0, 0, .1);
 	box-shadow: 0px 0px 4px 2px rgba(0, 0, 0, .1);
 	border: 1px solid #cfcfcf;
+}
+tr.odd {
+	background: #fafafa;
 }
 
 .ui-widget {  border: 1px solid #AAAAAA;}

@@ -12,7 +12,7 @@ $context.putPageValue("usestartswith",$usestartswith)
 #if( $edit)
 $context.putPageValue("edit",$edit)
 #end
-<form  name="advancedsearch" action="$home$apphome/views/search/search.html" class="em-widget-content">
+<form id="eml-search"  name="advancedsearch" action="$home$apphome/views/search/search.html" class="em-widget-content">
 ##We need 2 things passed in: $searcher, $view or $searcher $details
 #if (!$details && $view)
 

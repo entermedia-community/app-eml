@@ -13,18 +13,17 @@ body {
 	float: right;
 	background: #2790B0;
 	border-radius: 0 0 5px 5px;
-	padding: 5px 10px 8px 10px;
+	padding: 1px 10px 5px 10px;
 	margin: -35px -16px 0 0;
 }
 #header .navlinks a {
 	position: relative;
-	top: -2px;
-	color: #f5fdff;
+	top: -1px;
+	color: #fff;
 	padding: 0 5px;
 }
 #header .navlinks a:hover {
 	color: #fff;
-	text-decoration: none;
 }
 #header .navlinks {
 	color: #59bbd9;
@@ -228,9 +227,11 @@ ul.emheaderbuttons li.navselected a {
 	border: 0px;
 }
 #resultsdiv {
-	margin: -10px;
+	margin: 0;
+	padding: 0;
 }
 #emresultscontent {
+	margin: -10px;
 }
 
 #emresultscontent a {
@@ -686,6 +687,140 @@ ul.emuploadbutton li a.current span, ul.emuploadbutton li a:hover span {
 }
 #emselectable {
 	margin-bottom: 15px;
+}
+.ui-widget-content input[type="text"] {
+	border: 1px solid #ccc;
+	border-radius: 5px;
+	padding: 5px 10px;
+}
+.ui-widget-content input[type="text"]:focus {
+	border: 1px solid #2790B0;
+	color: #444;
+}
+.emgallery {
+	text-align: center;
+}
+.emthumbbox {
+	margin-bottom: 4px;
+	float: none;
+	display: inline-block;
+	padding: 0 30px 0 0;
+}
+.emboxthumb
+{
+	width: 200px;
+	height: 260px;
+	text-align: center;
+	border-bottom: none;
+	padding-bottom: 0;
+}
+.emthumbbox:hover .emdropshadow {
+	-webkit-box-shadow: 0px 0px 4px 2px rgba(0, 0, 0, .1);
+	-moz-box-shadow: 0px 0px 4px 2px rgba(0, 0, 0, .1);
+	box-shadow: 0px 0px 4px 2px rgba(0, 0, 0, .1);
+	border: 1px solid #cfcfcf;
+}
+#emcategoryinline .dTreeNodeSel {
+	margin-bottom: 10px;
+	padding: 5px;
+	background: #90BE5A;
+	color: #fff;
+}
+#emcategoryinline .dTreeNodeSel a {
+	color: #fff;
+}
+#emcategoryinline .treerowtext {
+	padding: 3px 0 1px 0;;
+}
+#emcategoryinline .node {
+	position: relative;
+	top: -1px;
+	margin-right: 3px;
+}
+#uploadform #fileName {
+	width: 187px;
+	margin-right: 10px;
+}
+#uploadform .finishbutt {
+	padding: 5px 10px;
+	cursor: pointer;
+	font-size: 14px;
+	float: right;
+	margin: 0 13px 20px 0;
+	text-transform: none;
+	letter-spacing: normal;
+}
+#uploadform .file_input_hidden {
+	width: 81px;
+	height: 29px;
+	position: relative;
+	left: -5px;
+	cursor: pointer;
+	z-index: 99;
+}
+.detailsbox {
+	background: none;
+}
+.commentbox {
+	margin-top: 15px;
+}
+td.player {
+	padding-right: 15px;
+}
+input[type="submit"] {
+	cursor: pointer !important;
+}
+#uploadform .required {
+	float: left;
+	margin: 1px 0 0 5px;
+}
+#uploadform .embutton img {
+	margin: 5px 0 0 7px;
+	float: left;
+}
+#uploadform h2 {
+	margin: 0; 
+	margin-bottom: 10px;
+	float: left;
+}
+#uploadform input[type="text"] {
+	padding: 5px 10px;
+	font-size: 14px;
+	margin-bottom: 20px;
+}
+p.noresults {
+	text-align: center;
+	font-size: 14px;
+	color: #777;
+}
+#collectionbasket {
+	font-size: 11px;
+}
+.emdetailsbox {
+	width: 180px;
+	padding: 10px;
+	color: #777;
+}
+.emdetailactions {
+	padding: 30px 0 0 0;
+	margin: 0 0 0 7px;
+}
+.emdetailactions .ui-button-text {
+	text-align: left;
+}
+.emdetailactions .ui-button-text img {
+	margin-left: 8px;
+	margin-right: 10px;
+}
+.ui-state-default, .ui-widget-content .ui-state-default, .ui-widget-header .ui-state-default {
+	color: #777;
+}
+.emdetailactions .ui-state-hover, .emdetailactions .ui-state-hover .ajax {
+	color: #444;
+}
+.emdetailactions a.ajax {
+	color: #777;
+	font-size: 12px;
 }
 
 .clearfix:before, .clearfix:after { content: "\0020"; display: block; height: 0; overflow: hidden; }
