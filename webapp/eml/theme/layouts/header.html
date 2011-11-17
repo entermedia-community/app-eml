@@ -1,12 +1,17 @@
-      <span class="logo ir">
+      <a class="logo ir" href="$home$apphome/index.html">
       	Enterprise Media Library
       	
-      </span>
+      </a>
       
       
       
       <span class="navlinks">
-       
+
+#if($canviewbasket)
+
+	$pages.include("$apphome/components/basket/menuitem.html")
+
+#end       
 
 #if( $user )
 	<a href="$home$apphome/authentication/logout.html">Logout</a>
@@ -15,7 +20,7 @@
 #end	 
  			
  #if($canviewsettings)
-<a href="$home$apphome/views/settings/index.html"><span class="settings-icon ir">Settings</span>Settings</a>
+<a href="$home$apphome/views/settings/index.html"><span class="settings-icon">Settings</span></a>
 <a href="$home/${content.parentapplicationid}/index.html">Manager</a>
 #end
  			

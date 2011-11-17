@@ -1,5 +1,8 @@
-
 <div id="eml-sidebar">
+		
+		#if( $canviewupload )
+		<a class="btn" href="$home$apphome/views/upload/index.html" ><span class="upload">Upload Media</span></a>
+		#end
 
 		<div class="ui-widget  uipanel" >
 			<div  class="ui-widget-header">Folders</div>
@@ -21,7 +24,7 @@ $pages.include("$apphome/components/relatedkeywords/index.html")
 #end
           
          <div id="eml-main">
-      
+			<div id="up">
 		$pages.includeContent()
-
-          </div>
+			</div>
+         </div>

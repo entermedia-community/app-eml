@@ -822,6 +822,15 @@ p.noresults {
 	color: #777;
 	font-size: 12px;
 }
+th {
+	text-align: center !important;
+}
+.resultstablecell {
+	text-align: center;
+}
+.la {
+	text-align: left;
+}
 
 .clearfix:before, .clearfix:after { content: "\0020"; display: block; height: 0; overflow: hidden; }
 .clearfix:after { clear: both; }

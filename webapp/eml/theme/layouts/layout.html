@@ -15,5 +15,34 @@ $pages.include("${themeprefix}/layouts/includes.html")
 </head>
 <body id="embody">
 		$pages.streamContent()
+
+
+<script>
+	
+	
+	$(document).ready(function(){ 
+		
+		var wh = $(window).height; 
+		var ww = $(window).width;
+		var cwh = wh - 79;
+		var cww = ww - 218;
+		alert(ww + " x " + wh);
+		
+		$(#emlMain).css({ 'width' : cww + 'px', 'height' : cwh + 'px'});
+	
+	});
+	
+	$(window).resize(function() { 
+		
+		var wh = $(window).height; 
+		var ww = $(window).width;
+		var cwh = wh - 79;
+		var cww = ww - 218;
+		
+		$(#emlMain).css({ 'width' : cww + 'px', 'height' : cwh + 'px'});
+		
+	});
+	
+</script>
 </body>
 </html>
