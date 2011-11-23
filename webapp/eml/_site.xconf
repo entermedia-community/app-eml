@@ -20,6 +20,7 @@
   <script id="entermedia" src="/${applicationid}/components/javascript/entermedia.js"/>
   <script id="validateandedit" src="/${applicationid}/components/javascript/validateandedit.js">     </script>
   <script id="theme-js" src="/${applicationid}/components/javascript/ui-components.js"/>
+  <script id="eml-js" src="/${applicationid}/components/javascript/eml.js"/>
   <property name="fallbackdirectory">/WEB-INF/base/emfrontend</property>
   <property name="title">EML</property>
   <property name="jquery-theme">emlred</property>

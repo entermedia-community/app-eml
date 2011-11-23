@@ -1,3 +1,6 @@
+body, #header a {
+	font-family: 'helvetica neue', helvetica, arial, sans-serif;
+}
 #header .navlinks a
 {
 	margin-top: 4px;
@@ -15,7 +18,7 @@
 	
 	padding: 10px;
 }
-#emselectable { font-family: Verdana,Arial; margin: 0 auto; }
+#emselectable {  margin: 0 auto; }
 #emselectable thead tr { font_size: 11px; font-weight: bold; padding: 5px 0px 5px 14px; }
 
 table td {
@@ -50,7 +53,7 @@ table td {
 }	
 
 .emdetailactions span, .embuttons span {
-	font-family: Verdana, Geneva, sans-serif;
+	
 	font-size: 12px;
 	font-weight: bold;
 
@@ -72,7 +75,7 @@ table td {
 	width: 130px;
 }
 .emdetailactions .ui-button-text, .embuttons .ui-button-text{
-	font-family: Verdana, Geneva, sans-serif;
+	
 	font-size: 12px;
 	font-weight: bold;
 	min-width: 70px;
@@ -123,7 +126,7 @@ ul.emheaderbuttons li a span {
     border-radius: 8px 8px 8px 8px;
 	float: left;
 	font-size: 12px;
-	font-family: Verdana, Geneva, sans-serif;
+	
 	font-weight: bold;
 	line-height: 23px;
 	padding: 5px 15px;
@@ -238,7 +241,6 @@ ul.emheaderbuttons li.navselected a {
 }
 
 .finishbutt {
-	font-family: Verdana, Arial;
 	font-size: 12px;
 	font-weight: bold;
 	color: #fff;
@@ -309,7 +311,7 @@ input:focus, a:focus, button:focus {
 
 input[type=submit], button, a.btn {
 	/* GENERAL */
-	font-family: Verdana, Geneva, sans-serif;
+	
 
 	-webkit-border-radius: 5px;
 	-moz-border-radius: 5px;
@@ -444,7 +446,7 @@ ul.emuploadbutton li a {
 ul.emuploadbutton li a span {
 	float: left;
 	font-size: 12px;
-	font-family: Verdana, Geneva, sans-serif;
+	
 	font-weight: bold;
 	line-height: 23px;
 	padding: 5px 15px;
@@ -584,9 +586,9 @@ ul.emuploadbutton li a.current span, ul.emuploadbutton li a:hover span {
 #emcontainer #emselectable table tr.emhighlight {	cursor:pointer; }
 #emcontainer #emselectable .emselectabledetails { padding-left: 20px; }
 
-.ui-widget { font-family: Verdana,Arial; margin: 0 auto; }
+.ui-widget {  margin: 0 auto; }
 .ui-widget .ui-widget { font-size: 1em; }
-.ui-widget input, .ui-widget select, .ui-widget textarea, .ui-widget button { font-family: Verdana,Arial; font-size: 11px; }
+.ui-widget input, .ui-widget select, .ui-widget textarea, .ui-widget button {  font-size: 11px; }
 .ui-widget-content {   font-size: 11px; padding: 0px; overflow:hidden;}
 .ui-widget-content a { font-size: 11px;}
 .ui-widget-header { font_size: 11px; font-weight: bold; padding: 5px 0px 5px 14px; }
@@ -654,7 +656,6 @@ html, body, #main {
 	height: 100%;
 	margin: 0;
 	padding: 0;
-	font-family: 'helvetica neue', helvetica, arial, sans-serif;
 	overflow: hidden;
 }
 
@@ -710,7 +711,7 @@ html, body, #main {
 	border-radius: 5px;
 	color: #fff;
 	padding: 6px 10px;
-	font-size: 10px;
+	font-size: 11px;
 	font-weight: bold;
 	position: relative;
 	top: 6px;
@@ -749,7 +750,21 @@ html, body, #main {
 	width: 500px;
 	margin-top: 200px;
 }
-#eml-search table tr:first-child .emsearchfield {
+#searchpanel {
+	text-align: center;
+	color: #797979;
+	font-size: 18px;
+	line-height: 24px;
+}
+#searchpanel a {
+	color: #acda54;
+	font-weight: bold;
+	text-decoration: none;
+}
+#searchpanel a:hover {
+	color: #92bf3d;
+}
+#main-search {
 	width: 489px;
 	height: 90px;
 	background: #000;
@@ -764,9 +779,8 @@ html, body, #main {
 	background: -o-linear-gradient(top, #595a5b 0%,#373739 100%); /* Opera 11.10+ */
 	background: -ms-linear-gradient(top, #595a5b 0%,#373739 100%); /* IE10+ */
 	background: linear-gradient(top, #595a5b 0%,#373739 100%); /* W3C */
-	text-indent: -999em;
 }
-#eml-search table tr:first-child .emsearchfield::before {
+#main-search:before {
 	content: '';
 	width: 489px;
 	height: 90px;
@@ -777,21 +791,59 @@ html, body, #main {
 	border-radius: 15px;
 	border: 1px solid #666;
 }
-#eml-search table tr:first-child input {
+#main-search .big-search-field {
 	border-radius: 10px;
-	padding: 4px 10px;
-	font-size: 24px;
+	padding: 7px 10px;
+	font-size: 20px;
 	color: #777;
 	border: 1px solid #000;
-	margin: -90px 0 0 20px;
 	background: #fff;
+	width: 320px;
+	
+	margin: 27px 0 0 0;
 	position: relative;
 	z-index: 3;
-	top: -53px;
-	left: 10px;
-	width: 333px;
 }
-
+#main-search .main-search-button {
+	color: #fff;
+	text-shadow: 0 1px 3px #659437;
+	font-size: 20px;
+	border-radius: 10px;
+	font-weight: bold;
+	padding: 7px 10px;
+	margin: 0;
+	text-align: center;
+	font-family: 'helvetica neue', helvetica, arial, sans-serif;
+	margin-left: 10px;
+	position: relative;
+	z-index: 3;
+	box-shadow: 0px 1px 2px 1px rgba(0, 0, 0, .3);
+	border: 1px solid #000;
+	background: rgb(192,242,94); /* Old browsers */
+	background: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/Pgo8c3ZnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgdmlld0JveD0iMCAwIDEgMSIgcHJlc2VydmVBc3BlY3RSYXRpbz0ibm9uZSI+CiAgPGxpbmVhckdyYWRpZW50IGlkPSJncmFkLXVjZ2ctZ2VuZXJhdGVkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjAlIiB5MT0iMCUiIHgyPSIwJSIgeTI9IjEwMCUiPgogICAgPHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iI2MwZjI1ZSIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgICA8c3RvcCBvZmZzZXQ9IjEwMCUiIHN0b3AtY29sb3I9IiNhY2RhNTQiIHN0b3Atb3BhY2l0eT0iMSIvPgogIDwvbGluZWFyR3JhZGllbnQ+CiAgPHJlY3QgeD0iMCIgeT0iMCIgd2lkdGg9IjEiIGhlaWdodD0iMSIgZmlsbD0idXJsKCNncmFkLXVjZ2ctZ2VuZXJhdGVkKSIgLz4KPC9zdmc+);
+	background: -moz-linear-gradient(top, rgba(192,242,94,1) 0%, rgba(172,218,84,1) 100%); /* FF3.6+ */
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(192,242,94,1)), color-stop(100%,rgba(172,218,84,1))); /* Chrome,Safari4+ */
+	background: -webkit-linear-gradient(top, rgba(192,242,94,1) 0%,rgba(172,218,84,1) 100%); /* Chrome10+,Safari5.1+ */
+	background: -o-linear-gradient(top, rgba(192,242,94,1) 0%,rgba(172,218,84,1) 100%); /* Opera 11.10+ */
+	background: -ms-linear-gradient(top, rgba(192,242,94,1) 0%,rgba(172,218,84,1) 100%); /* IE10+ */
+	background: linear-gradient(top, rgba(192,242,94,1) 0%,rgba(172,218,84,1) 100%); /* W3C */
+}	
+#main-search .main-search-button:hover {
+	cursor: pointer;
+	background: rgb(172,218,84); /* Old browsers */
+	background: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/Pgo8c3ZnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgdmlld0JveD0iMCAwIDEgMSIgcHJlc2VydmVBc3BlY3RSYXRpbz0ibm9uZSI+CiAgPGxpbmVhckdyYWRpZW50IGlkPSJncmFkLXVjZ2ctZ2VuZXJhdGVkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjAlIiB5MT0iMCUiIHgyPSIwJSIgeTI9IjEwMCUiPgogICAgPHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iI2FjZGE1NCIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgICA8c3RvcCBvZmZzZXQ9IjEwMCUiIHN0b3AtY29sb3I9IiNjMGYyNWUiIHN0b3Atb3BhY2l0eT0iMSIvPgogIDwvbGluZWFyR3JhZGllbnQ+CiAgPHJlY3QgeD0iMCIgeT0iMCIgd2lkdGg9IjEiIGhlaWdodD0iMSIgZmlsbD0idXJsKCNncmFkLXVjZ2ctZ2VuZXJhdGVkKSIgLz4KPC9zdmc+);
+	background: -moz-linear-gradient(top, rgba(172,218,84,1) 0%, rgba(192,242,94,1) 100%); /* FF3.6+ */
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(172,218,84,1)), color-stop(100%,rgba(192,242,94,1))); /* Chrome,Safari4+ */
+	background: -webkit-linear-gradient(top, rgba(172,218,84,1) 0%,rgba(192,242,94,1) 100%); /* Chrome10+,Safari5.1+ */
+	background: -o-linear-gradient(top, rgba(172,218,84,1) 0%,rgba(192,242,94,1) 100%); /* Opera 11.10+ */
+	background: -ms-linear-gradient(top, rgba(172,218,84,1) 0%,rgba(192,242,94,1) 100%); /* IE10+ */
+	background: linear-gradient(top, rgba(172,218,84,1) 0%,rgba(192,242,94,1) 100%); /* W3C */
+}
+#main-search .main-search-button:active {
+	position: relative;
+	top: 1px;
+	box-shadow: none;
+}
 /* Table CSS */
 
 #resultsdiv {
@@ -898,16 +950,15 @@ html, body, #main {
 }
 #eml-sidebar .ui-widget-header {
 	background: none;
-	color: #777;
+	color: #595959;
 	border: none;
 	border-bottom: 1px solid #ddd;
-	font-size: 10px;
+	font-size: 12px;
 	margin-bottom: 10px;
-	padding-left: 5px;
+	
+	margin-left: 21px;
+	padding-left: 0;
 }	
-#eml-sidebar .ui-widget-content {
-	border: none;
-}
 th span {
 	height: 18px;
 	line-height: 16px !important;
@@ -922,7 +973,7 @@ th span a.ajax {
 }
 #eml-sidebar .ui-widget {
 	border: none;
-	padding: 15px 5px;
+	padding: 15px 0 15px 5px;
 }
 .upload {
 	background: url('../images/upload.png') left top no-repeat;
@@ -931,6 +982,86 @@ th span a.ajax {
 .settings-icon {
 	background: url('../images/settings-icon.png') 0 2px no-repeat;
 	padding-left: 14px;
+}
+
+/* SAVE SEARCH SIDEBAR */
+
+.ui-widget {
+	font-family: 'helvetica neue', helvetica, arial, sans-serif;
+}
+.search-list {
+	width: 200px;
+	padding: 0;
+	margin: 0;
+}
+.search-list li {
+	margin: 0; 
+	padding: 0;
+	list-style: none;
+	width: 205px;
+	color: #49494b;
+}
+.search-list li a.search-href {
+	width: 165px;
+	padding: 3px 21px;
+	border-radius: 5px;
+	text-decoration: none;
+	displaY: block;
+	font-size: 12px;
+	text-overflow: ellipsis;
+	
+}
+.search-list li:hover a.search-href {
+	background: #efefef;
+}
+.search-save a {
+	background: url('../images/eml-save-icon.png') bottom center no-repeat;
+	width: 10px;
+	height: 10px;
+	float: left;
+	margin: 5px 0 0 5px;
+	visibility: hidden;
+	position: relative;
+	z-index: 3;
+}
+.search-edit a {
+	background: url('../images/eml-edit-icon.png') bottom center no-repeat;
+	width: 10px;
+	height: 10px;
+	float: left;
+	margin: 5px 0 0 5px;
+	visibility: hidden;
+	position: relative;
+	z-index: 3;
+}
+.search-delete a {
+	background: url('../images/eml-delete-icon.png') bottom center no-repeat;
+	width: 10px;
+	height: 10px;
+	margin: -15px 5px 0 0;
+	float: right;
+	visibility: hidden;
+	position: relative;
+	z-index: 3;
+}
+.search-list li:hover .search-save a, .search-list li:hover .search-delete a, .search-list li:hover .search-edit a  {
+	visibility: visible;
+}
+.search-delete a:hover, .search-save a:hover, .search-edit a:hover {
+	background-position: 0 0;
+}
+.search-list li.current a.search-href {
+	background: #acda54;
+	color: #fff;
+}
+.search-list li.current .search-delete a, .search-list li.current .search-save a, .search-list li.current .search-edit a {
+	background-position: 0 0;
+	visibility: visible;
+}
+#add-media {
+	position: absolute;
+	bottom: 100px;
+	left: 50px;
 }
 
 /* BUTTONS */
@@ -949,8 +1080,6 @@ a.btn {
 	color: #333;
 	text-shadow: 0 1px 0 0 #fff;
 	border: 1px solid #ccc;
-	-webkit-box-shadow: 0px 1px 2px 1px rgba(0, 0, 0, .1);
-	-moz-box-shadow: 0px 1px 2px 1px rgba(0, 0, 0, .1);
 	box-shadow: 0px 1px 2px 1px rgba(0, 0, 0, .1);
 }
 a.btn:hover {
@@ -974,6 +1103,7 @@ a.btn:active {
 	background: linear-gradient(top, rgba(219,219,219,1) 0%,rgba(246,246,246,1) 100%); /* W3C */
 	position: relative;
 	top: 1px;
+	box-shadow: none;
 }
 
 /* Helper Styles */
