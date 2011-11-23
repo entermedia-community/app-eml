@@ -1,25 +1,127 @@
 
-<div id="eml-asset-view">
+<div id="eml-tabs-view">
 	
 	<div id="eml-search-information">
-		<div id="eml-search-label">Your Search For:</div>
+		<div id="eml-search-label">Your Search For: <a href="#current-search">Skyrim</a></div>
+		<div id="eml-results-count">Returned <strong>28</strong> results</div>
+		<form id="eml-quick-search">
+			<input class="field" type="text" />
+			<input class="search" type="submit" />
+		</form>
+		<div id="eml-action-buttons">
+			<a class="btn small" href="#download">Download</a>
+			<a class="btn small" href="#share">Share</a>
+			<a class="btn small" href="#add-to-basket">Add to Basket</a>
+			<div id="eml-search-views">
+				<a class="btn view-left" href="#table-view"><span class="table-view ir">Table View</span></a>
+				<a class="btn view-middle" href="#gallery-view"><span class="gallery-view ir">Gallery View</span></a>
+				<a class="btn view-right current" href="#asset-view"><span class="asset-view ir">Asset View</span></a>
+			</div>
+		</div>
 	</div>
 	
 	<div id="eml-search-results">
-		<div id="eml-asset-tabs">
+		<div id="eml-tabs">
 			<ul>
-				<li class="current"><a href="#preview">Preview</a></li>
-				<li><a href="#metadeta">Metadata</a></li>
+				<li><a href="#preview">Preview</a></li>
+				<li class="current"><a href="#metadeta">Metadata</a></li>
 				<li><a href="#attachments">Attachments</a></li>
 				<li><a href="#asset-history">Asset History</a></li>
 			</ul>
 		</div>
-		<div id="eml-asset-tab-content"></div>
+		<div id="eml-tab-content">
+			<div id="eml-tab-subnav">
+				<ul>
+					<li class="current"><a href="#status">Status</a></li>
+					<li><a href="#contents">Contents</a></li>
+					<li><a href="#file-properties">File Properties</a></li>
+				</ul>
+			</div>
+			<div id="eml-tab-green-container">
+				<div id="eml-tab-options-container">
+					<div class="eml-tab-option">
+						<form id="eml-options">
+							<ul>
+								<li>
+									<label for="import-status">Import Status</label>
+									<input type="text" name="import-status" id="import-status" />
+								</li>
+								<li>
+									<label for="edit-status">Edit Status</label>
+									<input type="text" name="edit-status" id="edit-status" />
+								</li>
+								<li>
+									<input class="btn" type="submit" value="Save Changes" />
+								</li>
+							</ul>
+						</form>
+					</div>
+				</div>
+			</div>
+		</div>
 	</div>
 	
-	<div id="pagination-container">
-		<div id="carousel"></div>
-		<div id="pagination"></div>
+	<div id="eml-pagination-container">
+		<div id="eml-carousel" class="clearfix">
+			<ul>
+				<li>
+					<div class="carousel-thumbnail">
+						<img src="$home$apphome/theme/images/thumb.jpg" />
+					</div>
+				</li>
+				<li>
+					<div class="carousel-thumbnail">
+						<img src="$home$apphome/theme/images/thumb.jpg" alt="Thumbanil Description" />
+					</div>
+				</li>
+				<li>
+					<div class="carousel-thumbnail">
+						<img src="$home$apphome/theme/images/thumb.jpg" alt="Thumbanil Description" />
+					</div>
+				</li>
+				<li class="current">
+					<div class="carousel-thumbnail">
+						<img src="$home$apphome/theme/images/thumb.jpg" alt="Thumbanil Description" />
+					</div>
+				</li>
+				<li>
+					<div class="carousel-thumbnail">
+						<img src="$home$apphome/theme/images/thumb.jpg" alt="Thumbanil Description" />
+					</div>
+				</li>
+				<li>
+					<div class="carousel-thumbnail">
+						<img src="$home$apphome/theme/images/thumb.jpg" alt="Thumbanil Description" />
+					</div>
+				</li>
+			</ul>
+		</div>
+		<div id="pagination">
+			<div id="related-search-terms">
+				Related Search Terms: 
+				<a href="#term1">Term 1</a>, 
+				<a href="#term2">Term 2</a>, 
+				<a href="#term3">Term 3</a>, 
+				<a href="#term4">Term 4</a>
+			</div>
+			<div id="pages">
+				
+				<ul>
+					<li class="previous"><a class="ir" href="#previous">Previous</a></li>
+					<li class="current"><a href="#1">1</a></li>
+					<li><a href="#2">2</a></li>
+					<li><a href="#3">3</a></li>
+					<li><a href="#4">4</a></li>
+					<li><a href="#5">5</a></li>
+					<li class="ellipsis">...</li>
+					<li><a href="#21">21</a></li>
+					<li><a href="#22">22</a></li>
+					<li><a href="#23">23</a></li>
+					<li class="next"><a class="ir" href="#next">Next</a>
+				</ul>
+				
+			</div>
+		</div>
 	</div>
 	
 </div>
