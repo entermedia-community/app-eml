@@ -1,9 +1,14 @@
 
 doResize = function() {
 	var wh = $(window).height();
-	var cwh = wh - 79;
+	var cdho = $('#header').height() + $('#footer').height();
+	var cdhi = $('#eml-search-information').height() + $('#eml-pagination-container').height();
+	var cwho = wh - cdho;
+	var cwhi = wh - cdhi - cdho - 56;
 	
-	$('#up').css( 'height', cwh + 'px' );
+	$('.autoresize-outer').css( 'height', cwho + 'px' );
+	$('.autoresize-inner').css( 'height', cwhi + 'px' );
+	
 }
 
 $(window).resize(doResize); 

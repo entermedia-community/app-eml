@@ -1,4 +1,5 @@
 <page>
 <property name="showtoolbar">true</property>
+<property name="heightmargin">150</property>
 </page>
 

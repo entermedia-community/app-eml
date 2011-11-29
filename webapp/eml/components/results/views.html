@@ -1,3 +1,17 @@
+#set ($alldetails = $searcher.getDetailsForView("asset/searchselect", $user))
+	
+	<select  onchange='addColumn(jQuery(this).val())' name="addcolumn" >
+		<option>Add Column</option>
+	
+		#foreach( $detail in $alldetails)
+			<option value="$detail.id">&nbsp;&nbsp;&nbsp;&nbsp;$detail.getText($context)</option>
+		#end	
+		
+	</select> 
+	<a class="ajax" targetdiv="emresultscontent" href="$home$apphome/components/results/table.html?searchtype=asset&hitssessionid=$hits.getSessionId()&editheader="><img title="Cancel" src="$home$themeprefix/images/navigation/deletesm.png" /></a>
+
+
+
 <div id="eml-search-views">
 	<a class="btn view-left" href="#table-view"><span class="table-view ir">Table View</span></a>
 	<a class="btn view-middle" href="#gallery-view"><span class="gallery-view ir">Gallery View</span></a>

@@ -678,10 +678,16 @@ html, body, #main {
 	top: 0;
 	left: 0;
 }
-#up {
+.autoresize-outer {
 	position: relative;
 	z-index: 3;
 	overflow: auto;
+}
+.autoresize-inner {
+	overflow: auto;
+}
+#emselectable {
+	height: 100%;
 }
 #header .navlinks a {
 	background: #636363;
@@ -1140,10 +1146,9 @@ th span a.ajax {
 /* PAGINATION */
 
 #eml-pagination-container {
-	position: absolute;
-	bottom: 0;
-	left: 0;
 	width: 100%;
+	position: relative;
+	z-index: 5;
 }
 #pagination {
 	padding: 5px 20px;
@@ -1439,6 +1444,9 @@ th span a.ajax {
 
 /* OPTIONS BOX TABLE */
 
+#emselectable table {
+	background: #fff;
+}
 .eml-tab-option #emselectable table {
 	width: 95%;
 	border: 1px solid #5FA83E;
