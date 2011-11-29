@@ -1,0 +1,89 @@
+#if( $hits && $hits.totalPages > 1 )
+#set($resultsPage = "$home$apphome/views/search/index.html?hitssessionid=$hits.sessionId&searchtype=asset&hitsperpage=$!hits.hitsPerPage&categoryid=$!category.id&oemaxlevel=1&resultstype=$!resultstype")
+#set($resultsPage = "$resultsPage&page")
+#set($thispage = $hits.getPage())
+
+
+
+<div id="eml-pagination-container">
+		<!-- <div id="eml-carousel" class="clearfix">
+			<ul>
+				<li>
+					<div class="carousel-thumbnail">
+						<img src="$home$apphome/theme/images/thumb.jpg" />
+					</div>
+				</li>
+				<li>
+					<div class="carousel-thumbnail">
+						<img src="$home$apphome/theme/images/thumb.jpg" alt="Thumbanil Description" />
+					</div>
+				</li>
+				<li>
+					<div class="carousel-thumbnail">
+						<img src="$home$apphome/theme/images/thumb.jpg" alt="Thumbanil Description" />
+					</div>
+				</li>
+				<li class="current">
+					<div class="carousel-thumbnail">
+						<img src="$home$apphome/theme/images/thumb.jpg" alt="Thumbanil Description" />
+					</div>
+				</li>
+				<li>
+					<div class="carousel-thumbnail">
+						<img src="$home$apphome/theme/images/thumb.jpg" alt="Thumbanil Description" />
+					</div>
+				</li>
+				<li>
+					<div class="carousel-thumbnail">
+						<img src="$home$apphome/theme/images/thumb.jpg" alt="Thumbanil Description" />
+					</div>
+				</li>
+			</ul>
+		</div> -->
+		<div id="pagination">
+			<div id="related-search-terms">
+				Related Search Terms: 
+				<a href="#term1">Term 1</a>, 
+				<a href="#term2">Term 2</a>, 
+				<a href="#term3">Term 3</a>, 
+				<a href="#term4">Term 4</a>
+			</div>
+			<div id="pages">
+				
+				<ul>
+					#if( $hits.prevPage() )
+					<li class="previous"><a class="ir" targetdiv="emresultscontent" href="$resultsPage=$hits.prevPage()" title="Previous ( alt p enter)" accesskey="p" >Previous</a></li>
+					#end
+					#set( $befores = $hits.linksBefore() )					
+						#if($befores.size()!=0)
+						  #if($befores.get(0)>1)
+							<li><a class="ajax" targetdiv="emresultscontent" href="$resultsPage=1'" >1</a></li>	
+						    <li class="ellipsis">...</li>
+						   #end
+						#end
+						#set( $afters = $hits.linksAfter() )
+					#foreach( $before in $befores )
+						<li><a class="ajax" targetdiv="emresultscontent" href="$resultsPage=$before" >$before</a></li>		
+					#end
+						<li class="current"><a  class="ajax" targetdiv="emresultscontent" href="$resultsPage=$thispage" >$!thispage</a></li>
+					#foreach( $after in $afters )
+						<li><a  class="ajax" targetdiv="emresultscontent" href="$resultsPage=$after">$after</a></li>		
+					#end
+					#set($size=${afters.size()})
+					#set( $size = $size - 1 )
+					#if($size>0)
+						#if ($afters.get($size)< $hits.getTotalPages() )
+							<li class="ellipsis">...</li>
+							<li><a  class="ajax" targetdiv="emresultscontent" href="$resultsPage=$hits.getTotalPages()" >$hits.getTotalPages()</a></li>	
+						#end
+					#end
+					#if ( $hits.nextPage() )
+					<li class="next"><a class="ir" href="$resultsPage=$hits.nextPage()"   title="Next (alt n enter)" accesskey="n">Next</a>
+					#end
+				</ul>
+				
+			</div>
+		</div>
+	</div>
+	
+#end	
