@@ -1,7 +1,11 @@
 <div id="searchpanel" >
 
-	<form id="main-search">
-		<input class="big-search-field" type="text" />
+	<form id="main-search" name="searchform" action="$apphome/views/search/search.html" >
+		<input type="hidden" name="field" value="description" />
+		<input type="hidden" name="operation" value="startswith" />
+	##	not used #set( $input = "Search...") initialtext="Search..."
+	#set( $input = $hits.getInput("description") )
+    	<input type="text"  id="assetsearchinput"   class="initialtext big-search-field" name="description.value" value="$!input" />
 		<input class="main-search-button" type="submit" value="Search" />
 	</form>
 	

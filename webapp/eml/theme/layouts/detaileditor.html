@@ -1,0 +1,83 @@
+#macro (display $filename $label $assetid $view $print)
+	$context.putPageValue("view", $view)
+	#if ($print && $print == "true")
+		$pages.include("$apphome/components/detaileditor/$filename?assetid=$assetid&view=$view&print=true&pluginpath=$apphome/components/detaileditor/$filename", $context)
+	#else
+  		$pages.include("$apphome/components/detaileditor/toggle.html?pluginpath=$apphome/components/detaileditor/$filename&assetid=$assetid&label=$label&view=$view",$context)
+  	#end
+#end
+
+
+<div id="eml-tabs-view">
+	
+	<div id="eml-search-information">
+		$pages.include("$apphome/components/search/friendly.html")
+		$pages.include("$apphome/components/search/quicksearch.html")
+		<div id="eml-action-buttons">
+			$pages.include("$apphome/components/results/actionbuttons.html")
+			$pages.include("$apphome/components/results/views.html")
+		</div>
+	</div>
+	
+	<div id="eml-search-results">
+		<div id="eml-tabs">
+			<ul>
+				#set( $screens = $searcherManager.getList($catalogid,"asseteditor") )
+				#foreach($screen in $screens)
+				<li #if( $content.subtab == "$screen.id" ) class="current" #end><a href="$home$apphome${screen.path}?sourcepath=$asset.sourcepath">$screen.name</a></li>
+				#end
+ 			</ul>
+		</div>
+		<!--<div id="eml-tab-content">
+			<div id="eml-tab-subnav">
+				<ul>
+					<li class="current"><a href="#status">Status</a></li>
+					<li><a href="#contents">Contents</a></li>
+					<li><a href="#file-properties">File Properties</a></li>
+				</ul>
+			</div>
+		-->	
+		<div class="autoresize-inner">
+		$pages.includeContent()
+		</div>
+<!-- 			<div id="eml-tab-green-container">
+
+				<div id="eml-tab-options-container">
+
+					<div class="eml-tab-option">
+						<form id="eml-options">
+							<ul>
+								<li>
+									<div class="label">
+										<label for="import-status">Import Status</label>
+									</div>
+									<div class="option">
+										<input type="text" name="import-status" id="import-status" />
+									</div>
+								</li>
+								<li>
+									<div class="label">
+										<label for="edit-status">Edit Status</label>
+									</div>
+									<div class="option">
+										<input type="text" name="edit-status" id="edit-status" />
+									</div>
+								</li>
+								<li>
+									<input class="btn" type="submit" value="Save Changes" />
+								</li>
+							</ul>
+						</form>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	 -->
+#if( !$hits )	 
+	#set( $hits = $mediaarchive.getAssetSearcher().getAllHits($context) )
+	$context.putPageValue("hits",$hits)
+#end	 
+	 $pages.include("$apphome/components/results/pages.html",$context)
+	
+</div>
