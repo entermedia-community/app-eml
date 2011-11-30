@@ -1473,14 +1473,14 @@ th span a.ajax {
 	color: #646464;
 }
 .eml-tab-option #emselectable table tr.odd {
-	background: #f5fced;
+	background: #f0f6e9;
 }
 .eml-tab-option #emselectable table tr.emborderhover {
 	background: #e3fbc8;
 	color: #486f21;
 }
 .embuttons {
-	padding: 10px 0 20px 20px;
+	padding: 10px 0 35px 20px;
 	display: block;
 }
 .embuttons li {
@@ -1488,6 +1488,8 @@ th span a.ajax {
 }
 
 /* THOWAWAY WIDGET STYLES */
+
+
 #eml-tab-green-container .ui-widget {
 	border: 1px solid #5FA83E;
 	border-radius: 0;
@@ -1513,6 +1515,32 @@ th span a.ajax {
 }
 .emdataeditor tr td {
 	verticl-align: middle;
+}
+.field-editor tr td:first-child {
+	text-align: right;
+	padding-right: 20px;
+	font-size: 14px;
+	width: 120px;
+	height: 28px;
+}
+.vlist {
+	margin: 0;
+	padding: 0;
+}
+.vlist li {
+	list-style: none;
+	margin: 0;
+	margin-left: 20px;
+	padding: 5px 0;
+}
+.vlist li a {
+	color: #a8a8a8;
+	font-weight: bold;
+	text-decoration: none;
+	font-size: 14px !important;
+}
+.vlist li a:hover {
+	color: #595959;
 }
 
 /* BUTTONS */
