@@ -1,0 +1,4 @@
+<page>
+	<property name="subtab">metadatadetails</property>
+	<inner-layout>${themeprefix}/layouts/detaileditorsub.html</inner-layout>
+</page>
