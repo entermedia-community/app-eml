@@ -677,7 +677,7 @@ html, body, #main {
 .autoresize-outer {
 	position: relative;
 	z-index: 3;
-	overflow: auto;
+	overflow: hidden;
 }
 .autoresize-inner {
 	overflow: auto;
@@ -1241,6 +1241,13 @@ th span a.ajax {
 }
 
 /* CAROUSEL */
+#eml-carousel-outer {
+	height: 130px;
+	margin-top: -20px;
+	position: relative; 
+	z-index: 9999;
+	background: #000;
+}
 
 #eml-carousel {
 	background: #e6e6e6;
@@ -1251,7 +1258,7 @@ th span a.ajax {
 	margin: -13px 0;
 	padding: 0;
 	height: 130px;
-	width: 3000px;
+	width: 3500px;
 }
 #eml-carousel ul li {
 	list-style: none;
@@ -1264,6 +1271,8 @@ th span a.ajax {
 }
 #eml-carousel .current {
 	background: url('../images/thumbnail-selector.png');
+	position: relative;
+	z-index: 100;
 }
 #eml-carousel .carousel-thumbnail {
 	width: 110px;
@@ -1285,9 +1294,8 @@ th span a.ajax {
 	height: 16px;
 	padding: 2px 20px;
 	background: #929292;
-	border: 1px solid #8b8b8b;
-	border-left: none;
-	border-right: none;
+	border-top: 1px solid #8b8b8b;
+	border-bottom: 1px solid #777;
 }
 #eml-scroll-length {
 	width: 100%;
@@ -1720,18 +1728,3 @@ ul.embuttons li a, ul.embuttons li input[type="submit"] {
 .clearfix:before, .clearfix:after { content: "\0020"; display: block; height: 0; overflow: hidden; }
 .clearfix:after { clear: both; }
 .clearfix { zoom: 1; }
-
-#column-editor
-{
-	position: relative;	
-}
-
-#column-editor-content
-{
-	background-color: white;
-	border: 1px solid #eee;
-	position: absolute;
-	padding: 20px;
-	z-index: 100;	
-	
-}	
