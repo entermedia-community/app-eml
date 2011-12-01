@@ -6,40 +6,32 @@
 
 
 <div id="eml-pagination-container">
-		<!-- <div id="eml-carousel" class="clearfix">
+	#set( $showcarousel = $context.getRequestParameter("showcarousel"))
+	#if( $showcarousel )
+		<div id="eml-carousel" class="clearfix">
 			<ul>
-				<li>
+				#set( $id = $asset.id)
+				#foreach( $hit in $hits.getPageOfHits() )
+				$context.putPageValue("hit", $hit)
+				$context.putPageValue("sourcepath", $hit.sourcepath)
+
+				<li  #if($hit.id == $id) class="current" #end>
 					<div class="carousel-thumbnail">
-						<img src="$home$apphome/theme/images/thumb.jpg" />
+						<a href="$home$apphome/views/assets/$hit.sourcepath/index.html">
+				$pages.include("$apphome/components/results/thumbnails/small.html",$context)
+					</a>		
 					</div>
 				</li>
-				<li>
-					<div class="carousel-thumbnail">
-						<img src="$home$apphome/theme/images/thumb.jpg" alt="Thumbanil Description" />
-					</div>
-				</li>
-				<li>
-					<div class="carousel-thumbnail">
-						<img src="$home$apphome/theme/images/thumb.jpg" alt="Thumbanil Description" />
-					</div>
-				</li>
-				<li class="current">
-					<div class="carousel-thumbnail">
-						<img src="$home$apphome/theme/images/thumb.jpg" alt="Thumbanil Description" />
-					</div>
-				</li>
-				<li>
-					<div class="carousel-thumbnail">
-						<img src="$home$apphome/theme/images/thumb.jpg" alt="Thumbanil Description" />
-					</div>
-				</li>
-				<li>
-					<div class="carousel-thumbnail">
-						<img src="$home$apphome/theme/images/thumb.jpg" alt="Thumbanil Description" />
-					</div>
-				</li>
+				#end
 			</ul>
-		</div> -->
+		</div> 
+		<div id="eml-scroll-area">
+			<div id="eml-scroll-length">
+				<div id="eml-scroll-bar"></div>
+			</div>
+		</div>
+		#end
+		
 		<div id="pagination">
 			<div id="related-search-terms">
 				Related Search Terms: 

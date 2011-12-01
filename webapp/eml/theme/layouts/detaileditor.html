@@ -20,6 +20,9 @@
 	
 <div class="autoresize-inner">
 
+
+
+			
 	<div id="eml-search-results">
 		<div id="eml-tabs">
 			<ul>
@@ -30,9 +33,12 @@
  			</ul>
 		</div>
 
-		
+		<div id="eml-previous-asset"><a href="#previous" class="ir">Previous Asset</a></div>
+		<div id="eml-next-asset"><a href="#previous" class="ir">Next Asset</a></div>
 		$pages.includeContent()
+		
 	</div>
+
 </div>
 
 
@@ -40,6 +46,7 @@
 	#set( $hits = $mediaarchive.getAssetSearcher().getAllHits($context) )
 	$context.putPageValue("hits",$hits)
 #end	 
-	 $pages.include("$apphome/components/results/pages.html",$context)
+
+	 $pages.include("$apphome/components/results/pages.html?showcarousel=true",$context)
 	
 </div>
