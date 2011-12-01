@@ -1720,3 +1720,18 @@ ul.embuttons li a, ul.embuttons li input[type="submit"] {
 .clearfix:before, .clearfix:after { content: "\0020"; display: block; height: 0; overflow: hidden; }
 .clearfix:after { clear: both; }
 .clearfix { zoom: 1; }
+
+#column-editor
+{
+	position: relative;	
+}
+
+#column-editor-content
+{
+	background-color: white;
+	border: 1px solid #eee;
+	position: absolute;
+	padding: 20px;
+	z-index: 100;	
+	
+}	
