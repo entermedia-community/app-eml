@@ -1,4 +1,4 @@
 <page>
-
 <inner-layout>${themeprefix}/layouts/searchlayout.html</inner-layout>
+
 </page>
