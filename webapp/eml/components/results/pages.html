@@ -6,8 +6,7 @@
 <div id="eml-pagination-container">
 	#set( $showcarousel = $context.getRequestParameter("showcarousel"))
 	#if( $showcarousel )
-	
-		<div id="eml-carousel" class="clearfix">
+		<div id="eml-carousel" class="clearfix ">
 			<ul>
 				#set( $id = $asset.id)
 				#foreach( $hit in $hits.getPageOfHits() )
@@ -25,7 +24,7 @@
 				#end
 			</ul>
 		</div> 
-		<!--div id="eml-scroll-area">
+		<!-- <div id="eml-scroll-area">
 			<div id="eml-scroll-length">
 				<div id="eml-scroll-bar"></div>
 			</div>

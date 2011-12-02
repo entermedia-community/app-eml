@@ -8,23 +8,30 @@
 		
 		<div id="eml-media-details">
 			
-			<h3>assetpath.jpg</h3>
+			<h3>$asset.name</h3>
+
+#set($views = $searcherManager.getList("$catalogid", "assettype/views"))
+
+#set( $archive = $searcherManager.getPropertyDetailsArchive($catalogid) )
+
+			$context.putPageValue("view",$view)	
+			$context.putPageValue("origURL", "$apphome/assets/${asset.sourcePath}.html")
+			$context.putPageValue("data",$asset)	
+			$context.putPageValue("searcher",$mediaarchive.getAssetSearcher() )	
 			
-			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+			#foreach( $target in $views)
+
+			#if( $asset.assettype && $archive.viewExists("asset/assettype/$asset.assettype/$target.id") )
+			  #set ($view = "asset/assettype/$asset.assettype/$target.id")
+			#else
+			  #set ($view = "assettype/default/$target.id")
+			#end
+			$context.putPageValue("view",$view)	
+			$pages.include("/$applicationid/components/xml/detailviewer.html", $context)
+
 			
-			<ul>
-				<li>Item 1</li>
-				<li>Item 2</li>
-				<li>Item 3</li>
-				<li>Item 4</li>
-				<li>Item 5</li>
-			</ul>
-			
-			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-						
-			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-									
-			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+			#end
+
 			
 			
 		</div>
