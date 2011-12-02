@@ -2,7 +2,9 @@
 			
 	<a class="btn small" href="$home$apphome/views/activity/downloadassets.html?hitssessionid=$!hits.getSessionId()">Download</a>
 	<a class="btn small" href="#share">Share</a>
-	
+	#if( $asset )
+	<a class="btn small" href="#share">Delete</a>
+	#end
 	#if($content.isPropertyTrue("showaddselections"))
 	
 	<a class="btn small toggleitem ajax" targetdiv="basketmenu" href="$home$apphome/components/basket/addselection.html?hitssessionid=$hits.getSessionId()">Add to Basket</a>
