@@ -1,11 +1,18 @@
-<div id="viewswitcher">
-
+<div id="eml-tabs-view">
 	
+	<h2 id="buffer" style="border-bottom: 1px solid #CBCBCB; position: relative; z-index: 99;">Share</h2>
 <div class="autoresize-inner">
-
-$pages.includeContent()
-
+	<div id="eml-tab-content" >
+		
+				<div id="eml-tab-green-container" class="clearfix">
+					<div id="eml-tab-options-container">
+						<div class="eml-tab-option">
+							$pages.includeContent()
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
 </div>
 
-	
-</div>
+$pages.include("$apphome/components/results/pages.html",$context)
