@@ -1,3 +1,4 @@
+<div id="viewswitcher">
 #macro (display $filename $label $assetid $view $print)
 	$context.putPageValue("view", $view)
 	#if ($print && $print == "true")
@@ -13,8 +14,8 @@
 		$pages.include("$apphome/components/search/friendly.html")
 		$pages.include("$apphome/components/search/quicksearch.html")
 		<div id="eml-action-buttons">
-			$pages.include("$apphome/components/results/actionbuttons.html")
-			$pages.include("$apphome/components/results/views.html")
+			$pages.include("$apphome/components/results/actionbuttons.html",$context)
+			$pages.include("$apphome/components/results/views.html?resultstype=assetview",$context)
 		</div>
 	</div>
 	
@@ -28,7 +29,7 @@
 			<ul>
 				#set( $screens = $searcherManager.getList($catalogid,"asseteditor") )
 				#foreach($screen in $screens)
-				<li #if( $content.subtab == "$screen.id" ) class="current" #end><a href="$home$apphome${screen.path}?sourcepath=$asset.sourcepath">$screen.name</a></li>
+				<li #if( $content.tab == "$screen.id" ) class="current" #end><a href="$home$apphome${screen.path}?sourcepath=$asset.sourcepath">$screen.name</a></li>
 				#end
  			</ul>
 		</div>
@@ -49,4 +50,6 @@
 
 	 $pages.include("$apphome/components/results/pages.html?showcarousel=true",$context)
 	
+</div>
+
 </div>

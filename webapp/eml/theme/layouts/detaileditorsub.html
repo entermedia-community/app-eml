@@ -1,13 +1,14 @@
 
 <div id="eml-tab-content">
-#if ($content.tab)
+
 #set ($listid =	$content.tab )
+#set( $screens = $searcherManager.getList($catalogid,$listid) ) 
+#if ($screens.size() > 0)
 <div id="eml-tab-subnav">
 	<ul>
-		#set( $screens = $searcherManager.getList($catalogid,$listid) )
 		#foreach($screen in $screens)
-		<li #if( $content.subtab == "$screen.id" ) class="current" #end>
-			<a  href="$home$apphome${screen.path}"><!-- <img  src="$home$themeprefix/images/icons/${screen.icon}.png"> -->$screen </a>
+		<li #if( $content.subtab == "$screen.id" ) class="current" #end> 
+			<a  href="$home$apphome${screen.path}?sourcepath=$asset.sourcepath"><!-- <img  src="$home$themeprefix/images/icons/${screen.icon}.png"> -->$screen </a>
 		</li>
 		#end
 	</ul>
@@ -17,8 +18,6 @@
 	<div id="eml-tab-options-container">
 		<div class="eml-tab-option">
 			
-
-
 			$pages.includeContent()			
 
 				

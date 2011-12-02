@@ -16,5 +16,12 @@ $(window).resize(doResize);
 $(document).ready(function() {
 
 	doResize();
+	
+	$('#eml-carousel').livequery(
+			function()
+			{
+				jQuery(this).jScrollPane();
+			}
+		);
 
 });

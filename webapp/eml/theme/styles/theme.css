@@ -1141,11 +1141,7 @@ th span a.ajax {
 
 /* PAGINATION */
 
-#eml-pagination-container {
-	width: 100%;
-	position: relative;
-	z-index: 5;
-}
+
 #pagination {
 	padding: 5px 20px;
 	background: #e6e6e6;
@@ -1241,6 +1237,31 @@ th span a.ajax {
 }
 
 /* CAROUSEL */
+
+#Xeml-carousel-scroll
+{
+	background: transparent;	
+	Xmargin-top: -20px;
+	position: relative;
+	z-index: 5;
+}
+
+
+#eml-pagination-container {
+	width: 100%;
+	position: relative;
+	z-index: 5;
+}
+#eml-pagination-container .jspContainer
+{
+	overflow:visible;
+}
+
+#eml-pagination-container .jspVerticalBar
+{
+	display:none;
+}
+
 #eml-carousel-outer {
 	height: 130px;
 	margin-top: -20px;
@@ -1290,8 +1311,9 @@ th span a.ajax {
 
 /* CAROUSEL SCROLL BAR */
 
+
 #eml-scroll-area {
-	height: 16px;
+	height: 36px;
 	padding: 2px 20px;
 	background: #929292;
 	border-top: 1px solid #8b8b8b;

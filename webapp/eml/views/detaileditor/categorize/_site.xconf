@@ -1,0 +1,6 @@
+<page>
+	<property name="tab">asseteditormetadata</property>
+
+	<property name="subtab">editassetcategories</property>
+	<inner-layout>${themeprefix}/layouts/detaileditorsub.html</inner-layout>
+</page>

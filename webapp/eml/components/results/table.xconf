@@ -1,5 +1,6 @@
 <page>
 <property name="showtoolbar">true</property>
+<property name="resulttype">table</property>
 <property name="heightmargin">150</property>
 </page>
 

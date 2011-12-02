@@ -4,6 +4,6 @@
 	<path-action name="MediaSearchModule.searchCategories"/>
 	
 	<inner-layout>/${applicationid}/views/detaileditor/viewer/index.html</inner-layout>
-	<property name="subtab">viewmediaviewer</property>
+	<property name="tab">viewmediaviewer</property>
 	
 </page>

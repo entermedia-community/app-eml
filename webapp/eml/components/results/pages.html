@@ -3,11 +3,10 @@
 #set($resultsPage = "$resultsPage&page")
 #set($thispage = $hits.getPage())
 
-
-
 <div id="eml-pagination-container">
 	#set( $showcarousel = $context.getRequestParameter("showcarousel"))
 	#if( $showcarousel )
+	
 		<div id="eml-carousel" class="clearfix">
 			<ul>
 				#set( $id = $asset.id)
@@ -17,20 +16,21 @@
 
 				<li  #if($hit.id == $id) class="current" #end>
 					<div class="carousel-thumbnail">
-						<a href="$home$apphome/views/assets/$hit.sourcepath/index.html">
-				$pages.include("$apphome/components/results/thumbnails/small.html",$context)
-					</a>		
+						#set( $alink = "$home$apphome/views/detaileditor/viewer/index.html?sourcepath=$hit.sourcepath&hitssessionid=$!hits.getSessionId()&oemaxlevel=2" )
+						<a href="$alink" class="ajax" targetdiv="viewswitcher">
+						$pages.include("$apphome/components/results/thumbnails/small.html",$context)
+						</a>		
 					</div>
 				</li>
 				#end
 			</ul>
 		</div> 
-		<div id="eml-scroll-area">
+		<!--div id="eml-scroll-area">
 			<div id="eml-scroll-length">
 				<div id="eml-scroll-bar"></div>
 			</div>
 		</div>
-	
+	     -->
 		#end
 		
 		<div id="pagination">
