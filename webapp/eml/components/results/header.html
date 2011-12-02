@@ -8,14 +8,15 @@
 		<div id="eml-action-buttons">
 			$pages.include("$apphome/components/results/actionbuttons.html")
 			$pages.include("$apphome/components/results/views.html?resulttype=$!userprofile.resultview")
+			#set( $edit = $context.getRequestParameter("editheader") )
+		#if($edit && $edit == "true"  )
+				<p style="display: inline; margin-left: 15px;"><span class="ui-icon ui-icon-info" style="display: inline-block; margin-right: .3em; position: relative; top: 3px;"></span>
+				[[Drag columns to move them]]</p>
+		#end
 		</div>
 	</div>
 
-		#set( $edit = $context.getRequestParameter("editheader") )
-		#if($edit && $edit == "true"  )
-				<p><span class="ui-icon ui-icon-info" style="float: left; margin-right: .3em;"></span>
-				[[Drag columns to move them]]</p>
-		#end
+		
 
 
 			
