@@ -1,0 +1,22 @@
+#set ($classname="enabled")
+			
+	<a class="btn small" href="$home$apphome/views/activity/downloadassets.html?hitssessionid=$!hits.getSessionId()">Download</a>
+<<<<<<< HEAD
+	<a class="btn small" href="$home$apphome/views/activity/index.html">Share</a>
+	
+=======
+	<a class="btn small" href="#share">Share</a>
+	#if( $asset )
+	<a class="btn small" href="#share">Delete</a>
+	#end
+>>>>>>> 668dbe832aa8888a223827c338aac437466ef5fe
+	#if($content.isPropertyTrue("showaddselections"))
+	
+	<a class="btn small toggleitem ajax" targetdiv="basketmenu" href="$home$apphome/components/basket/addselection.html?hitssessionid=$hits.getSessionId()">Add to Basket</a>
+	
+	#end
+	#if($content.isPropertyTrue("showremoveselections"))
+	
+	<a class="btn small toggleitem ajax" targetdiv="basketmenu" href="$home$apphome/components/basket/removeselections.html?hitssessionid=$hits.getSessionId()">Remove from Basket</a>
+	
+#end
