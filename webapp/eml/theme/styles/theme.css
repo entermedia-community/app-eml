@@ -21,7 +21,7 @@ body, #header a {
 #emselectable {  margin: 0 auto; }
 #emselectable thead tr { font_size: 11px; font-weight: bold; padding: 5px 0px 5px 14px; }
 
-table td {
+table td {d
 	vertical-align: top;
 }
 
@@ -830,7 +830,7 @@ html, body, #main {
 td {
 	vertical-align: middle !important;
 }
-#emselectable td {
+#emselectable td, #shared-asset-table {
 	padding: 7px 0;
 }
 
@@ -1556,10 +1556,10 @@ th.editcolumnheader {
 
 /* OPTIONS BOX TABLE */
 
-#emselectable table {
+#emselectable table, #shared-asset-table {
 	background: #fff;
 }
-.eml-tab-option #emselectable table {
+.eml-tab-option #emselectable table, #shared-asset-table {
 	width: 95%;
 	border: 1px solid #5FA83E;
 	background: #fff;
@@ -1575,7 +1575,7 @@ th.editcolumnheader {
 	border: none;
 	margin: 0;
 }
-.eml-tab-option #emselectable table tr td {
+.eml-tab-option #emselectable table tr td, #shared-asset-table tr td {
 	padding: 8px 15px;
 	font-size: 12px;
 	margin: 0;
@@ -1815,6 +1815,23 @@ h3.instructions {
 }
 #newterm {
 	color: #c3c3c3;
+}
+
+
+/* SHARE STYLES */
+
+
+#eml-tab-green-container h3 {
+	color: #fff;
+}
+td.asset-name {
+	background: #5FA83E;
+	color: #fff;
+	padding: 10px 0;
+	font-size: 14px;
+	border: none;
+	margin: 0;
+	font-weight: bold;
 }
 
 
