@@ -1200,6 +1200,8 @@ th.editcolumnheader {
 	float: right;
 	width: 50%;
 	margin-top: 5px;
+	position: realtive;
+	z-index: 999;
 }
 #pages .ellipsis {
 	color: #797979;
@@ -1719,10 +1721,13 @@ th.editcolumnheader {
 
 /* SEARCH EDITOR STYLES */
 
-#search-title {
+#eml-tabs-view #search-title {
 	color: #c3c3c3;
 	font-size: 23px;
 	font-weight: normal;
+	padding: 0;
+	margin: 0 0 16px 0;
+	background: none;
 }
 #search-title input {
 	color: #333;
@@ -1808,6 +1813,9 @@ h3.instructions {
 	padding: 6px 10px;
 	margin-top: 10px;
 }
+#newterm {
+	color: #c3c3c3;
+}
 
 
 /* THOWAWAY WIDGET STYLES */
@@ -1831,6 +1839,11 @@ h3.instructions {
 #eml-tab-green-container .ui-widget-content {
 	background: #fff;
 	padding: 20px;
+}
+#eml-tab-green-container p {
+	font-size: 16px;
+	color: white;
+	font-weight: bold;
 }
 .emdataeditor tr {
 	padding: 8px 15px;
