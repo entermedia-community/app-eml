@@ -1,6 +1,3 @@
-#if( $hits && $hits.totalPages > 1 )
-#set($resultsPage = "$home$apphome/views/search/index.html?hitssessionid=$hits.sessionId&searchtype=asset&hitsperpage=$!hits.hitsPerPage&categoryid=$!category.id&oemaxlevel=1&resultstype=$!resultstype")
-#set($resultsPage = "$resultsPage&page")
 #set($thispage = $hits.getPage())
 
 <div id="eml-pagination-container">
@@ -16,7 +13,7 @@
 				<li  #if($hit.id == $id) class="current" #end>
 					<div class="carousel-thumbnail">
 						#set( $alink = "$home$apphome/views/detaileditor/viewer/index.html?sourcepath=$hit.sourcepath&hitssessionid=$!hits.getSessionId()&oemaxlevel=2" )
-						<a href="$alink" class="ajax" targetdiv="viewswitcher">
+						<a href="$alink" class="ajax" targetdivinner="viewswitcher">
 						$pages.include("$apphome/components/results/thumbnails/small.html",$context)
 						</a>		
 					</div>
@@ -24,58 +21,56 @@
 				#end
 			</ul>
 		</div> 
-		<!-- <div id="eml-scroll-area">
-			<div id="eml-scroll-length">
-				<div id="eml-scroll-bar"></div>
-			</div>
-		</div>
-	     -->
-		#end
+	#end
 		
+#if( $showcarousel )
+	#set($rootpath = "$home$apphome/components/results/pages.html")
+	#set($targetdiv = "eml-pagination-container")
+#else
+	#set($rootpath = "$home$apphome/views/search/index.html")
+	#set($targetdiv = "up")
+#end
+
+#set($resultsPage = "$home$rootpath?hitssessionid=$hits.sessionId&searchtype=asset&hitsperpage=$!hits.hitsPerPage&categoryid=$!category.id&oemaxlevel=1&resultstype=$!resultstype&showcarousel=$!showcarousel")
+#set($resultsPage = "$resultsPage&page")
+
 		<div id="pagination">
-			<div id="related-search-terms">
-				Related Search Terms: 
-				<a href="#term1">Term 1</a>, 
-				<a href="#term2">Term 2</a>, 
-				<a href="#term3">Term 3</a>, 
-				<a href="#term4">Term 4</a>
-			</div>
+		$pages.include("$apphome/components/relatedkeywords/hlist.html")
+
+		#if( $hits && $hits.totalPages > 1 )
 			<div id="pages">
-				
 				<ul>
 					#if( $hits.prevPage() )
-					<li class="previous"><a class="ir" targetdiv="emresultscontent" href="$resultsPage=$hits.prevPage()" title="Previous ( alt p enter)" accesskey="p" >Previous</a></li>
+					<li class="previous"><a class="ir ajax" targetdivinner="$targetdiv" href="$resultsPage=$hits.prevPage()" title="Previous ( alt p enter)" accesskey="p" >Previous</a></li>
 					#end
 					#set( $befores = $hits.linksBefore() )					
 						#if($befores.size()!=0)
 						  #if($befores.get(0)>1)
-							<li><a class="ajax" targetdiv="emresultscontent" href="$resultsPage=1'" >1</a></li>	
+							<li><a class="ajax" targetdivinner="$targetdiv" href="$resultsPage=1'" >1</a></li>	
 						    <li class="ellipsis">...</li>
 						   #end
 						#end
 						#set( $afters = $hits.linksAfter() )
 					#foreach( $before in $befores )
-						<li><a class="ajax" targetdiv="emresultscontent" href="$resultsPage=$before" >$before</a></li>		
+						<li><a class="ajax" targetdivinner="$targetdiv" href="$resultsPage=$before" >$before</a></li>		
 					#end
-						<li class="current"><a  class="ajax" targetdiv="emresultscontent" href="$resultsPage=$thispage" >$!thispage</a></li>
+						<li class="current"><a  class="ajax" targetdivinner="$targetdiv" href="$resultsPage=$thispage" >$!thispage</a></li>
 					#foreach( $after in $afters )
-						<li><a  class="ajax" targetdiv="emresultscontent" href="$resultsPage=$after">$after</a></li>		
+						<li><a  class="ajax" targetdivinner="$targetdiv" href="$resultsPage=$after">$after</a></li>		
 					#end
 					#set($size=${afters.size()})
 					#set( $size = $size - 1 )
 					#if($size>0)
 						#if ($afters.get($size)< $hits.getTotalPages() )
 							<li class="ellipsis">...</li>
-							<li><a  class="ajax" targetdiv="emresultscontent" href="$resultsPage=$hits.getTotalPages()" >$hits.getTotalPages()</a></li>	
+							<li><a  class="ajax" targetdivinner="$targetdiv" href="$resultsPage=$hits.getTotalPages()" >$hits.getTotalPages()</a></li>	
 						#end
 					#end
 					#if ( $hits.nextPage() )
-					<li class="next"><a class="ir" href="$resultsPage=$hits.nextPage()"   title="Next (alt n enter)" accesskey="n">Next</a>
+					<li class="next"><a class="ir ajax" targetdivinner="$targetdiv" href="$resultsPage=$hits.nextPage()"   title="Next (alt n enter)" accesskey="n">Next</a>
 					#end
 				</ul>
-				
 			</div>
-		</div>
+	#end
 	</div>
 </div>
-#end	

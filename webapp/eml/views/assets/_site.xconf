@@ -6,4 +6,8 @@
 	<inner-layout>/${applicationid}/views/detaileditor/viewer/index.html</inner-layout>
 	<property name="tab">viewmediaviewer</property>
 	
+		<style id="jscrollpanecss"  href="/${applicationid}/components/javascript/jscroll/jquery.jscrollpane.css" />
+	<script id="jscrollmouse" src="/${applicationid}/components/javascript/jscroll/jquery.mousewheel.js"></script>
+	<script id="jscrollpane" src="/${applicationid}/components/javascript/jscroll/jquery.jscrollpane.js"></script>
+	
 </page>

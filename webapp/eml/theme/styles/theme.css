@@ -1833,18 +1833,21 @@ td.asset-name {
 	margin: 0;
 	font-weight: bold;
 }
+#eml-main .jstree-default.jstree-focused {
+	background: #fff;
+}
 
 
 /* THOWAWAY WIDGET STYLES */
 
 
-#eml-tab-green-container .ui-widget {
+#eml-tab-green-container .ui-widget, #eml-green-dialog .ui-widget {
 	border: 1px solid #5FA83E;
 	border-radius: 0;
 	width: 95%;
 	margin-top: 10px;	
 }
-#eml-tab-green-container .ui-widget-header {
+#eml-tab-green-container .ui-widget-header, #eml-green-dialog .ui-widget-header {
 	background: #5FA83E;
 	color: #fff;
 	padding: 10px 20px;
@@ -1853,7 +1856,7 @@ td.asset-name {
 	margin: 0;
 	border: none;
 }
-#eml-tab-green-container .ui-widget-content {
+#eml-tab-green-container .ui-widget-content, #eml-green-dialog .ui-widget-content {
 	background: #fff;
 	padding: 20px;
 }
