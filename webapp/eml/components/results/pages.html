@@ -43,6 +43,9 @@
 			
 		</div> 
 	#end
+
+#set( $resulttype = $context.findValue("resultstype"))
+
 		
 #if( $showcarousel )
 	#set($rootpath = "$home$apphome/components/results/pages.html")
@@ -50,7 +53,7 @@
 	#set($level = "oemaxlevel=1")
 #else
 	#set($rootpath = "$home$apphome/views/search/index.html")
-	#set($targetdiv = "up")
+	#set($targetdiv = "viewswitcher")
 	#set($level = "oemaxlayout=3")
 #end
 
