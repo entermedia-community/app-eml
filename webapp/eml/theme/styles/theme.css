@@ -964,16 +964,13 @@ th span a.ajax {
 
 /* TABLE EDITOR CSS */
 
-th.editcolumnheader {
-	border-left: 1px solid #ccc;
-	border-right: 1px solid #eee;
+#table-edit-outside {
 	position: relative;
-}
-.headerdraggableeneabled {
-  background: #ccc;
 }
 .editcolumnheader {
 	padding: 0;
+	border-left: 1px solid #ccc !important;
+	border-right: 1px solid #eee !important;
 }
 .edit-table-header {
     margin: 0; 
@@ -981,7 +978,7 @@ th.editcolumnheader {
     top: 5px;
 }
 
-.table-editor {
+#table-editor, .table-edit-close {
 	float: right;
 	margin-top: -18px;
 	margin-right: 15px;
@@ -990,7 +987,7 @@ th.editcolumnheader {
 #column-editor {
 	position: absolute;
 	right: 0px;
-	top: 30px;
+	top: 5px;
 	padding: 15px;
 	background: #fff;
 	box-shadow: 0px 0px 10px 0px rgba(0,0,0,.25);
@@ -1020,9 +1017,10 @@ th.editcolumnheader {
 	padding: 3px 21px;
 	border-radius: 5px;
 	text-decoration: none;
-	displaY: block;
+	display: block;
 	font-size: 12px;
-	text-overflow: ellipsis;
+	word-wrap: break-word;
+	
 	
 }
 .search-list li:hover a.search-href {
@@ -1198,9 +1196,8 @@ th.editcolumnheader {
 }
 #pages {
 	float: right;
-	width: 50%;
 	margin-top: 5px;
-	position: realtive;
+	position: relative;
 	z-index: 999;
 }
 #pages .ellipsis {
@@ -1274,7 +1271,7 @@ th.editcolumnheader {
 
 /* CAROUSEL */
 
-#Xeml-carousel-scroll
+#eml-carousel-scroll
 {
 	background: transparent;	
 	Xmargin-top: -20px;
@@ -1314,7 +1311,6 @@ th.editcolumnheader {
 #eml-carousel ul {
 	margin: -13px 0;
 	padding: 0;
-	height: 130px;
 	margin-bottom: 20px;
 	width: 3160px;
 }
@@ -1652,6 +1648,8 @@ th.editcolumnheader {
 	border-radius: 0 10px 10px 0;
 	border: 1px solid #f7f7f7;
 	border-left: none;
+	position: relative;
+	z-index: 99;
 }
 #eml-previous-asset a:hover {
 	border: 1px solid #fff;
@@ -1666,6 +1664,9 @@ th.editcolumnheader {
 	border-radius: 10px 0 0 10px;
 	border: 1px solid #f7f7f7;
 	border-right: none;
+	position: relative;
+	z-index: 99;
+	
 }
 #eml-next-asset a:hover {
 	background-color: #cbcbcb;
@@ -1685,7 +1686,7 @@ th.editcolumnheader {
 	text-decoration: none;
 	color: #a8a8a8;
 }
-.eml-thumbnail-caption:hover {
+.emboxthumb:hover .eml-thumbnail-caption {
 	color: #595959;
 }
 .gallery-thumb {
