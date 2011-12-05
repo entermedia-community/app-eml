@@ -12,7 +12,7 @@
 
 				<li  #if($hit.id == $id) class="current" #end>
 					<div class="carousel-thumbnail">
-						#set( $alink = "$home$apphome/views/detaileditor/viewer/index.html?sourcepath=$hit.sourcepath&hitssessionid=$!hits.getSessionId()&oemaxlevel=2" )
+						#set( $alink = "$home$content.path?sourcepath=$hit.sourcepath&hitssessionid=$!hits.getSessionId()&oemaxlayout=3" )
 						<a href="$alink" class="ajax" targetdivinner="viewswitcher">
 						$pages.include("$apphome/components/results/thumbnails/small.html",$context)
 						</a>		

@@ -29,24 +29,29 @@
 			<ul>
 				#set( $screens = $searcherManager.getList($catalogid,"asseteditor") )
 				#foreach($screen in $screens)
-				<li #if( $content.tab == "$screen.id" ) class="current" #end><a href="$home$apphome${screen.path}?sourcepath=$asset.sourcepath">$screen.name</a></li>
+				<li #if( $content.tab == "$screen.id" ) class="current" #end><a href="$home$apphome${screen.path}?sourcepath=$asset.sourcepath&hitssessionid=$!hits.getSessionId()">$screen.name</a></li>
 				#end
  			</ul>
 		</div>
 
-		<div id="eml-previous-asset"><a href="#previous" class="ir">Previous Asset</a></div>
-		<div id="eml-next-asset"><a href="#previous" class="ir">Next Asset</a></div>
+		#if( $hits )
+			#set($indexOf = $hits.indexOf($asset.catalogid, $asset.id))
+			#set($showIndex = $indexOf + 1)
+			#set($previous = $hits.previous($indexOf))
+			#set($next = $hits.next($indexOf))
+			
+				#if($previous)
+					<div id="eml-previous-asset"><a href="$home$content.path?sourcepath=${previous.sourcepath}&hitssessionid=$hits.getSessionId()&roothits=$roothits&oemaxlayout=3" targetdiv="viewswitcher" class="ir ajax">Previous Asset</a></div>
+				#end
+				#if($next)
+					<div id="eml-next-asset"><a href="${home}$content.path?sourcepath=${next.sourcepath}&hitssessionid=$hits.getSessionId()&oemaxlayout=3" targetdiv="viewswitcher" class="ir ajax">Next Asset</a></div>
+				#end
+		#end
 		$pages.includeContent()
 		
 	</div>
 
 </div>
-
-
-#if( !$hits )	 
-	#set( $hits = $mediaarchive.getAssetSearcher().getAllHits($context) )
-	$context.putPageValue("hits",$hits)
-#end	 
 
 	 $pages.include("$apphome/components/results/pages.html?showcarousel=true",$context)
 	
