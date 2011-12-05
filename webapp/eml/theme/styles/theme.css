@@ -1274,7 +1274,7 @@ th span a.ajax {
 #eml-carousel-scroll
 {
 	background: transparent;	
-	Xmargin-top: -20px;
+	margin-topXXX: -20px;
 	position: relative;
 	z-index: 5;
 }
@@ -1306,13 +1306,19 @@ th span a.ajax {
 #eml-carousel {
 	background: #e6e6e6;
 	border-top: 1px solid #CBCBCB;
-	height: 98px;
 }
-#eml-carousel ul {
-	margin: -13px 0;
+
+
+
+#eml-carousel  ul {
+	margin: -13px 0 0px 0;
+	display:block;
 	padding: 0;
-	margin-bottom: 20px;
-	width: 3160px;
+	widthXX: 3160px;
+}
+#eml-carousel .jspContainer ul {
+	position: relative;
+	topXXX: -22px;
 }
 #eml-carousel ul li {
 	list-style: none;
@@ -1323,6 +1329,7 @@ th span a.ajax {
 	height: 71px;
 	margin: 0;
 }
+
 #eml-carousel .current {
 	background: url('../images/thumbnail-selector.png');
 	position: relative;
@@ -1380,13 +1387,6 @@ th span a.ajax {
 }
 #eml-carousel .jspCorner {
 	display: none;
-}
-.jspScrollable {
-	padding-top: 19px !important;
-}
-#eml-carousel .jspContainer ul {
-	position: relative;
-	top: -22px;
 }
 
 

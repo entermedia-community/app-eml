@@ -2,8 +2,8 @@
 
 	<property name="hitsname">hits</property>
 	<property name="searchtype">asset</property>
-	<path-action name="DataEditModule.loadHits" />
-
+	<path-action name="DataEditModule.loadPageOfSearch"/>
+	
 	<style id="jscrollpanecss"  href="/${applicationid}/components/javascript/jscroll/jquery.jscrollpane.css" />
 	<script id="jscrollmouse" src="/${applicationid}/components/javascript/jscroll/jquery.mousewheel.js"></script>
 	<script id="jscrollpane" src="/${applicationid}/components/javascript/jscroll/jquery.jscrollpane.js"></script>

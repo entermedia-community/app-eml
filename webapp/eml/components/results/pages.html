@@ -3,20 +3,35 @@
 <div id="eml-pagination-container">
 	#set( $showcarousel = $context.getRequestParameter("showcarousel"))
 	#if( $showcarousel )
-		<div id="eml-carousel" class="clearfix ">
-			<ul>
+		 #set( $page = $hits.getPageOfHits() )
+
+		#set( $width = $page.size() * 156)
+		#set( $height = "98px")
+		#if( $width  > 800 )
+			#set( $height = "120px")
+		#end
+
+		<div id="eml-carousel" class="clearfixX #if( $height == "120px") autoscroll #end" style="padding: 0px;height:$height" >
+			##set( $link = "$apphome/views/detaileditor/viewer/index.html?sourcepath=H5_SEPTEMBER_11_COVERS/H5_09_11_SUB_BC_FC&hitssessionid=hitsmedia/catalogs/highlights&oemaxlayout=3")
+			<!--  <div style="height: 120px;background: black;width: 3160px;">
+				<a href="$link" class="ajax" targetdivinner="viewswitcher">Hey</a>
+			</div>
+			 -->
+		   <div id="eml-viewport" style="height:$height">
+		   		<ul style="width:${width}px">
 				#set( $id = $asset.id)
-				#foreach( $hit in $hits.getPageOfHits() )
+				#foreach( $hit in $page )
 				$context.putPageValue("hit", $hit)
 				$context.putPageValue("sourcepath", $hit.sourcepath)
 
 				<li  #if($hit.id == $id) class="current" #end>
 					<div class="carousel-thumbnail">
-						#set( $link = $content.path)
-						#if( !$link.contains("views/detaileditor") )
+						#if( $content.scrollable && $content.scrollable == "true")
+							#set( $link = $content.path)
+						#else	
 							#set( $link = "$apphome/views/detaileditor/viewer/index.html")
 						#end
-						#set( $alink = "$home?sourcepath=$hit.sourcepath&hitssessionid=$!hits.getSessionId()&oemaxlayout=3" )
+						#set( $alink = "$home$link?sourcepath=$hit.sourcepath&hitssessionid=$!hits.getSessionId()&oemaxlayout=3" )
 						<a href="$alink" class="ajax" targetdivinner="viewswitcher">
 						$pages.include("$apphome/components/results/thumbnails/small.html",$context)
 						</a>		
@@ -24,6 +39,8 @@
 				</li>
 				#end
 			</ul>
+			</div>
+			
 		</div> 
 	#end
 		
@@ -34,10 +51,10 @@
 #else
 	#set($rootpath = "$home$apphome/views/search/index.html")
 	#set($targetdiv = "up")
-	#set($level = "oemaxlayout=2")
+	#set($level = "oemaxlayout=3")
 #end
 
-#set($resultsPage = "$home$rootpath?hitssessionid=$hits.sessionId&searchtype=asset&hitsperpage=$!hits.hitsPerPage&categoryid=$!category.id&$level&resultstype=$!resultstype&showcarousel=$!showcarousel")
+#set($resultsPage = "$home$rootpath?hitssessionid=$hits.sessionId&searchtype=asset&categoryid=$!category.id&$level&resultstype=$!resultstype&showcarousel=$!showcarousel")
 #set($resultsPage = "$resultsPage&page")
 
 		<div id="pagination">

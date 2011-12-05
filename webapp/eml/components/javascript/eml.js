@@ -4,8 +4,8 @@ doResize = function() {
 	var cdho = $('#header').height() + $('#footer').height();
 	var cdhi = $('#eml-search-information').height() + $('#eml-pagination-container').height() + $('#buffer').height() + $('#eml-tabs').height();
 	var cwho = wh - cdho;
-	
-	var current = $("#eml-carousel .current");
+	//alert( cdhi);
+	var current = $("#eml-carousel");
 	var cwhi = wh - cdhi - cdho - 56;
 	if( current.length > 0 )
 	{
@@ -18,33 +18,75 @@ doResize = function() {
 }
 
 
-$(document).ready(function() {
-	$('#eml-carousel').livequery(
-			function()
-			{
-				var carouseldiv = $(this);
-				var element = carouseldiv.jScrollPane();
-				var api = element.data('jsp');
+$(document).ready(function() 
+{
+	
+	emlcomponents();
 
-				$(element).bind('jsp-scroll-x', function(event,inoffset) 
-						{
-							var per = api.getPercentScrolledX();
-							setCookie("carousel",inoffset, 1);
-							setCookie("carouselper",per, 1);
-						}
-					);		
-				var current = $("#eml-carousel .current");
-				var entirething = $("#eml-carousel ul");
+	$(window).resize(doResize); 
+
+	doResize();
+
+	setTimeout("doResize()",200);
+
+	//setTimeout("doResize()",1000);
+	
+
+});
+
+emlcomponents = function()
+{
+	$('#eml-carousel.autoscroll').livequery(
+		function()
+		{
+			var carouseldiv = $(this);
+
+//			var count = carouseldiv.attr("total");
+//			count = parseInt(count);
+			//var totalw = count * ( $("#eml-carousel ul li" ).width()  + 38 );
+			//totalw = totalw + count*38;
+
+			var entirething = $("#eml-carousel #eml-viewport");
+//			if( totalw < carouseldiv.width() ) //we will have a scroll bar
+//			{
+//
+//				entirething.css("height","98px");
+//				carouseldiv.css("height","98px");
+//				doResize();
+//				return;
+//				
+//			}
+
+//			entirething.css("height","120px");
+//			carouseldiv.css("height","120px");
+
+			//$("#eml-carousel ul").css("width",totalw + "px");
+			
+			var element = entirething.jScrollPane();
+			var api = element.data('jsp');
+
+			$(element).bind('jsp-scroll-x', function(event,inoffset) 
+					{
+						var per = api.getPercentScrolledX();
+						setCookie("carousel",inoffset, 1);
+						setCookie("carouselper",per, 1);
+					}
+				);		
+
+			
+			var current = $("#eml-carousel .current");
+			if( current.length > 0)
+			{
+				
 				var total = entirething.width();
 				var viewport = carouseldiv.width() + 500; //div does not seem to have correct width added buffer
-
+	
 				
 				var entirethingstart = entirething.offset().left;
-				var current = $("#eml-carousel .current");
 				var positionx = current.offset().left - entirethingstart;
 				
 				var percentage = positionx  / total;
-
+	
 				if( percentage < .2)
 				{
 					percentage = 0;
@@ -81,72 +123,66 @@ $(document).ready(function() {
 					api.scrollToX(exact,false);
 				}
 			}
-		);
-	
-	$("#savedquerylist a").click(function(e)
-					{
-						e.preventDefault();
-						var a = jQuery(this);
-						var link = a.attr("href");
-						
-						jQuery.get(link, {}, function(data) 
-								{
-									var toreplace = jQuery("#searcheditor");
-									toreplace.html(data);
-									
-									var tmp = jQuery("#savedquerylist #newterm");
-									tmp.remove();
-									var top = a.position().top;
-									top = top + a.height() + 40;
-									jQuery("#eml-green-dialog").css("top",top);
-									
-									jQuery("#arrow").show();
-									var padleft = a.position().left;
-									padleft = padleft + a.width() / 2;
-									padleft = padleft  - 42; //arrow width
-									jQuery("#arrow").css("left",padleft);
-								}
-						);
-						return false;
-					}
-			);
-	
-	$("#addterm").click(function(e)
-			{
-				e.preventDefault();
-				var a = jQuery(this);
-				var link = a.attr("href");
-				
-				jQuery.get(link, {}, function(data) 
-						{
-							var toreplace = jQuery("#searcheditor");
-							toreplace.html(data);
-							
-							jQuery("#savedquerylist span").append('<span id="newterm">new term</span>');
-							var a = jQuery("#savedquerylist #newterm");
-							var top = a.position().top;
-							top = top + a.height() + 40;
-							jQuery("#eml-green-dialog").css("top",top);
-							
-							jQuery("#arrow").show();
-							var padleft = a.position().left;
-							padleft = padleft + a.width() / 2;
-							padleft = padleft  - 42; //arrow width
-							jQuery("#arrow").css("left",padleft);
-						}
-				);
-				return false;
-			}
+		}
 	);
 
-	$(window).resize(doResize); 
-	doResize();
+$("#savedquerylist a").click(function(e)
+				{
+					e.preventDefault();
+					var a = jQuery(this);
+					var link = a.attr("href");
+					
+					jQuery.get(link, {}, function(data) 
+							{
+								var toreplace = jQuery("#searcheditor");
+								toreplace.html(data);
+								
+								var tmp = jQuery("#savedquerylist #newterm");
+								tmp.remove();
+								var top = a.position().top;
+								top = top + a.height() + 40;
+								jQuery("#eml-green-dialog").css("top",top);
+								
+								jQuery("#arrow").show();
+								var padleft = a.position().left;
+								padleft = padleft + a.width() / 2;
+								padleft = padleft  - 42; //arrow width
+								jQuery("#arrow").css("left",padleft);
+							}
+					);
+					return false;
+				}
+		);
 
-	setTimeout("doResize()",200);
+$("#addterm").click(function(e)
+		{
+			e.preventDefault();
+			var a = jQuery(this);
+			var link = a.attr("href");
+			
+			jQuery.get(link, {}, function(data) 
+					{
+						var toreplace = jQuery("#searcheditor");
+						toreplace.html(data);
+						
+						jQuery("#savedquerylist span").append('<span id="newterm">new term</span>');
+						var a = jQuery("#savedquerylist #newterm");
+						var top = a.position().top;
+						top = top + a.height() + 40;
+						jQuery("#eml-green-dialog").css("top",top);
+						
+						jQuery("#arrow").show();
+						var padleft = a.position().left;
+						padleft = padleft + a.width() / 2;
+						padleft = padleft  - 42; //arrow width
+						jQuery("#arrow").css("left",padleft);
+					}
+			);
+			return false;
+		}
+);
 
-
-});
-
+}
 
 function setCookie(name,value,days) {
     if (days) {

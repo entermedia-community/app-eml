@@ -1,2 +1,9 @@
-<div id="eml-search-label">Your Basket Contains: <a href="#current-search">#if( $hits ) $hits.size() [[assets]]#end</a></div>
+#if( $order )
+<div id="eml-search-label">Your Basket Contains: #if( $hits ) $hits.size() [[assets]]#end</a></div>
 <div id="eml-results-count">Use the buttons below to interact with your selection.</div>
+
+#else
+<div id="eml-search-label">Your search for:  <a href="$home$apphome/views/search/index.html?page=1&hitssessionid=$!hits.getSessionId()">$hits.getSearchQuery().getName()</a></div>
+<div id="eml-results-count">returned <strong>$hits.size()</strong> results</div>
+#end
+

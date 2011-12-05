@@ -8,19 +8,13 @@
 	#set ($current = "table")
 #end
 
+#if( $hits )
+
 <div id="eml-search-views">
-	#if( $hits )
-		#set( $tlink =  "$home$apphome/views/search/index.html?resultstype=table&hitssessionid=$hits.getSessionId()&oemaxlevel=1")
-	#else
-		#set( $tlink = "#")	
-	#end
+	#set( $tlink =  "$home$apphome/views/search/index.html?resultstype=table&hitssessionid=$hits.getSessionId()&oemaxlevel=1")
 	<a class="btn ajax view-left #if( $current == "table") current #end " href="$tlink" targetdivinner="viewswitcher"><span class="table-view ir">Table View</span></a>
 
-	#if( $hits )
-		#set( $glink =  "$home$apphome/views/search/index.html?resultstype=gallery&hitssessionid=$hits.getSessionId()&oemaxlevel=1")
-	#else
-		#set( $glink = "#")	
-	#end
+	#set( $glink =  "$home$apphome/views/search/index.html?resultstype=gallery&hitssessionid=$hits.getSessionId()&oemaxlevel=1")
 
 	<a class="btn ajax view-middle #if( $current == "gallery") current #end "  targetdivinner="viewswitcher" href="$glink"><span class="gallery-view ir">Gallery View</span></a>
 	#if( $asset )
@@ -37,3 +31,4 @@
 	href="$alink"><span class="asset-view ir">Asset View</span>
 	</a>
 </div>
+#end
