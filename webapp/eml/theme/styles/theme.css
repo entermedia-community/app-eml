@@ -1646,8 +1646,6 @@ th span a.ajax {
 	float: left;
 	margin: 120px 0 0 0 ;
 	border-radius: 0 10px 10px 0;
-	border: 1px solid #f7f7f7;
-	border-left: none;
 	position: relative;
 	z-index: 99;
 }
@@ -1662,8 +1660,6 @@ th span a.ajax {
 	float: right;
 	margin: 120px 0 0 0;
 	border-radius: 10px 0 0 10px;
-	border: 1px solid #f7f7f7;
-	border-right: none;
 	position: relative;
 	z-index: 99;
 	
