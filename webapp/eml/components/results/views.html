@@ -14,7 +14,7 @@
 	#else
 		#set( $tlink = "#")	
 	#end
-	<a class="btn ajax view-left #if( $current == "table") current #end " href="$tlink" targetdiv="viewswitcher"><span class="table-view ir">Table View</span></a>
+	<a class="btn ajax view-left #if( $current == "table") current #end " href="$tlink" targetdivinner="viewswitcher"><span class="table-view ir">Table View</span></a>
 
 	#if( $hits )
 		#set( $glink =  "$home$apphome/views/search/index.html?resultstype=gallery&hitssessionid=$hits.getSessionId()&oemaxlevel=1")
@@ -22,7 +22,7 @@
 		#set( $glink = "#")	
 	#end
 
-	<a class="btn ajax view-middle #if( $current == "gallery") current #end "  targetdiv="viewswitcher" href="$glink"><span class="gallery-view ir">Gallery View</span></a>
+	<a class="btn ajax view-middle #if( $current == "gallery") current #end "  targetdivinner="viewswitcher" href="$glink"><span class="gallery-view ir">Gallery View</span></a>
 	#if( $asset )
 		#set( $alink = "$home$apphome/views/detaileditor/viewer/index.html?sourcepath=$asset.sourcepath&hitssessionid=$!hits.getSessionId()&oemaxlevel=2" )
 	#elseif( $hits )
@@ -33,7 +33,7 @@
 	#else
 	#end
 
-	<a class="btn ajax view-right #if( $current == "assetview") current #end #if( !$alink) btn_disabled #end"  targetdiv="viewswitcher"
+	<a class="btn ajax view-right #if( $current == "assetview") current #end #if( !$alink) btn_disabled #end"  targetdivinner="viewswitcher"
 	href="$alink"><span class="asset-view ir">Asset View</span>
 	</a>
 </div>

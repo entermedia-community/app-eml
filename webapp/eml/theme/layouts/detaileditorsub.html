@@ -8,7 +8,7 @@
 	<ul>
 		#foreach($screen in $screens)
 		<li #if( $content.subtab == "$screen.id" ) class="current" #end> 
-			<a  href="$home$apphome${screen.path}?sourcepath=$asset.sourcepath"><!-- <img  src="$home$themeprefix/images/icons/${screen.icon}.png"> -->$screen </a>
+			<a  href="$home$apphome${screen.path}?sourcepath=$asset.sourcepath&hitssessionid=$hits.getSessionId()"><!-- <img  src="$home$themeprefix/images/icons/${screen.icon}.png"> -->$screen </a>
 		</li>
 		#end
 	</ul>

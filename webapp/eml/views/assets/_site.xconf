@@ -1,7 +1,8 @@
 <page>
 
-	<property name="categoryid">index</property>
-	<path-action name="MediaSearchModule.searchCategories"/>
+	<property name="hitsname">hits</property>
+	<property name="searchtype">asset</property>
+	<path-action name="DataEditModule.loadHits" />
 	
 	<inner-layout>/${applicationid}/views/detaileditor/viewer/index.html</inner-layout>
 	<property name="tab">viewmediaviewer</property>

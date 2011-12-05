@@ -12,7 +12,11 @@
 
 				<li  #if($hit.id == $id) class="current" #end>
 					<div class="carousel-thumbnail">
-						#set( $alink = "$home$apphome/views/detaileditor/viewer/index.html?sourcepath=$hit.sourcepath&hitssessionid=$!hits.getSessionId()&oemaxlevel=2" )
+						#set( $link = $content.path)
+						#if( !$link.contains("views/detaileditor") )
+							#set( $link = "$apphome/views/detaileditor/viewer/index.html")
+						#end
+						#set( $alink = "$home?sourcepath=$hit.sourcepath&hitssessionid=$!hits.getSessionId()&oemaxlayout=3" )
 						<a href="$alink" class="ajax" targetdivinner="viewswitcher">
 						$pages.include("$apphome/components/results/thumbnails/small.html",$context)
 						</a>		
@@ -26,12 +30,14 @@
 #if( $showcarousel )
 	#set($rootpath = "$home$apphome/components/results/pages.html")
 	#set($targetdiv = "eml-pagination-container")
+	#set($level = "oemaxlevel=1")
 #else
 	#set($rootpath = "$home$apphome/views/search/index.html")
 	#set($targetdiv = "up")
+	#set($level = "oemaxlayout=2")
 #end
 
-#set($resultsPage = "$home$rootpath?hitssessionid=$hits.sessionId&searchtype=asset&hitsperpage=$!hits.hitsPerPage&categoryid=$!category.id&oemaxlevel=1&resultstype=$!resultstype&showcarousel=$!showcarousel")
+#set($resultsPage = "$home$rootpath?hitssessionid=$hits.sessionId&searchtype=asset&hitsperpage=$!hits.hitsPerPage&categoryid=$!category.id&$level&resultstype=$!resultstype&showcarousel=$!showcarousel")
 #set($resultsPage = "$resultsPage&page")
 
 		<div id="pagination">
