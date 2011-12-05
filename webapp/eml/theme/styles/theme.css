@@ -1170,6 +1170,32 @@ th span a.ajax {
 	width: 14px;
 	height: 13px;
 }
+.emdataviewer {
+	padding: 0;
+	margin: 10px 0;
+}
+.emdataviewer li {
+	list-style: none;
+}
+.emdataviewer li span {
+	display: block;
+	float: left;
+	padding: 2px 0;
+}
+.emdataviewer li span:nth-child(1) {
+	color: #666;
+	text-align: right;
+	width: 25%;
+	padding-right: 10px;
+}
+.emdataviewer li span:nth-child(2) {
+	color: #84CA30;
+	font-weight: bold;
+	text-align: left;
+	width: 60%;
+	padding-left: 10px;
+	border-left: 1px solid #ddd;
+}
 
 /* PAGINATION */
 
@@ -1605,7 +1631,7 @@ th span a.ajax {
 }
 #eml-media {
 	width: 620px;
-	margin: 0 50px 0 0;
+	margin: 0 50px 60px 0;
 	float: left;
 }
 .eml-media-frame {
