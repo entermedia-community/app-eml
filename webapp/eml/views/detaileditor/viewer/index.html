@@ -25,7 +25,7 @@
 			#if( $asset.assettype && $archive.viewExists("asset/assettype/$asset.assettype/$target.id") )
 			  #set ($view = "asset/assettype/$asset.assettype/$target.id")
 			#else
-			  #set ($view = "assettype/default/$target.id")
+			  #set ($view = "asset/assettype/default/$target.id")
 			#end
 			$context.putPageValue("view",$view)	
 			$pages.include("/$applicationid/components/xml/detailviewer.html", $context)
