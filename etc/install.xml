@@ -19,7 +19,7 @@
   </target>
     
   <target name="unzip" depends="update-dependencies">
-    <unzip  src="${build}/eml.zip" dest=".." />
+    <unzip  src="${build}/eml.zip" dest="base" />
   </target>
  
 </project>

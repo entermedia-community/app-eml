@@ -19,8 +19,8 @@ unziper.unzip(  tmp + "/eml.zip",  tmp );
 
 var files = new FileUtils();
 log.add("4. UPGRADE BASE DIR");
-files.deleteAll( root + "/eml");
-files.copyFiles( tmp + "/eml", root + "/eml/");
+files.deleteAll( root + "/WEB-INF/base/eml");
+files.copyFiles( tmp + "/eml", root + "/WEB-INF/base/eml/");
 
 log.add("5. CLEAN UP");
 files.deleteAll(tmp);
