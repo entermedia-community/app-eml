@@ -27,7 +27,7 @@ body, #header a {
 #emselectable {  margin: 0 auto; }
 #emselectable thead tr { font_size: 11px; font-weight: bold; padding: 5px 0px 5px 14px; }
 
-table td {d
+table td {
 	vertical-align: top;
 }
 
@@ -1584,10 +1584,10 @@ th span a.ajax {
 
 /* OPTIONS BOX TABLE */
 
-#emselectable table, #shared-asset-table, #eml-tab-green-container table {
+#emselectable table, #shared-asset-table, #eml-tab-green-container table.emdata {
 	background: #fff;
 }
-.eml-tab-option #emselectable table, #shared-asset-table, #attachment-table, #eml-tab-green-container table {
+.eml-tab-option #emselectable table, #shared-asset-table, #attachment-table, #eml-tab-green-container table.emdata {
 	width: 95%;
 	border: 1px solid #5FA83E;
 	background: #fff;
@@ -1595,7 +1595,7 @@ th span a.ajax {
 	padding: 0;
 	border-spacing: 0;
 }
-.eml-tab-option #emselectable table thead th, #attachment-table #tableheader-row, #eml-tab-green-container table th {
+.eml-tab-option #emselectable table thead th, #attachment-table #tableheader-row, #eml-tab-green-container table.emdata th {
 	background: #5FA83E;
 	color: #fff;
 	padding: 10px 0;
@@ -1603,16 +1603,16 @@ th span a.ajax {
 	border: none;
 	margin: 0;
 }
-.eml-tab-option #emselectable table tr td, #shared-asset-table tr td, #attachment-table tr td, #eml-tab-green-container table tr td {
+.eml-tab-option #emselectable table tr td, #shared-asset-table tr td, #attachment-table tr td, #eml-tab-green-container table.emdata tr td {
 	padding: 8px 15px;
 	font-size: 12px;
 	margin: 0;
 	vertical-align: middle;
 }
-.eml-tab-option table tr {
+.eml-tab-option .emdata tr {
 	color: #646464;
 }
-.eml-tab-option #emselectable table tr.odd, #attachment-table tr.odd, #eml-tab-green-container table tr.odd {
+.eml-tab-option #emselectable table tr.odd, #attachment-table tr.odd, #eml-tab-green-container table.emdata tr.odd {
 	background: #f0f6e9;
 }
 .eml-tab-option #emselectable table tr.emborderhover {
