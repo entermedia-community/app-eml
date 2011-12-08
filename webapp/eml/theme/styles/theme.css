@@ -1109,7 +1109,7 @@ th span a.ajax {
 }
 #eml-quick-search {
 	float: right;
-	margin-top: -30px;
+	margin-top: -34px;
 }
 #eml-quick-search .field {
 	border-radius: 5px;
@@ -1845,7 +1845,18 @@ h3.instructions {
 #newterm {
 	color: #c3c3c3;
 }
-
+#buffer {
+	position: relative;
+}
+#buffer #eml-quick-search {
+	position: absolute;
+	top: 30px;
+	right: 20px;
+}
+#buffer .search {
+	position: relative;
+	top: -8px;
+}
 
 /* SHARE STYLES */
 
