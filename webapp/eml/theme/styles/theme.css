@@ -1584,10 +1584,10 @@ th span a.ajax {
 
 /* OPTIONS BOX TABLE */
 
-#emselectable table, #shared-asset-table {
+#emselectable table, #shared-asset-table, #eml-tab-green-container table {
 	background: #fff;
 }
-.eml-tab-option #emselectable table, #shared-asset-table, #attachment-table {
+.eml-tab-option #emselectable table, #shared-asset-table, #attachment-table, #eml-tab-green-container table {
 	width: 95%;
 	border: 1px solid #5FA83E;
 	background: #fff;
@@ -1595,7 +1595,7 @@ th span a.ajax {
 	padding: 0;
 	border-spacing: 0;
 }
-.eml-tab-option #emselectable table thead th, #attachment-table #tableheader-row {
+.eml-tab-option #emselectable table thead th, #attachment-table #tableheader-row, #eml-tab-green-container table th {
 	background: #5FA83E;
 	color: #fff;
 	padding: 10px 0;
@@ -1603,7 +1603,7 @@ th span a.ajax {
 	border: none;
 	margin: 0;
 }
-.eml-tab-option #emselectable table tr td, #shared-asset-table tr td, #attachment-table tr td {
+.eml-tab-option #emselectable table tr td, #shared-asset-table tr td, #attachment-table tr td, #eml-tab-green-container table tr td {
 	padding: 8px 15px;
 	font-size: 12px;
 	margin: 0;
@@ -1612,7 +1612,7 @@ th span a.ajax {
 .eml-tab-option table tr {
 	color: #646464;
 }
-.eml-tab-option #emselectable table tr.odd, #attachment-table tr.odd {
+.eml-tab-option #emselectable table tr.odd, #attachment-table tr.odd, #eml-tab-green-container table tr.odd {
 	background: #f0f6e9;
 }
 .eml-tab-option #emselectable table tr.emborderhover {
@@ -1625,6 +1625,12 @@ th span a.ajax {
 }
 .embuttons li {
    margin: 0 10px 0 0;
+}
+#eml-tab-green-container table a {
+	color: #72ac2c;
+}
+#eml-tab-green-container table a:hover {
+	color: #84CA30;
 }
 
 /* EML MEDIA VIEWER STYLES */
@@ -1966,14 +1972,33 @@ form[name="addcomment"] .btn {
 
 /* THOWAWAY WIDGET STYLES */
 
-
-#eml-tab-green-container .ui-widget, #eml-green-dialog .ui-widget {
+#uploadform .required {
+	float: left;
+	margin: 1px 0 0 5px;
+}
+#uploadform .embutton img {
+	margin: 5px 0 0 7px;
+	float: left;
+}
+#uploadform h2 {
+	margin: 0; 
+	margin-bottom: 10px;
+	float: left;
+}
+#uploadform input[type="text"] {
+	padding: 5px 10px;
+	font-size: 14px;
+	margin-bottom: 20px;
+	border: 1px solid #ccc;
+	border-radius: 5px;
+}
+#up .ui-widget, #eml-green-dialog .ui-widget {
 	border: 1px solid #5FA83E;
 	border-radius: 0;
 	width: 95%;
 	margin-top: 10px;	
 }
-#eml-tab-green-container .ui-widget-header, #eml-green-dialog .ui-widget-header {
+#up .ui-widget-header, #eml-green-dialog .ui-widget-header {
 	background: #5FA83E;
 	color: #fff;
 	padding: 10px 20px;
@@ -1982,7 +2007,7 @@ form[name="addcomment"] .btn {
 	margin: 0;
 	border: none;
 }
-#eml-tab-green-container .ui-widget-content, #eml-green-dialog .ui-widget-content {
+#up .ui-widget-content, #eml-green-dialog .ui-widget-content {
 	background: #fff;
 	padding: 20px;
 }
