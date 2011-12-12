@@ -27,10 +27,12 @@
   <property name="showaddselections">true</property>
   <property name="mastergroup">video</property>
   <property name="parentapplicationid">media</property>
-  <property name="catalogid">media/catalogs/highlights</property>
+  <!-- property name="catalogid">media/catalogs/highlights</property -->
+  <property name="catalogid">media/catalogs/matt</property>
   <property name="section">home</property>
   <property name="tagline"></property>
   <property name="applicationid">eml</property>
   <path-action name="MediaSearchModule.searchCategories" cancel="true"/>
   <inner-layout>${themeprefix}/layouts/searchlayout.html</inner-layout>
+ 
 </page>
