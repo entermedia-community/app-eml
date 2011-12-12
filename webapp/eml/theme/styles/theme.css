@@ -1182,6 +1182,7 @@ th span a.ajax {
 }
 .emdataviewer li {
 	list-style: none;
+	line-height: 18px;
 }
 .emdataviewer li span {
 	display: block;
@@ -1189,14 +1190,14 @@ th span a.ajax {
 	padding: 2px 0;
 }
 .emdataviewer li span:nth-child(1) {
-	color: #666;
+	color: #84CA30;
+	font-weight: bold;
 	text-align: right;
 	width: 25%;
 	padding-right: 10px;
 }
 .emdataviewer li span:nth-child(2) {
-	color: #84CA30;
-	font-weight: bold;
+	color: #666;
 	text-align: left;
 	width: 60%;
 	padding-left: 10px;
@@ -1900,6 +1901,29 @@ form[name="addcomment"] .btn {
 	float: right;
 	margin: 10px 5px 0 0;
 }
+.emcomment {
+	padding: 20px 0;
+}
+.emcommentuser, .emcommentdate {
+	padding: 5px 10px 5px 10px;
+	font-size: 12px;
+	font-weight: bold;
+	color: #fff;
+	background: #5FA83E;
+}
+.emcommentdate {
+	float: right;
+	position: relative;
+	top: -1px;
+}
+.emcommenttext {
+	padding: 20px;
+	background: #fff;
+	border: 1px solid #5FA83E;
+	margin-top: 5px;
+	line-height: 21px;
+	color: #777;
+}
 
 /* CATEGORIES TAB STYLES */
 
@@ -1948,6 +1972,7 @@ form[name="addcomment"] .btn {
 	font-family: 'helvetica neue', helvetica, arial, sans-serif;
 	margin-bottom: 10px;
 }
+
 
 /* ATTACHMENTS STYLES */
 
@@ -2049,7 +2074,27 @@ form[name="addcomment"] .btn {
 .vlist li a:hover {
 	color: #595959;
 }
-
+.ui-widget h4 {
+	color: #595959;
+	padding: 10px 0;
+	border-bottom: 1px solid #ddd;
+	margin: 0 0 10px 0;
+}
+.ui-widget .sub-list {
+	margin: 0;
+	padding: 0;
+}
+.ui-widget input[type="text"] {
+	border-radius: 5px;
+	border: 1px solid #999;
+	padding: 4px 8px;
+	font-size: 14px;
+	color: #999;
+}
+.ui-widget input[type="text"]:focus {
+	border: 1px solid #5FA83E;
+	color: #5FA83E;
+}
 
 /* BUTTONS */
 
