@@ -1,4 +1,4 @@
 <page>
 
-	<generator name="admintoolbar" />
+	<generator name="admintoolbarGenerator" />
 </page>
