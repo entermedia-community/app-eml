@@ -1435,7 +1435,7 @@ th span a.ajax {
 	font-weight: normal;
 	font-size: 30px;
 	background: #fff;
-	margin-bottom: -20px;
+	margin-bottom: 0;
 }
 #eml-tabs {
 	position: absolute;
@@ -1489,7 +1489,6 @@ th span a.ajax {
 	margin: 0 auto;
 	position: relative; 
 	top: 100px;
-	height: 100%;
 }
 #eml-tab-subnav ul {
 	margin: 0;
@@ -1535,6 +1534,23 @@ th span a.ajax {
 	background: -o-linear-gradient(top, rgba(153,222,70,1) 0%,rgba(132,202,48,1) 100%); /* Opera 11.10+ */
 	background: -ms-linear-gradient(top, rgba(153,222,70,1) 0%,rgba(132,202,48,1) 100%); /* IE10+ */
 	background: linear-gradient(top, rgba(153,222,70,1) 0%,rgba(132,202,48,1) 100%); /* W3C */
+}
+/* HINT STYLES */
+
+.hints {
+	color: #595959;
+	line-height: 21px;
+}
+.hints h3 {
+	color: #84CA30;
+}
+.hints a {
+	font-weight: bold;
+	color: #595959;
+	text-decoration: none;
+}
+.hints a:hover {
+	color: #84CA30;
 }
 
 /* OPTION BOX FORM STYLES */
@@ -1589,7 +1605,7 @@ th span a.ajax {
 	background: #fff;
 }
 .eml-tab-option #emselectable table, #shared-asset-table, #attachment-table, #eml-tab-green-container table.emdata {
-	width: 95%;
+	width: 100%;
 	border: 1px solid #5FA83E;
 	background: #fff;
 	margin: 20px auto;
@@ -1994,6 +2010,59 @@ form[name="addcomment"] .btn {
 }
 
 
+/* SHARING STYLES */
+.emdataeditor, .field-editor, .greytxt {
+	color: #595959;
+}
+#shares .emdataeditor {
+	background: #fff;
+	border: 1px solid #5FA83E;
+	padding: 20px;
+	width: 100%;
+	margin-top: -20px;
+}
+#shares table td[width="40px"] {
+	width: 80px;
+	padding: 15px 10px;
+	text-align: right;
+}
+#share-submit {
+	float: right;
+}
+#eml-tab-green-container #email-preview {
+	height: 300px;
+	overflow: auto;
+	padding: 20px;
+	background: #fff;
+	border: 1px solid #5fa83e;
+	color: #000;
+	margin-bottom: 20px;
+}
+#eml-tab-green-container #email-preview p {
+	font-family: 'helvetica neue', helvetica, arial, sans-serif;
+	font-size: 14px;
+	line-height: 21px;
+	font-weight: normal;
+	color: #000;
+}
+#email-preview table {
+	width: 500px;
+	font-size: 12px;
+	padding-bottom: 20px;
+}
+#email-preview table th {
+	background: #000;
+	color: #fff;
+	padding: 10px;
+}
+#email-preview table td {
+	border-bottom: 1px solid #595959;
+	padding: 10px;
+}
+#sharenote___Frame {
+	font-size: 14px;
+	line-height: 21px;
+}
 
 /* THOWAWAY WIDGET STYLES */
 
@@ -2084,18 +2153,21 @@ form[name="addcomment"] .btn {
 	margin: 0;
 	padding: 0;
 }
-.ui-widget input[type="text"] {
+.ui-widget input[type="text"], #shares input[type="text"] {
 	border-radius: 5px;
 	border: 1px solid #999;
 	padding: 4px 8px;
 	font-size: 14px;
 	color: #999;
 }
-.ui-widget input[type="text"]:focus {
+.ui-widget input[type="text"]:focus, #shares input[type="text"]:focus {
 	border: 1px solid #5FA83E;
 	color: #5FA83E;
 }
-
+td#detail_sharewithemail input {
+	width: 440px;
+	margin-right: 10px;
+}
 /* BUTTONS */
 
 ul.embuttons li a span {
