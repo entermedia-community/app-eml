@@ -1111,6 +1111,9 @@ th span a.ajax {
 	float: right;
 	margin-top: -34px;
 }
+#buffer #eml-quick-search {
+	margin-top: -9px;
+}
 #eml-quick-search .field {
 	border-radius: 5px;
 	border: 1px solid #a8a8a8;
@@ -1430,22 +1433,22 @@ th span a.ajax {
 	position: relative;
 }
 #eml-tabs-view h2 {
-	padding: 0 0 20px 20px;
+	padding: 20px 0 20px 20px;
 	color: #595959;
 	font-weight: normal;
 	font-size: 30px;
 	background: #fff;
-	margin-bottom: 0;
+	margin: 0;
 }
 #eml-tabs {
-	position: absolute;
-	left: 0;
 	border-bottom: 1px solid #CBCBCB;
-	padding-top: 35px;
+	padding: 0;
+	padding-top: 4px;
+	margin: 0;
 	width: 100%;
 	z-index: 7;
 	background: #fff;
-
+	height: 28px;
 }
 #eml-tabs ul {
 	padding: 0;
@@ -1455,15 +1458,14 @@ th span a.ajax {
 	list-style: none;
 	display: block;
 	float: left;
-	position: relative;
-	top: -4px;
 	z-index: 8;
+	margin-top: 2px;
 }
 #eml-tabs ul li a {
 	font-size: 18px;
 	padding: 5px 15px;
 	border: 1px solid #cbcbcb;
-	margin: 0px 10px 0 0;
+	margin: 0 10px 0 0;
 	color: #a8a8a8;
 	background: #fff;
 	text-decoration: none;
