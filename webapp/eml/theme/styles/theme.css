@@ -2066,6 +2066,16 @@ form[name="addcomment"] .btn {
 	line-height: 21px;
 }
 
+/* UPLOAD FORM STYLES */
+
+#single-uploader {
+	width:320px; 
+	margin: 20px auto;
+}
+#single-uploader h4 {
+	margin: 5px 0 5px 5px;
+}
+
 /* THOWAWAY WIDGET STYLES */
 
 #uploadform .required {
