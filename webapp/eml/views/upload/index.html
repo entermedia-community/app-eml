@@ -3,23 +3,18 @@
 	<h2 id="buffer">Upload
 		$pages.include("$apphome/components/search/quicksearch.html")
 	</h2>
-	<div id="eml-tabs">
-		<ul>
-			<li id="single" class="">
-				<a class="ajax" targetdivinner="eml-tab-content" href="$apphome/components/upload/types/simpler.html?oemaxlevel=3">Single File Uploader</a>
-			</li>
-			#if( $canviewuploadmulti)
-			<li id="multiple" class="">
-				<a  class="ajax" targetdivinner="eml-tab-content" href="$apphome/components/upload/types/draganddrop.html?oemaxlevel=3">Multiple File Uploader</a>
-			</li>
-			#end
-		</ul>
-	</div>
 	<div class="autoresize-inner">
 	<div id="eml-tab-content" >
+
+
 	
-	$pages.includeContent()
-	
+$pages.include("$apphome/components/upload/types/simpler.html")	
+			#if( $canviewuploadmulti)
+				<div align="right" style="  width: 600px; padding-top:10px;">
+				<a  class="ajax btn small" targetdivinner="eml-tab-content" href="$apphome/components/upload/types/draganddrop.html?oemaxlevel=3">Multiple File Uploader</a>
+				</div>
+			#end
+
 	</div>
 	</div>
 </div>
