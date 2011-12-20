@@ -58,7 +58,9 @@ input:invalid, textarea:invalid { background-color: #f0dddd; }
 
 table { border-collapse: collapse; border-spacing: 0; }
 td { vertical-align: top; }
-
+*:focus {
+	outline: none;
+}
 
 /* ==|== primary styles =====================================================
    Author: 
@@ -1581,6 +1583,50 @@ form[name="addcomment"] .btn {
 	margin: 5px 0 5px 5px;
 }
 
+/* PERMISSIONS STYLES OVERRIDE */
+
+#eml-tab-green-container #permissions .header_element {
+	background: none;
+	color: #595959;
+	font-size: 16px;
+	padding: 0;
+	margin: 0 0 5px 0;
+}
+#eml-tab-green-container #permissions .access_message {
+	height: 12px;
+	line-height: 15px;
+	margin: 0 0 30px 0;
+	padding: 0;
+}
+#eml-tab-green-container #permissions .access_span {
+	position: relative;
+	top: 1px;
+	color: #84CA30;
+	font-weight: bold;
+	font-size: 11px;
+}
+#eml-tab-green-container #permissions .checkbox_holder {
+	margin: 0 0 20px 0;
+}
+#eml-tab-green-container #permissions .all_text {
+	margin: 1px 10px 0 5px
+}
+#eml-tab-green-container #permissions .field_title {
+	margin: 25px 0 5px 0;
+	color: #595959;
+	font-size: 14px;
+	padding: 0;
+}
+#eml-tab-green-container #permissions .people_table tr td {
+	padding: 6px;
+}
+#eml-tab-green-container #permissions .people_table .userlevel {
+	text-align: right;
+}
+#eml-tab-green-container #permissions .people_table .delete-row {
+	margin: 0 10px 0 0;
+	padding: 0;
+}
 /* THOWAWAY WIDGET STYLES */
 
 .emdataeditor td {
