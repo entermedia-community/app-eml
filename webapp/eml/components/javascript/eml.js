@@ -6,7 +6,7 @@ doResize = function() {
 	var cwho = wh - cdho;
 	//alert( cdhi);
 	var current = $("#eml-carousel");
-	var cwhi = wh - cdhi - cdho - 85;
+	var cwhi = wh - cdhi - cdho - 56;
 	if( current.length > 0 )
 	{
 		cwhi = cwhi + 22;
