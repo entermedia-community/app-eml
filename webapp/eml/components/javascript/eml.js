@@ -1,4 +1,5 @@
 
+
 doResize = function() {
 	var wh = $(window).height();
 	var cdho = $('#header').height() + $('#footer').height();
@@ -6,10 +7,12 @@ doResize = function() {
 	var cwho = wh - cdho;
 	//alert( cdhi);
 	var current = $("#eml-carousel");
+	var tabs = $('#eml-tabs');
+	var buffer = $('#buffer');
 	var cwhi = wh - cdhi - cdho - 56;
-	if( current.length > 0 )
+	if( buffer.length == 0 && tabs.length > 0 )
 	{
-		cwhi = cwhi + 22;
+		cwhi = cwhi - 10;
 	}
 	
 	$('.autoresize-outer').css( 'height', cwho + 'px' );
