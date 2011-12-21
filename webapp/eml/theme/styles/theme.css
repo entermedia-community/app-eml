@@ -2076,6 +2076,19 @@ form[name="addcomment"] .btn {
 	margin: 5px 0 5px 5px;
 }
 
+/* VIDEO PLAYER STYLES */
+
+.eml-media-frame a.mediaplayer {
+	
+}
+
+.eml-media-frame a.mediaplayer img {
+	border: none !important;
+	top: 110px;
+	position: relative;    
+}
+
+
 /* THOWAWAY WIDGET STYLES */
 
 #uploadform .required {
