@@ -637,7 +637,7 @@ th span a.ajax {
 	cursor: pointer;
 	width: 15px;
 	height: 19px;
-	margin: 8px 0 0 -22px;
+	margin: 6px 0 0 -22px;
 	flaot: right:
 }
 #eml-quick-search .search:hover {
@@ -1387,7 +1387,7 @@ h3.instructions {
 }
 #buffer .search {
 	position: relative;
-	top: -8px;
+	top: -4px;
 }
 
 /* SHARE STYLES */
@@ -1581,6 +1581,14 @@ form[name="addcomment"] .btn {
 }
 #single-uploader h4 {
 	margin: 5px 0 5px 5px;
+}
+.inner-content {
+	width: 100%; 
+	background: #fff; 
+	border: 1px solid #5FA83E;
+}
+h2.no-tabs {
+	border-bottom: 1px solid #CBCBCB;
 }
 
 /* PERMISSIONS STYLES OVERRIDE */
