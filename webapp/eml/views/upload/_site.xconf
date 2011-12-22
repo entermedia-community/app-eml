@@ -1,0 +1,4 @@
+<page>
+	<property name="sectiontitle">Add Media</property>
+	<inner-layout>${themeprefix}/layouts/searchbox.html</inner-layout>
+</page>
