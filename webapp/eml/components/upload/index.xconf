@@ -1,6 +1,0 @@
-<page>
-	<layout/>
-			<inner-layout>${themeprefix}/layouts/detaileditorsub.html</inner-layout>
-	
-</page>
-
