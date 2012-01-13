@@ -1488,7 +1488,11 @@ form[name="addcomment"] .btn {
 	font-family: 'helvetica neue', helvetica, arial, sans-serif;
 	margin-bottom: 10px;
 }
-
+.ui-widget.columns-2 {
+	width: 47%;
+	margin: 10px;
+	float: left;
+}
 
 /* ATTACHMENTS STYLES */
 
