@@ -1847,6 +1847,27 @@ small {
 	float: right;
 }
 
+.settings-table {
+	padding: 10px;
+	margin: 20px 0;
+	border: 1px solid #eee;
+	border-left: none;
+	border-right: none;
+}
+.settings-table tr th {
+	padding: 10px 0;
+	color: #fff;
+}
+.settings-table tr {
+	border-bottom: 1px solid #eee;
+}
+.settings-table tr:last-child {
+	border: none;
+}
+.settings-table tr td {
+	padding: 10px;
+	vertical-align: middle;
+}
 
 /* BUTTONS */
 
