@@ -463,6 +463,9 @@ th span a.ajax {
 	background: url('../images/settings-icon.png') 0 2px no-repeat;
 	padding-left: 14px;
 }
+#main-asset-table {
+	width: 100%;
+}
 
 /* TABLE EDITOR CSS */
 
