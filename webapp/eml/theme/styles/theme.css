@@ -1383,6 +1383,9 @@ h3.instructions {
 	position: relative;
 	top: -4px;
 }
+#eml-green-dialog.add-search-term {
+	width: 757px;
+}
 
 /* SHARE STYLES */
 
